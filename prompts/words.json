@@ -1,80 +1,1387 @@
 {
-  "_meta": {
-    "source": "Spelling.pdf — Spelling Dictionary word bank (P. Olivieri / Rockin Resources), letter A section, pages 3-4",
-    "count": 71,
-    "audience": "Middle school students (ages 11-14), Lake Drive School for Deaf and Hard of Hearing Children"
+ "_meta": {
+  "source": "Revised List.md (teacher-selected list)",
+  "count": 270,
+  "letters": {
+   "A": 10,
+   "B": 16,
+   "C": 17,
+   "D": 19,
+   "E": 6,
+   "F": 15,
+   "G": 11,
+   "H": 14,
+   "I": 3,
+   "J": 3,
+   "K": 8,
+   "L": 11,
+   "M": 18,
+   "N": 8,
+   "O": 6,
+   "P": 17,
+   "Q": 2,
+   "R": 16,
+   "S": 30,
+   "T": 16,
+   "U": 1,
+   "V": 2,
+   "W": 14,
+   "X": 2,
+   "Y": 4,
+   "Z": 1
   },
-  "words": [
-    {"word": "able", "sentence": "I am able to carry all these books.", "scene": "A confident middle-school student carrying a tall stack of textbooks with one arm, standing straight and smiling, giving a small nod; a soft glow line shows effortless strength"},
-    {"word": "about", "sentence": "This book is about sharks.", "scene": "A student holding an open book toward the viewer; the visible page clearly shows a large illustrated shark; the student points at the shark page with one finger"},
-    {"word": "above", "sentence": "The kite flies above the tree.", "scene": "A bright red diamond kite floating high in the sky directly above a single green tree, with a clear vertical gap of open sky between them and a simple upward arrow at the left"},
-    {"word": "accident", "sentence": "It was an accident. The paint spilled.", "scene": "A tipped-over can of blue paint spreading a puddle across a classroom floor, a student standing beside it with wide eyes and both hands raised in surprise"},
-    {"word": "across", "sentence": "We walked across the bridge.", "scene": "A student walking across a small wooden footbridge over a stream, shown from the side, with a dashed arrow tracing the path from one bank to the other"},
-    {"word": "act", "sentence": "I act in the school play.", "scene": "A student on a small stage in costume, arms raised mid-performance, red stage curtains behind and a warm spotlight circle on the floor"},
-    {"word": "add", "sentence": "Add two and three.", "scene": "A student at a whiteboard writing the equation 2 + 3 = 5 with a marker, pointing at the plus sign"},
-    {"word": "addition", "sentence": "I finished my addition problems.", "scene": "A math worksheet on a desk showing a neat column of addition problems with large plus signs, a pencil resting on it and a student's hand solving one"},
-    {"word": "address", "sentence": "Write the address on the envelope.", "scene": "A white envelope with clearly written lines of a mailing address and a stamp, held up in front of a house with a numbered mailbox"},
-    {"word": "adventure", "sentence": "We had an adventure in the mountains.", "scene": "A teen hiker with a backpack standing on a mountain trail holding an open paper map, tall peaks and pine trees ahead"},
-    {"word": "afraid", "sentence": "He is afraid of the dark hallway.", "scene": "A student standing at the edge of a dim hallway, shoulders pulled up, hands clasped at chest, nervous expression, cool shadows ahead"},
-    {"word": "after", "sentence": "I brush my teeth after dinner.", "scene": "A two-panel sequence separated by a thin arrow: left panel a student eating at a dinner plate, right panel the same student brushing teeth at a sink"},
-    {"word": "afternoon", "sentence": "School ends in the afternoon.", "scene": "Students walking out of a school building under a bright mid-afternoon sun, a large wall clock in the sky area reading 3:00"},
-    {"word": "afterward", "sentence": "We played soccer, and afterward we ate pizza.", "scene": "A two-panel sequence separated by a thin arrow: left panel two teens kicking a soccer ball, right panel the same two teens sharing a pizza at a table"},
-    {"word": "again", "sentence": "She tried again and made the shot.", "scene": "A student shooting a basketball into a hoop, with a curved circular arrow beside them showing a repeated attempt and a small ghosted outline of the first try"},
-    {"word": "against", "sentence": "My bike leans against the wall.", "scene": "A bicycle leaning at an angle against a red brick wall, side view, clear contact point between tire, frame and wall"},
-    {"word": "age", "sentence": "My age is thirteen.", "scene": "A smiling teen behind a birthday cake with candles shaped as the number 13, party setting"},
-    {"word": "ago", "sentence": "That happened a week ago.", "scene": "A wall calendar with today's date marked and a curved arrow pointing backward to a date circled seven days earlier"},
-    {"word": "ahead", "sentence": "He is ahead in the race.", "scene": "Three student runners on a track seen from the side, the leading runner clearly in front with a forward arrow above them and a finish line ahead"},
-    {"word": "air", "sentence": "The balloon is full of air.", "scene": "A student blowing into a large balloon, cheeks puffed, with curved motion lines showing air moving into the balloon"},
-    {"word": "airplane", "sentence": "The airplane flies in the sky.", "scene": "A passenger airplane in flight, side three-quarter view, against a blue sky with a few rounded clouds below"},
-    {"word": "airport", "sentence": "We waited at the airport.", "scene": "An airport terminal with tall windows, two parked airplanes at gates outside, and travelers rolling suitcases inside"},
-    {"word": "alike", "sentence": "The two sneakers look alike.", "scene": "Two identical sneakers side by side on a plain surface with a large equals sign between them"},
-    {"word": "alive", "sentence": "The little plant is alive.", "scene": "A small green seedling with two bright leaves growing from brown soil, a ladybug on one leaf, sun rays above"},
-    {"word": "all", "sentence": "I ate all the grapes.", "scene": "A bowl containing a full bunch of grapes with a wide circle drawn around the entire bowl to show the whole group"},
-    {"word": "allow", "sentence": "The teacher allowed us to go outside.", "scene": "A teacher smiling and handing a hall pass to a student while gesturing toward an open door, a green check mark beside them"},
-    {"word": "all right", "sentence": "Are you all right? Yes, I am all right.", "scene": "A student who has just stood up after a small stumble, brushing off their sleeve and giving a clear thumbs-up with a reassuring smile"},
-    {"word": "almost", "sentence": "The glass is almost full.", "scene": "A tall clear glass filled with water nearly to the top, with a small visible gap of empty space and a thin dashed line marking the rim"},
-    {"word": "alone", "sentence": "She sat alone and read a book.", "scene": "A single student sitting at one end of a long empty park bench reading a book, plenty of empty space on either side"},
-    {"word": "along", "sentence": "We walked along the river.", "scene": "A student walking on a path that runs beside a winding river, viewed from the side, with a dashed line following the path's direction"},
-    {"word": "a lot", "sentence": "There are a lot of books here.", "scene": "A very tall stack of colorful books towering on a table beside a small student who looks up at it"},
-    {"word": "already", "sentence": "I already finished my homework.", "scene": "A student holding up a completed worksheet marked with a green check while a wall clock shows early evening, a closed backpack at their feet"},
-    {"word": "also", "sentence": "I have a sandwich and also an apple.", "scene": "A school lunch tray holding a sandwich on the left and an apple on the right with a large plus sign between them"},
-    {"word": "although", "sentence": "Although it rained, she rode her bike.", "scene": "A student in a yellow raincoat cheerfully riding a bicycle through light rain, puddles splashing, gray rain clouds above but a confident smile"},
-    {"word": "always", "sentence": "The sun always rises.", "scene": "A row of three calendar squares each showing the same sunrise over the same house, each marked with a check, and a repeating circular arrow above"},
-    {"word": "am", "sentence": "I am a student.", "scene": "A student pointing at their own chest with a thumb, wearing a name tag that reads MAYA, smiling directly at the viewer"},
-    {"word": "America", "sentence": "We live in America.", "scene": "A simple outline map of the United States filled with red and blue, with a waving American flag beside it and the Statue of Liberty in the background"},
-    {"word": "among", "sentence": "One red apple is among the green apples.", "scene": "A group of green apples arranged together on a table with a single bright red apple in the middle of them and an arrow pointing to the red one"},
-    {"word": "and", "sentence": "I like peanut butter and jelly.", "scene": "A jar of peanut butter on the left and a jar of jelly on the right with a large plus sign between them and a sandwich below"},
-    {"word": "angry", "sentence": "He felt angry.", "scene": "A teen with arms tightly crossed, eyebrows pulled down, mouth in a firm frown, with two small cartoon steam puffs rising from the sides of the head"},
-    {"word": "animal", "sentence": "A dog is an animal.", "scene": "A friendly group of four animals together: a dog, a rabbit, a turtle and a small bird, arranged in a row on grass"},
-    {"word": "another", "sentence": "May I have another cookie?", "scene": "A plate with cookies where one has already been taken, a hand reaching in to take one more, with a small plus one symbol"},
-    {"word": "answer", "sentence": "She knew the answer.", "scene": "A student sitting at a desk with hand raised high, a speech bubble above containing a large green check mark, a teacher nodding nearby"},
-    {"word": "any", "sentence": "You may take any marker.", "scene": "A row of five different colored markers on a desk with an open hand hovering above them, undecided, small question marks over each"},
-    {"word": "anybody", "sentence": "Can anybody help me?", "scene": "A student holding a heavy box turning toward a group of classmates, a large question mark above, several classmates beginning to raise their hands"},
-    {"word": "anyone", "sentence": "Does anyone have a pencil?", "scene": "A classroom where one student holds a single pencil up high in the air while others look toward them, a small question mark above the asking student"},
-    {"word": "anything", "sentence": "You can put anything in this backpack.", "scene": "An open backpack with many different objects floating out of it: a pencil, a soccer ball, an apple, a notebook and a water bottle"},
-    {"word": "anyway", "sentence": "The umbrella broke, but she walked anyway.", "scene": "A student walking forward in the rain holding a clearly broken bent umbrella, still smiling and stepping confidently"},
-    {"word": "apple", "sentence": "I eat an apple every day.", "scene": "A single bright red apple with a green leaf on its stem, resting on a wooden desktop, centered and clean"},
-    {"word": "April", "sentence": "April is a rainy month.", "scene": "A calendar page with the heading APRIL and a grid of dates, surrounded by falling raindrops and blooming tulips"},
-    {"word": "are", "sentence": "We are friends.", "scene": "Three teens standing close together with arms around each other's shoulders, all smiling at the viewer"},
-    {"word": "aren't", "sentence": "These shoes aren't the same.", "scene": "Two clearly different shoes side by side, one a blue sneaker and one a brown boot, with a large red X between them and an unequal look"},
-    {"word": "argue", "sentence": "They had an argument.", "scene": "Two teens standing face to face with hands out in disagreement, each with a jagged zigzag speech bubble above their head, frustrated but not violent"},
-    {"word": "arithmetic", "sentence": "Arithmetic uses numbers.", "scene": "A classroom chalkboard covered with large plus, minus, multiplication and division symbols and simple number problems"},
-    {"word": "arm", "sentence": "I raised my arm.", "scene": "A teen standing and flexing one bent arm upward, with a thin pointer line labeling the arm from shoulder to hand"},
-    {"word": "around", "sentence": "He ran around the track.", "scene": "An oval running track seen from above at an angle with a student running on it and a large circular arrow following the loop"},
-    {"word": "art", "sentence": "I love art class.", "scene": "A wooden easel holding a colorful painting, with a paint palette, brushes in a jar and a student painting beside it"},
-    {"word": "as", "sentence": "He is as tall as his friend.", "scene": "Two students standing back to back at exactly the same height with a horizontal dashed measuring line running level across the tops of both heads"},
-    {"word": "ask", "sentence": "I asked my teacher a question.", "scene": "A student with hand raised at a desk, a speech bubble above containing a large question mark, a teacher turning to listen"},
-    {"word": "asleep", "sentence": "She is asleep.", "scene": "A teen sleeping peacefully in a bed under a blanket, eyes closed, with three floating Z letters rising above the pillow and a dark window"},
-    {"word": "astronaut", "sentence": "The astronaut floats in space.", "scene": "An astronaut in a white spacesuit and reflective helmet floating in dark space with stars and the curved blue Earth behind"},
-    {"word": "at", "sentence": "I waited at the bus stop.", "scene": "A student standing directly beside a bus stop sign on a sidewalk with a red location pin marker floating above their head"},
-    {"word": "ate", "sentence": "I ate my whole lunch.", "scene": "An empty plate with only a few crumbs and a fork resting on it, a satisfied student sitting behind it patting their stomach"},
-    {"word": "August", "sentence": "August is a hot month.", "scene": "A calendar page with the heading AUGUST and a grid of dates, with a bright sun, a beach ball and a sand pail beside it"},
-    {"word": "aunt", "sentence": "My aunt came to visit.", "scene": "A warm adult woman hugging a smiling teenager in a living room doorway, a suitcase beside her"},
-    {"word": "automobile", "sentence": "An automobile is a car.", "scene": "A clean blue four-door sedan car parked on a driveway, three-quarter front view, clearly showing wheels, windows and doors"},
-    {"word": "autumn", "sentence": "Leaves fall in autumn.", "scene": "A tree with orange and red leaves, several leaves drifting down through the air, and a raked pile of leaves on the ground"},
-    {"word": "awake", "sentence": "I am awake now.", "scene": "A teen sitting upright in bed with eyes wide open and arms stretching, a ringing alarm clock on the nightstand and morning sunlight through the window"},
-    {"word": "away", "sentence": "The bus drove away.", "scene": "A student on a sidewalk waving goodbye as a yellow school bus drives off into the distance, with a long arrow pointing away toward the horizon"},
-    {"word": "awful", "sentence": "The smell was awful.", "scene": "A teen pinching their nose and leaning back from a plate of burnt blackened food on a table, with wavy green stink lines rising from the plate"},
-    {"word": "awhile", "sentence": "We waited awhile for the bus.", "scene": "A student sitting on a bench at a bus stop looking at a wristwatch, with a large hourglass floating beside them showing sand running down"}
-  ]
+  "audience": "Middle school, Lake Drive School"
+ },
+ "words": [
+  {
+   "word": "accident",
+   "letter": "A",
+   "sentence": "It was an accident. The paint spilled."
+  },
+  {
+   "word": "add",
+   "letter": "A",
+   "sentence": "Add two and three to get five."
+  },
+  {
+   "word": "airplane",
+   "letter": "A",
+   "sentence": "The airplane flies above the clouds."
+  },
+  {
+   "word": "airport",
+   "letter": "A",
+   "sentence": "We waited for our plane at the airport."
+  },
+  {
+   "word": "angry",
+   "letter": "A",
+   "sentence": "He felt angry when he lost the game."
+  },
+  {
+   "word": "animal",
+   "letter": "A",
+   "sentence": "A dog is my favorite animal."
+  },
+  {
+   "word": "apple",
+   "letter": "A",
+   "sentence": "I packed an apple for lunch."
+  },
+  {
+   "word": "arm",
+   "letter": "A",
+   "sentence": "I raised my arm to answer."
+  },
+  {
+   "word": "art",
+   "letter": "A",
+   "sentence": "Art class is on Tuesday."
+  },
+  {
+   "word": "astronaut",
+   "letter": "A",
+   "sentence": "The astronaut floated in space."
+  },
+  {
+   "word": "bag",
+   "letter": "B",
+   "sentence": "My bag is full of books."
+  },
+  {
+   "word": "bake",
+   "letter": "B",
+   "sentence": "We bake bread on Sundays."
+  },
+  {
+   "word": "balloon",
+   "letter": "B",
+   "sentence": "The red balloon floated away."
+  },
+  {
+   "word": "baseball",
+   "letter": "B",
+   "sentence": "He hit the baseball over the fence."
+  },
+  {
+   "word": "basketball",
+   "letter": "B",
+   "sentence": "She plays basketball after school."
+  },
+  {
+   "word": "beach",
+   "letter": "B",
+   "sentence": "We swam at the beach all day."
+  },
+  {
+   "word": "bear",
+   "letter": "B",
+   "sentence": "A brown bear walked through the trees."
+  },
+  {
+   "word": "bike",
+   "letter": "B",
+   "sentence": "I ride my bike to school."
+  },
+  {
+   "word": "bird",
+   "letter": "B",
+   "sentence": "A small bird landed on the fence."
+  },
+  {
+   "word": "birthday",
+   "letter": "B",
+   "sentence": "My birthday is in October."
+  },
+  {
+   "word": "blanket",
+   "letter": "B",
+   "sentence": "I pulled the blanket over my feet."
+  },
+  {
+   "word": "boat",
+   "letter": "B",
+   "sentence": "The boat crossed the lake."
+  },
+  {
+   "word": "book",
+   "letter": "B",
+   "sentence": "This book has three hundred pages."
+  },
+  {
+   "word": "box",
+   "letter": "B",
+   "sentence": "Put the shoes back in the box."
+  },
+  {
+   "word": "breakfast",
+   "letter": "B",
+   "sentence": "I eat breakfast before school."
+  },
+  {
+   "word": "brother",
+   "letter": "B",
+   "sentence": "My brother is older than me."
+  },
+  {
+   "word": "cake",
+   "letter": "C",
+   "sentence": "She put candles on the cake."
+  },
+  {
+   "word": "camera",
+   "letter": "C",
+   "sentence": "I took a picture with my camera."
+  },
+  {
+   "word": "candy",
+   "letter": "C",
+   "sentence": "The candy was too sweet."
+  },
+  {
+   "word": "chair",
+   "letter": "C",
+   "sentence": "Pull your chair up to the desk."
+  },
+  {
+   "word": "cheese",
+   "letter": "C",
+   "sentence": "I put cheese on my sandwich."
+  },
+  {
+   "word": "chicken",
+   "letter": "C",
+   "sentence": "We had chicken for dinner."
+  },
+  {
+   "word": "chocolate",
+   "letter": "C",
+   "sentence": "Chocolate is my favorite flavor."
+  },
+  {
+   "word": "city",
+   "letter": "C",
+   "sentence": "The city has tall buildings."
+  },
+  {
+   "word": "clean",
+   "letter": "C",
+   "sentence": "I clean my room on Saturday."
+  },
+  {
+   "word": "climb",
+   "letter": "C",
+   "sentence": "We climb the rope in gym."
+  },
+  {
+   "word": "clock",
+   "letter": "C",
+   "sentence": "The clock says three o'clock."
+  },
+  {
+   "word": "cloud",
+   "letter": "C",
+   "sentence": "One white cloud crossed the sky."
+  },
+  {
+   "word": "clown",
+   "letter": "C",
+   "sentence": "The clown made everyone laugh."
+  },
+  {
+   "word": "coat",
+   "letter": "C",
+   "sentence": "Wear your coat. It is cold."
+  },
+  {
+   "word": "computer",
+   "letter": "C",
+   "sentence": "I typed my report on the computer."
+  },
+  {
+   "word": "cook",
+   "letter": "C",
+   "sentence": "My father can cook rice."
+  },
+  {
+   "word": "cookie",
+   "letter": "C",
+   "sentence": "May I have one cookie?"
+  },
+  {
+   "word": "dance",
+   "letter": "D",
+   "sentence": "We dance at the school party."
+  },
+  {
+   "word": "dark",
+   "letter": "D",
+   "sentence": "The hallway was dark at night."
+  },
+  {
+   "word": "dentist",
+   "letter": "D",
+   "sentence": "The dentist checked my teeth."
+  },
+  {
+   "word": "desk",
+   "letter": "D",
+   "sentence": "My books are on my desk."
+  },
+  {
+   "word": "dessert",
+   "letter": "D",
+   "sentence": "We had ice cream for dessert."
+  },
+  {
+   "word": "dinosaur",
+   "letter": "D",
+   "sentence": "This dinosaur lived long ago."
+  },
+  {
+   "word": "dirt",
+   "letter": "D",
+   "sentence": "My shoes were covered in dirt."
+  },
+  {
+   "word": "dish",
+   "letter": "D",
+   "sentence": "I washed every dish."
+  },
+  {
+   "word": "doctor",
+   "letter": "D",
+   "sentence": "The doctor checked my ears."
+  },
+  {
+   "word": "doll",
+   "letter": "D",
+   "sentence": "She kept the doll on her shelf."
+  },
+  {
+   "word": "dollar",
+   "letter": "D",
+   "sentence": "The pencil cost one dollar."
+  },
+  {
+   "word": "door",
+   "letter": "D",
+   "sentence": "Please close the door."
+  },
+  {
+   "word": "dragon",
+   "letter": "D",
+   "sentence": "The dragon in the story breathed fire."
+  },
+  {
+   "word": "draw",
+   "letter": "D",
+   "sentence": "I like to draw animals."
+  },
+  {
+   "word": "dress",
+   "letter": "D",
+   "sentence": "She wore a blue dress."
+  },
+  {
+   "word": "drink",
+   "letter": "D",
+   "sentence": "I drink water after I run."
+  },
+  {
+   "word": "drive",
+   "letter": "D",
+   "sentence": "My mother will drive us home."
+  },
+  {
+   "word": "drum",
+   "letter": "D",
+   "sentence": "He plays the drum in band."
+  },
+  {
+   "word": "duck",
+   "letter": "D",
+   "sentence": "A duck swam across the pond."
+  },
+  {
+   "word": "ear",
+   "letter": "E",
+   "sentence": "My hearing aid sits behind my ear."
+  },
+  {
+   "word": "earth",
+   "letter": "E",
+   "sentence": "Earth is the planet we live on."
+  },
+  {
+   "word": "egg",
+   "letter": "E",
+   "sentence": "I ate one egg for breakfast."
+  },
+  {
+   "word": "elephant",
+   "letter": "E",
+   "sentence": "The elephant has a long trunk."
+  },
+  {
+   "word": "exercise",
+   "letter": "E",
+   "sentence": "We exercise in gym class."
+  },
+  {
+   "word": "eye",
+   "letter": "E",
+   "sentence": "Something got in my eye."
+  },
+  {
+   "word": "face",
+   "letter": "F",
+   "sentence": "A big smile filled her face."
+  },
+  {
+   "word": "family",
+   "letter": "F",
+   "sentence": "My family eats dinner together."
+  },
+  {
+   "word": "farm",
+   "letter": "F",
+   "sentence": "Cows live on the farm."
+  },
+  {
+   "word": "farmer",
+   "letter": "F",
+   "sentence": "The farmer drove the tractor."
+  },
+  {
+   "word": "feet",
+   "letter": "F",
+   "sentence": "My feet hurt after the hike."
+  },
+  {
+   "word": "fence",
+   "letter": "F",
+   "sentence": "The ball went over the fence."
+  },
+  {
+   "word": "field",
+   "letter": "F",
+   "sentence": "We played soccer on the field."
+  },
+  {
+   "word": "finger",
+   "letter": "F",
+   "sentence": "I pointed with one finger."
+  },
+  {
+   "word": "fire",
+   "letter": "F",
+   "sentence": "The fire kept us warm."
+  },
+  {
+   "word": "fish",
+   "letter": "F",
+   "sentence": "A silver fish swam past."
+  },
+  {
+   "word": "flag",
+   "letter": "F",
+   "sentence": "The flag waved in the wind."
+  },
+  {
+   "word": "floor",
+   "letter": "F",
+   "sentence": "Keep your backpack off the floor."
+  },
+  {
+   "word": "flower",
+   "letter": "F",
+   "sentence": "One yellow flower opened today."
+  },
+  {
+   "word": "food",
+   "letter": "F",
+   "sentence": "We packed food for the trip."
+  },
+  {
+   "word": "forest",
+   "letter": "F",
+   "sentence": "Tall trees filled the forest."
+  },
+  {
+   "word": "game",
+   "letter": "G",
+   "sentence": "We won the game by two points."
+  },
+  {
+   "word": "garden",
+   "letter": "G",
+   "sentence": "Tomatoes grow in our garden."
+  },
+  {
+   "word": "ghost",
+   "letter": "G",
+   "sentence": "The ghost in the story was friendly."
+  },
+  {
+   "word": "giant",
+   "letter": "G",
+   "sentence": "The giant was taller than the trees."
+  },
+  {
+   "word": "gift",
+   "letter": "G",
+   "sentence": "I wrapped the gift in blue paper."
+  },
+  {
+   "word": "glass",
+   "letter": "G",
+   "sentence": "Pour the milk into a glass."
+  },
+  {
+   "word": "gold",
+   "letter": "G",
+   "sentence": "The ring is made of gold."
+  },
+  {
+   "word": "grandfather",
+   "letter": "G",
+   "sentence": "My grandfather taught me to fish."
+  },
+  {
+   "word": "grandmother",
+   "letter": "G",
+   "sentence": "My grandmother makes the best soup."
+  },
+  {
+   "word": "grass",
+   "letter": "G",
+   "sentence": "The grass is wet this morning."
+  },
+  {
+   "word": "gym",
+   "letter": "G",
+   "sentence": "We run laps in the gym."
+  },
+  {
+   "word": "hair",
+   "letter": "H",
+   "sentence": "She tied her hair back."
+  },
+  {
+   "word": "halloween",
+   "letter": "H",
+   "sentence": "We wear costumes on Halloween."
+  },
+  {
+   "word": "hand",
+   "letter": "H",
+   "sentence": "Raise your hand to answer."
+  },
+  {
+   "word": "head",
+   "letter": "H",
+   "sentence": "I wore a hat on my head."
+  },
+  {
+   "word": "heart",
+   "letter": "H",
+   "sentence": "My heart beat fast after running."
+  },
+  {
+   "word": "help",
+   "letter": "H",
+   "sentence": "Can you help me carry this?"
+  },
+  {
+   "word": "hide",
+   "letter": "H",
+   "sentence": "We hide behind the door."
+  },
+  {
+   "word": "hill",
+   "letter": "H",
+   "sentence": "We rode our bikes down the hill."
+  },
+  {
+   "word": "hole",
+   "letter": "H",
+   "sentence": "There is a hole in my sock."
+  },
+  {
+   "word": "home",
+   "letter": "H",
+   "sentence": "I walk home after school."
+  },
+  {
+   "word": "horse",
+   "letter": "H",
+   "sentence": "The horse ran across the field."
+  },
+  {
+   "word": "hospital",
+   "letter": "H",
+   "sentence": "The nurse works at the hospital."
+  },
+  {
+   "word": "house",
+   "letter": "H",
+   "sentence": "Our house has a red door."
+  },
+  {
+   "word": "hungry",
+   "letter": "H",
+   "sentence": "I was hungry before lunch."
+  },
+  {
+   "word": "ice",
+   "letter": "I",
+   "sentence": "The ice melted in my drink."
+  },
+  {
+   "word": "ice cream",
+   "letter": "I",
+   "sentence": "We ate ice cream at the park."
+  },
+  {
+   "word": "island",
+   "letter": "I",
+   "sentence": "The island is surrounded by water."
+  },
+  {
+   "word": "jar",
+   "letter": "J",
+   "sentence": "The cookies are in the jar."
+  },
+  {
+   "word": "juice",
+   "letter": "J",
+   "sentence": "I drink orange juice with breakfast."
+  },
+  {
+   "word": "jump",
+   "letter": "J",
+   "sentence": "I can jump over the puddle."
+  },
+  {
+   "word": "kick",
+   "letter": "K",
+   "sentence": "Kick the ball to me."
+  },
+  {
+   "word": "king",
+   "letter": "K",
+   "sentence": "The king wore a gold crown."
+  },
+  {
+   "word": "kiss",
+   "letter": "K",
+   "sentence": "She gave the baby a kiss."
+  },
+  {
+   "word": "kitchen",
+   "letter": "K",
+   "sentence": "We cook in the kitchen."
+  },
+  {
+   "word": "kite",
+   "letter": "K",
+   "sentence": "My kite flew above the trees."
+  },
+  {
+   "word": "kitten",
+   "letter": "K",
+   "sentence": "The kitten fell asleep in my lap."
+  },
+  {
+   "word": "knee",
+   "letter": "K",
+   "sentence": "I scraped my knee on the sidewalk."
+  },
+  {
+   "word": "knife",
+   "letter": "K",
+   "sentence": "Cut the bread with a knife."
+  },
+  {
+   "word": "ladder",
+   "letter": "L",
+   "sentence": "He climbed the ladder to the roof."
+  },
+  {
+   "word": "lake",
+   "letter": "L",
+   "sentence": "We swam across the lake."
+  },
+  {
+   "word": "lamp",
+   "letter": "L",
+   "sentence": "Turn on the lamp so you can read."
+  },
+  {
+   "word": "laugh",
+   "letter": "L",
+   "sentence": "That joke made me laugh."
+  },
+  {
+   "word": "leg",
+   "letter": "L",
+   "sentence": "I hurt my leg playing soccer."
+  },
+  {
+   "word": "letter",
+   "letter": "L",
+   "sentence": "I mailed a letter to my cousin."
+  },
+  {
+   "word": "library",
+   "letter": "L",
+   "sentence": "I borrowed two books from the library."
+  },
+  {
+   "word": "light",
+   "letter": "L",
+   "sentence": "The light is too bright."
+  },
+  {
+   "word": "lion",
+   "letter": "L",
+   "sentence": "The lion has a thick mane."
+  },
+  {
+   "word": "lock",
+   "letter": "L",
+   "sentence": "Remember to lock your locker."
+  },
+  {
+   "word": "lunch",
+   "letter": "L",
+   "sentence": "We eat lunch at noon."
+  },
+  {
+   "word": "magic",
+   "letter": "M",
+   "sentence": "The card trick looked like magic."
+  },
+  {
+   "word": "mailman",
+   "letter": "M",
+   "sentence": "The mailman brought a package."
+  },
+  {
+   "word": "mall",
+   "letter": "M",
+   "sentence": "We met our friends at the mall."
+  },
+  {
+   "word": "math",
+   "letter": "M",
+   "sentence": "Math is my first class."
+  },
+  {
+   "word": "meat",
+   "letter": "M",
+   "sentence": "He does not eat meat."
+  },
+  {
+   "word": "medicine",
+   "letter": "M",
+   "sentence": "I took medicine for my cold."
+  },
+  {
+   "word": "milk",
+   "letter": "M",
+   "sentence": "I poured milk on my cereal."
+  },
+  {
+   "word": "money",
+   "letter": "M",
+   "sentence": "I saved money for a new game."
+  },
+  {
+   "word": "monkey",
+   "letter": "M",
+   "sentence": "The monkey hung from a branch."
+  },
+  {
+   "word": "monster",
+   "letter": "M",
+   "sentence": "The monster in the movie was not real."
+  },
+  {
+   "word": "moon",
+   "letter": "M",
+   "sentence": "The moon was full last night."
+  },
+  {
+   "word": "mother",
+   "letter": "M",
+   "sentence": "My mother drives me to practice."
+  },
+  {
+   "word": "mountain",
+   "letter": "M",
+   "sentence": "Snow covered the top of the mountain."
+  },
+  {
+   "word": "mouse",
+   "letter": "M",
+   "sentence": "A small mouse ran under the shelf."
+  },
+  {
+   "word": "mouth",
+   "letter": "M",
+   "sentence": "Cover your mouth when you cough."
+  },
+  {
+   "word": "movie",
+   "letter": "M",
+   "sentence": "We watched a movie on Friday."
+  },
+  {
+   "word": "mud",
+   "letter": "M",
+   "sentence": "My boots were thick with mud."
+  },
+  {
+   "word": "music",
+   "letter": "M",
+   "sentence": "The band played music at the assembly."
+  },
+  {
+   "word": "name",
+   "letter": "N",
+   "sentence": "Write your name at the top."
+  },
+  {
+   "word": "neck",
+   "letter": "N",
+   "sentence": "I wore a scarf around my neck."
+  },
+  {
+   "word": "neighbor",
+   "letter": "N",
+   "sentence": "Our neighbor helped us move."
+  },
+  {
+   "word": "nest",
+   "letter": "N",
+   "sentence": "Three eggs sat in the nest."
+  },
+  {
+   "word": "night",
+   "letter": "N",
+   "sentence": "The stars come out at night."
+  },
+  {
+   "word": "nose",
+   "letter": "N",
+   "sentence": "My nose was cold outside."
+  },
+  {
+   "word": "nurse",
+   "letter": "N",
+   "sentence": "The nurse checked my ear."
+  },
+  {
+   "word": "nut",
+   "letter": "N",
+   "sentence": "A squirrel buried the nut."
+  },
+  {
+   "word": "ocean",
+   "letter": "O",
+   "sentence": "We saw whales in the ocean."
+  },
+  {
+   "word": "office",
+   "letter": "O",
+   "sentence": "The principal works in the office."
+  },
+  {
+   "word": "open",
+   "letter": "O",
+   "sentence": "Please open the window."
+  },
+  {
+   "word": "orange",
+   "letter": "O",
+   "sentence": "I peeled an orange for lunch."
+  },
+  {
+   "word": "oven",
+   "letter": "O",
+   "sentence": "The bread is in the oven."
+  },
+  {
+   "word": "outside",
+   "letter": "O",
+   "sentence": "We ate lunch outside today."
+  },
+  {
+   "word": "paint",
+   "letter": "P",
+   "sentence": "We paint in art class."
+  },
+  {
+   "word": "pants",
+   "letter": "P",
+   "sentence": "My pants have deep pockets."
+  },
+  {
+   "word": "paper",
+   "letter": "P",
+   "sentence": "I need one sheet of paper."
+  },
+  {
+   "word": "park",
+   "letter": "P",
+   "sentence": "We play basketball at the park."
+  },
+  {
+   "word": "party",
+   "letter": "P",
+   "sentence": "The party starts at four."
+  },
+  {
+   "word": "pen",
+   "letter": "P",
+   "sentence": "Sign your name with a pen."
+  },
+  {
+   "word": "pencil",
+   "letter": "P",
+   "sentence": "My pencil needs sharpening."
+  },
+  {
+   "word": "phone",
+   "letter": "P",
+   "sentence": "I texted her from my phone."
+  },
+  {
+   "word": "piano",
+   "letter": "P",
+   "sentence": "She plays the piano every day."
+  },
+  {
+   "word": "picture",
+   "letter": "P",
+   "sentence": "I drew a picture of my dog."
+  },
+  {
+   "word": "plant",
+   "letter": "P",
+   "sentence": "The plant needs water."
+  },
+  {
+   "word": "play",
+   "letter": "P",
+   "sentence": "We play soccer after school."
+  },
+  {
+   "word": "police",
+   "letter": "P",
+   "sentence": "The police officer helped us cross."
+  },
+  {
+   "word": "potato",
+   "letter": "P",
+   "sentence": "We baked a potato for dinner."
+  },
+  {
+   "word": "present",
+   "letter": "P",
+   "sentence": "I opened my present first."
+  },
+  {
+   "word": "pumpkin",
+   "letter": "P",
+   "sentence": "We carved a pumpkin in October."
+  },
+  {
+   "word": "puppy",
+   "letter": "P",
+   "sentence": "The puppy chewed my shoe."
+  },
+  {
+   "word": "queen",
+   "letter": "Q",
+   "sentence": "The queen waved to the crowd."
+  },
+  {
+   "word": "quiet",
+   "letter": "Q",
+   "sentence": "The library is a quiet place."
+  },
+  {
+   "word": "rabbit",
+   "letter": "R",
+   "sentence": "A rabbit hopped across the yard."
+  },
+  {
+   "word": "rain",
+   "letter": "R",
+   "sentence": "The rain stopped before recess."
+  },
+  {
+   "word": "rainbow",
+   "letter": "R",
+   "sentence": "A rainbow appeared after the storm."
+  },
+  {
+   "word": "read",
+   "letter": "R",
+   "sentence": "I read two chapters last night."
+  },
+  {
+   "word": "rice",
+   "letter": "R",
+   "sentence": "We ate rice with dinner."
+  },
+  {
+   "word": "ride",
+   "letter": "R",
+   "sentence": "I ride the bus to school."
+  },
+  {
+   "word": "ring",
+   "letter": "R",
+   "sentence": "She wore a silver ring."
+  },
+  {
+   "word": "river",
+   "letter": "R",
+   "sentence": "The river runs past our town."
+  },
+  {
+   "word": "road",
+   "letter": "R",
+   "sentence": "The road turns left at the light."
+  },
+  {
+   "word": "robot",
+   "letter": "R",
+   "sentence": "Our team built a robot for science class."
+  },
+  {
+   "word": "rock",
+   "letter": "R",
+   "sentence": "I found a smooth rock by the water."
+  },
+  {
+   "word": "rocket",
+   "letter": "R",
+   "sentence": "The rocket lifted off."
+  },
+  {
+   "word": "roof",
+   "letter": "R",
+   "sentence": "Snow covered the roof."
+  },
+  {
+   "word": "room",
+   "letter": "R",
+   "sentence": "My room is upstairs."
+  },
+  {
+   "word": "rope",
+   "letter": "R",
+   "sentence": "We climbed the rope in gym."
+  },
+  {
+   "word": "run",
+   "letter": "R",
+   "sentence": "I run a mile every morning."
+  },
+  {
+   "word": "sandwich",
+   "letter": "S",
+   "sentence": "I made a cheese sandwich."
+  },
+  {
+   "word": "scared",
+   "letter": "S",
+   "sentence": "The dark hallway made me scared."
+  },
+  {
+   "word": "school",
+   "letter": "S",
+   "sentence": "Our school starts at eight."
+  },
+  {
+   "word": "science",
+   "letter": "S",
+   "sentence": "We did an experiment in science."
+  },
+  {
+   "word": "scissors",
+   "letter": "S",
+   "sentence": "Cut the paper with scissors."
+  },
+  {
+   "word": "shirt",
+   "letter": "S",
+   "sentence": "My shirt has blue stripes."
+  },
+  {
+   "word": "shoe",
+   "letter": "S",
+   "sentence": "There is a hole in my shoe."
+  },
+  {
+   "word": "shop",
+   "letter": "S",
+   "sentence": "We shop for groceries on Saturday."
+  },
+  {
+   "word": "sidewalk",
+   "letter": "S",
+   "sentence": "We walked along the sidewalk."
+  },
+  {
+   "word": "sing",
+   "letter": "S",
+   "sentence": "We sing at the winter concert."
+  },
+  {
+   "word": "sister",
+   "letter": "S",
+   "sentence": "My sister is in third grade."
+  },
+  {
+   "word": "skate",
+   "letter": "S",
+   "sentence": "I skate on the frozen pond."
+  },
+  {
+   "word": "sleep",
+   "letter": "S",
+   "sentence": "I sleep eight hours a night."
+  },
+  {
+   "word": "slide",
+   "letter": "S",
+   "sentence": "The little kids went down the slide."
+  },
+  {
+   "word": "smell",
+   "letter": "S",
+   "sentence": "I smell bread baking."
+  },
+  {
+   "word": "smile",
+   "letter": "S",
+   "sentence": "A big smile crossed her face."
+  },
+  {
+   "word": "soap",
+   "letter": "S",
+   "sentence": "Wash your hands with soap."
+  },
+  {
+   "word": "soccer",
+   "letter": "S",
+   "sentence": "We won our soccer game."
+  },
+  {
+   "word": "spider",
+   "letter": "S",
+   "sentence": "A spider built a web in the corner."
+  },
+  {
+   "word": "sport",
+   "letter": "S",
+   "sentence": "Basketball is my favorite sport."
+  },
+  {
+   "word": "stairs",
+   "letter": "S",
+   "sentence": "We ran up the stairs."
+  },
+  {
+   "word": "stand",
+   "letter": "S",
+   "sentence": "Please stand for the flag."
+  },
+  {
+   "word": "star",
+   "letter": "S",
+   "sentence": "One bright star appeared first."
+  },
+  {
+   "word": "stomach",
+   "letter": "S",
+   "sentence": "My stomach hurt after lunch."
+  },
+  {
+   "word": "store",
+   "letter": "S",
+   "sentence": "The store closes at nine."
+  },
+  {
+   "word": "storm",
+   "letter": "S",
+   "sentence": "The storm knocked down a tree."
+  },
+  {
+   "word": "stove",
+   "letter": "S",
+   "sentence": "The pot is on the stove."
+  },
+  {
+   "word": "street",
+   "letter": "S",
+   "sentence": "Look both ways before crossing the street."
+  },
+  {
+   "word": "swim",
+   "letter": "S",
+   "sentence": "I swim laps at the pool."
+  },
+  {
+   "word": "swing",
+   "letter": "S",
+   "sentence": "She pushed me on the swing."
+  },
+  {
+   "word": "table",
+   "letter": "T",
+   "sentence": "We set the table for dinner."
+  },
+  {
+   "word": "tail",
+   "letter": "T",
+   "sentence": "The dog wagged its tail."
+  },
+  {
+   "word": "teacher",
+   "letter": "T",
+   "sentence": "My teacher signs very clearly."
+  },
+  {
+   "word": "teeth",
+   "letter": "T",
+   "sentence": "I brush my teeth twice a day."
+  },
+  {
+   "word": "tiger",
+   "letter": "T",
+   "sentence": "The tiger has orange stripes."
+  },
+  {
+   "word": "time",
+   "letter": "T",
+   "sentence": "What time does the bus come?"
+  },
+  {
+   "word": "tired",
+   "letter": "T",
+   "sentence": "I was tired after practice."
+  },
+  {
+   "word": "tissue",
+   "letter": "T",
+   "sentence": "I need a tissue for my nose."
+  },
+  {
+   "word": "tongue",
+   "letter": "T",
+   "sentence": "I burned my tongue on the soup."
+  },
+  {
+   "word": "touch",
+   "letter": "T",
+   "sentence": "Do not touch the wet paint."
+  },
+  {
+   "word": "town",
+   "letter": "T",
+   "sentence": "Our town has one movie theater."
+  },
+  {
+   "word": "train",
+   "letter": "T",
+   "sentence": "The train arrives at six."
+  },
+  {
+   "word": "tree",
+   "letter": "T",
+   "sentence": "We planted a tree at school."
+  },
+  {
+   "word": "truck",
+   "letter": "T",
+   "sentence": "The truck carried our furniture."
+  },
+  {
+   "word": "turkey",
+   "letter": "T",
+   "sentence": "We eat turkey in November."
+  },
+  {
+   "word": "turtle",
+   "letter": "T",
+   "sentence": "The turtle moved slowly."
+  },
+  {
+   "word": "uncle",
+   "letter": "U",
+   "sentence": "My uncle taught me to ride."
+  },
+  {
+   "word": "vacation",
+   "letter": "V",
+   "sentence": "We go to the beach on vacation."
+  },
+  {
+   "word": "vegetable",
+   "letter": "V",
+   "sentence": "A carrot is my favorite vegetable."
+  },
+  {
+   "word": "walk",
+   "letter": "W",
+   "sentence": "I walk to school with my sister."
+  },
+  {
+   "word": "wash",
+   "letter": "W",
+   "sentence": "Wash your hands before lunch."
+  },
+  {
+   "word": "watch",
+   "letter": "W",
+   "sentence": "My watch stopped last night."
+  },
+  {
+   "word": "water",
+   "letter": "W",
+   "sentence": "I drink water after gym."
+  },
+  {
+   "word": "wave",
+   "letter": "W",
+   "sentence": "A big wave splashed my legs."
+  },
+  {
+   "word": "weather",
+   "letter": "W",
+   "sentence": "The weather is warm today."
+  },
+  {
+   "word": "wet",
+   "letter": "W",
+   "sentence": "My jacket is wet from the rain."
+  },
+  {
+   "word": "window",
+   "letter": "W",
+   "sentence": "Open the window for fresh air."
+  },
+  {
+   "word": "winter",
+   "letter": "W",
+   "sentence": "It snows here in winter."
+  },
+  {
+   "word": "witch",
+   "letter": "W",
+   "sentence": "The witch in the story flew away."
+  },
+  {
+   "word": "woman",
+   "letter": "W",
+   "sentence": "The woman next door is a nurse."
+  },
+  {
+   "word": "wood",
+   "letter": "W",
+   "sentence": "The table is made of wood."
+  },
+  {
+   "word": "work",
+   "letter": "W",
+   "sentence": "My parents work downtown."
+  },
+  {
+   "word": "write",
+   "letter": "W",
+   "sentence": "Write your answer on the line."
+  },
+  {
+   "word": "x-ray",
+   "letter": "X",
+   "sentence": "The x-ray showed a broken bone."
+  },
+  {
+   "word": "xylophone",
+   "letter": "X",
+   "sentence": "She played the xylophone in music class."
+  },
+  {
+   "word": "yard",
+   "letter": "Y",
+   "sentence": "We raked leaves in the yard."
+  },
+  {
+   "word": "yawn",
+   "letter": "Y",
+   "sentence": "A long yawn made my eyes water."
+  },
+  {
+   "word": "yellow",
+   "letter": "Y",
+   "sentence": "The school bus is yellow."
+  },
+  {
+   "word": "young",
+   "letter": "Y",
+   "sentence": "My cousin is too young for school."
+  },
+  {
+   "word": "zoo",
+   "letter": "Z",
+   "sentence": "We saw elephants at the zoo."
+  }
+ ]
 }

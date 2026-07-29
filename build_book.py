@@ -27,8 +27,7 @@ STEM = os.environ.get("STEM", "Lake Drive Picture Dictionary - A")
 
 # Grid is configurable so densities can be compared on real pages rather than
 # argued about. Override with e.g. GRID=6x2 python3 build_book.py
-COLS, ROWS = (int(n) for n in os.environ.get('GRID', '5x2').split('x'))
-PER_PAGE = COLS * ROWS
+MAX_PER_PAGE = int(os.environ.get('MAX_PER_PAGE', '10'))
 PAGE_W, PAGE_H = (float(v) for v in os.environ.get('PAGE','11.0x8.5').split('x'))
 
 # ---------------------------------------------------------------- brand
@@ -51,18 +50,88 @@ M = 0.45
 GUT_X, GUT_Y = 0.22, 0.22
 GRID_TOP = 1.30
 GRID_BOT = 0.48
-CELL_W = (PAGE_W - 2 * M - (COLS - 1) * GUT_X) / COLS
-CELL_H = (PAGE_H - GRID_TOP - GRID_BOT - (ROWS - 1) * GUT_Y) / ROWS
-# The image is square, so it is capped by whichever of width or leftover
-# vertical space is smaller once the headword and sentence have their room.
-TEXT_H = 0.95
-CELL_IMG = min(CELL_W, CELL_H - TEXT_H)
-# Type scales with the column, but with a floor: below ~7.5pt an example
-# sentence stops being readable for the audience this book is for, which is a
-# harder limit than image legibility.
-SCALE = CELL_W / 2.36
-WORD_PT = max(10.0, 16 * SCALE)
-SENT_PT = max(7.5, 8.5 * SCALE)
+AREA_W = PAGE_W - 2 * M
+AREA_H = PAGE_H - GRID_TOP - GRID_BOT
+TEXT_H = 0.95            # headword + rule + sentence beneath each image
+
+# No single image gets larger than this. A one-word letter on a full landscape
+# page could otherwise take a 5.8in picture, which needs 2K generation to stay
+# above 300dpi and looks overblown next to the rest of the book.
+IMG_MAX = 3.30
+
+
+def grid_dims(n):
+    """Columns and rows for n words on one page.
+
+    Three or fewer words go in a single row so they get big pictures; a sparse
+    letter forced into two rows would end up with SMALLER artwork than a full
+    page, which is backwards. Four or more use two rows, so the column count
+    sets the image size. Past five columns the images shrink while row height
+    goes unused, hence MAX_PER_PAGE of 10.
+    """
+    if n <= 3:
+        return max(1, n), 1
+    return min(5, -(-n // 2)), 2
+
+
+def grid_metrics(cols, rows):
+    """Geometry for a cols x rows grid.
+
+    The image is square and often capped by row height rather than column
+    width. When that happens the column is narrowed to the image width and the
+    block is centred with a wider gutter — otherwise the picture floats in the
+    middle of its cell while the word sits at the far left, and the two read as
+    unrelated.
+
+    Type scales off the image, not the column. Scaling off a 4.94in two-column
+    cell produced a 33pt headword that overflowed into the footer.
+    """
+    cw_raw = (AREA_W - (cols - 1) * GUT_X) / cols
+    ch_raw = (AREA_H - (rows - 1) * GUT_Y) / rows
+    img = min(cw_raw, ch_raw - TEXT_H, IMG_MAX)
+    col = img                                   # text shares the image's width
+    gut = min(0.9, (AREA_W - cols * col) / (cols - 1)) if cols > 1 else 0.0
+    x0 = M + (AREA_W - (cols * col + (cols - 1) * gut)) / 2
+
+    # centre the block vertically so single-row pages are not top-heavy
+    ch = img + TEXT_H
+    y0 = GRID_TOP + (AREA_H - (rows * ch + (rows - 1) * GUT_Y)) / 2
+
+    scale = img / 2.30
+    return (col, ch, img, gut, x0, y0,
+            max(10.0, min(30.0, 16 * scale)),
+            max(7.5, min(14.0, 8.5 * scale)))
+
+
+def page_plan(entries):
+    """Group into pages, one letter per page, split as evenly as possible.
+
+    A letter never shares a page with another letter: the book's job is lookup,
+    and a letter that reliably starts a new page is what makes that work. Splits
+    are balanced rather than greedy — 11 words become 6 + 5, not 10 + 1, so no
+    page is nearly empty.
+    """
+    pages = []
+    by_letter = {}
+    order = []
+    for e in entries:
+        L = e.get("letter") or e["word"][0].upper()
+        if L not in by_letter:
+            by_letter[L] = []
+            order.append(L)
+        by_letter[L].append(e)
+
+    for L in order:
+        words = by_letter[L]
+        n_pages = max(1, -(-len(words) // MAX_PER_PAGE))
+        base, extra = divmod(len(words), n_pages)
+        i = 0
+        for k in range(n_pages):
+            take = base + (1 if k < extra else 0)
+            pages.append({"letter": L, "words": words[i:i + take],
+                          "part": k + 1, "parts": n_pages})
+            i += take
+    return pages
 
 
 def slugify(w):
@@ -148,7 +217,7 @@ def how_to_page(cv):
 
     items = [
         ("1.  Find your word",
-         f"Words are in alphabetical order, {PER_PAGE} to a page."),
+         "Each letter starts on its own page, in alphabetical order."),
         ("2.  Look at the picture",
          "The picture shows the meaning. Details matter — faces, hands and "
          "arrows all carry information."),
@@ -174,63 +243,90 @@ def how_to_page(cv):
             leading=1.45)
 
 
-def word_cell(cv, entry, x, y):
-    ix = x + (CELL_W - CELL_IMG) / 2          # centre a square image in the column
-    cv.rounded(ix, y, CELL_IMG, CELL_IMG, WASH, r=0.1)
-    p = img_path(slugify(entry["word"]))
-    if p:
-        cv.image(p, ix, y, CELL_IMG, CELL_IMG)
-    else:
-        cv.text(ix, y + CELL_IMG / 2 - 0.06, CELL_IMG, "[ missing ]", 9, SLATE,
-                align="center")
-    ty = y + CELL_IMG + 0.12
-    cv.text(x, ty, CELL_W, entry["word"], WORD_PT, NAVY, bold=True, font=DISPLAY)
-    cv.rect(x, ty + WORD_PT / 50, 0.42, 0.045, GOLD)
-    cv.text(x, ty + WORD_PT / 50 + 0.14, CELL_W, entry["sentence"], SENT_PT,
-            INK, leading=1.3)
-
-
-def word_page(cv, chunk, page_no, total_pages):
-    cv.page(PAGE_W, PAGE_H)
-    cv.rect(0, 0, PAGE_W, PAGE_H, PAPER)
+def _header(cv, letter, sub, page_no, total_pages):
     cv.rect(0, 0, PAGE_W, 0.16, NAVY)
-    letter = chunk[0]["word"][0].upper()
     cv.rect(M, 0.44, 0.62, 0.62, NAVY)
     cv.text(M, 0.58, 0.62, letter, 22, PAPER, bold=True, font=DISPLAY,
             align="center")
     cv.text(1.22, 0.52, 5.0, "Picture Dictionary", 15, NAVY, bold=True,
             font=DISPLAY)
-    cv.text(1.22, 0.8, 5.0, f"{chunk[0]['word']}  –  {chunk[-1]['word']}",
-            9.5, SLATE)
+    cv.text(1.22, 0.8, 5.0, sub, 9.5, SLATE)
     cv.text(6.0, 0.64, 4.55, SCHOOL, 10.5, SLATE, align="right")
-    cv.rect(M, 1.16, PAGE_W - 2 * M, 0.02, LINE)
+    cv.rect(M, 1.16, AREA_W, 0.02, LINE)
 
-    for i, e in enumerate(chunk):
-        c, r = i % COLS, i // COLS
-        word_cell(cv, e, M + (CELL_W + GUT_X) * c, GRID_TOP + (CELL_H + GUT_Y) * r)
 
-    cv.rect(M, 8.02, PAGE_W - 2 * M, 0.02, LINE)
-    cv.text(M, 8.16, 6.0, f"{SCHOOL}  ·  Picture Dictionary: {SUBTITLE}",
-            8, SLATE)
+def _footer(cv, page_no, total_pages):
+    cv.rect(M, 8.02, AREA_W, 0.02, LINE)
+    cv.text(M, 8.16, 6.0, f"{SCHOOL}  ·  Picture Dictionary: {SUBTITLE}", 8,
+            SLATE)
     cv.text(6.5, 8.16, 4.05, f"Page {page_no} of {total_pages}", 8, SLATE,
             align="right")
 
 
-def index_page(cv, words):
+def word_cell(cv, entry, x, y, col, img, word_pt, sent_pt):
+    cv.rounded(x, y, img, img, WASH, r=0.1)
+    p = img_path(slugify(entry["word"]))
+    if p:
+        cv.image(p, x, y, img, img)
+    else:
+        cv.text(x, y + img / 2 - 0.06, img, "[ missing ]", 9, SLATE,
+                align="center")
+    ty = y + img + 0.12
+    cv.text(x, ty, col, entry["word"], word_pt, NAVY, bold=True, font=DISPLAY)
+    cv.rect(x, ty + word_pt / 50, 0.42, 0.045, GOLD)
+    cv.text(x, ty + word_pt / 50 + 0.14, col, entry["sentence"], sent_pt, INK,
+            leading=1.3)
+
+
+def grid_page(cv, page, page_no, total_pages):
+    words = page["words"]
+    cols, rows = grid_dims(len(words))
+    col, ch, img, gut, x0, y0, word_pt, sent_pt = grid_metrics(cols, rows)
+
+    cv.page(PAGE_W, PAGE_H)
+    cv.rect(0, 0, PAGE_W, PAGE_H, PAPER)
+    sub = (words[0]["word"] if len(words) == 1
+           else f"{words[0]['word']}  –  {words[-1]['word']}")
+    if page["parts"] > 1:
+        sub += f"   ({page['part']} of {page['parts']})"
+    _header(cv, page["letter"], sub, page_no, total_pages)
+
+    for i, e in enumerate(words):
+        c, r = i % cols, i // cols
+        word_cell(cv, e, x0 + (col + gut) * c, y0 + (ch + GUT_Y) * r,
+                  col, img, word_pt, sent_pt)
+    _footer(cv, page_no, total_pages)
+
+
+def word_page(cv, page, page_no, total_pages):
+    grid_page(cv, page, page_no, total_pages)
+
+
+def index_page(cv, entries, part, parts):
     cv.page(PAGE_W, PAGE_H)
     cv.rect(0, 0, PAGE_W, PAGE_H, PAPER)
     cv.rect(0, 0, PAGE_W, 1.35, NAVY)
-    cv.text(0.6, 0.45, 8.0, f"Word List — {SUBTITLE}", 26, PAPER, bold=True,
-            font=DISPLAY)
-    cols, per_col, col_w = 6, 12, 1.68
-    for i, w in enumerate(words):
-        c, r = divmod(i, per_col)
+    head = f"Word List — {SUBTITLE}"
+    if parts > 1:
+        head += f"  ({part} of {parts})"
+    cv.text(0.6, 0.45, 8.0, head, 26, PAPER, bold=True, font=DISPLAY)
+
+    cols, col_w = 6, 1.68
+    rows = 17
+    for i, e in enumerate(entries):
+        c, r = divmod(i, rows)
         if c >= cols:
             break
-        cv.text(0.6 + col_w * c, 1.95 + 0.34 * r, col_w, f"{i+1}.  {w}",
-                10, INK)
-    cv.rect(0.6, 8.02, 9.8, 0.02, LINE)
-    cv.text(0.6, 8.16, 9.8, f"{SCHOOL}  ·  Picture Dictionary: {SUBTITLE}",
+        x = 0.6 + col_w * c
+        y = 1.9 + 0.355 * r
+        # letter dividers arrive unindented; words are indented by index_chunks
+        if e and not e.startswith(" "):
+            cv.text(x, y, col_w, e, 13, NAVY, bold=True, font=DISPLAY)
+            cv.rect(x, y + 0.22, 0.30, 0.035, GOLD)
+        else:
+            cv.text(x, y, col_w, e.strip(), 10, INK)
+    cv.rect(0.6, 8.02, AREA_W, 0.02, LINE)
+    cv.text(0.6, 8.16, AREA_W, f"{SCHOOL}  ·  Picture Dictionary: {SUBTITLE}",
             8, SLATE)
 
 
@@ -257,15 +353,32 @@ def back_cover(cv, n_words):
 
 # ---------------------------------------------------------------- main
 
-def render(cv, entries, chunks):
+def index_chunks(entries):
+    """Index entries laid out letter by letter, six columns of seventeen."""
+    lines, last = [], None
+    for e in entries:
+        L = e.get("letter") or e["word"][0].upper()
+        if L != last:
+            lines.append(f"{L}")
+            last = L
+        lines.append(f"   {e['word']}")
+    per_page = 6 * 17
+    return [lines[i:i + per_page] for i in range(0, len(lines), per_page)]
+
+
+def render(cv, entries, pages):
+    idx_pages = index_chunks(entries)
+    total = len(pages)
+
     front_cover(cv)
-    title_page(cv, len(entries), len(chunks))
+    title_page(cv, len(entries), total)
     how_to_page(cv)
-    for i, ch in enumerate(chunks, 1):
-        word_page(cv, ch, i, len(chunks))
-    index_page(cv, [e["word"] for e in entries])
-    # cover + title + how-to + word pages + index, then the back cover last
-    if (4 + len(chunks) + 1) % 2:
+    for i, pg in enumerate(pages, 1):
+        word_page(cv, pg, i, total)
+    for k, chunk in enumerate(idx_pages, 1):
+        index_page(cv, chunk, k, len(idx_pages))
+    # cover + title + how-to + word pages + index pages, then the back cover
+    if (3 + total + len(idx_pages) + 1) % 2:
         blank_page(cv)
     back_cover(cv, len(entries))
 
@@ -273,27 +386,33 @@ def render(cv, entries, chunks):
 def main():
     with open(os.path.join(HERE, "prompts", "words.json")) as f:
         entries = json.load(f)["words"]
-    chunks = [entries[i:i + PER_PAGE] for i in range(0, len(entries), PER_PAGE)]
+    pages = page_plan(entries)
 
     slugs = [slugify(e["word"]) for e in entries] + ["_cover", "_back"]
     prepare_images(slugs)
 
     for cls, ext in ((PptxCanvas, "pptx"), (PdfCanvas, "pdf")):
         cv = cls()
-        render(cv, entries, chunks)
+        render(cv, entries, pages)
         out = os.path.join(BUILD, f"{STEM}.{ext}")
         cv.save(out)
         print(f"  {ext:5s} {os.path.getsize(out)/1e6:6.1f} MB  {out}")
 
-    missing = [s for s in slugs if not img_path(s)]
-    pad = (4 + len(chunks) + 1) % 2
-    total = 5 + len(chunks) + pad
-    print(f"Pages: {len(chunks)} word pages + 5"
-          + (" + 1 blank (even-page padding)" if pad else "")
-          + f" = {total}"
-          + ("  [even]" if total % 2 == 0 else "  [ODD - back cover will misbind]"))
-    print(f"Missing images: {len(missing)}"
-          + (f" -> {', '.join(missing[:14])}" if missing else " (none)"))
+    n_idx = len(index_chunks(entries))
+    pad = (3 + len(pages) + n_idx + 1) % 2
+    total = 3 + len(pages) + n_idx + 1 + pad
+    have = sum(1 for e in entries if img_path(slugify(e["word"])))
+    print(f"Words: {len(entries)}   illustrated: {have}   "
+          f"placeholders: {len(entries) - have}")
+    print(f"Pages: 3 front + {len(pages)} word + {n_idx} index + 1 back"
+          + (" + 1 blank" if pad else "")
+          + f" = {total}" + ("  [even]" if total % 2 == 0 else "  [ODD]"))
+    tmpl = {}
+    for pg in pages:
+        c, r = grid_dims(len(pg["words"]))
+        kind = f"{c}x{r}"
+        tmpl[kind] = tmpl.get(kind, 0) + 1
+    print("Templates: " + ", ".join(f"{k}: {v}" for k, v in sorted(tmpl.items())))
 
 
 if __name__ == "__main__":

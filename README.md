@@ -12,21 +12,44 @@ from one source of truth:
 
 ## Status
 
-**In progress.** The word list is being finalised at roughly 400 words A-Z.
-13 illustrations exist so far; the rest render as `[ missing ]` placeholders.
+**Layout stage.** The word list is final at **270 words across 26 letters**
+(`Revised List.md`, teacher-selected). All 270 sentences are written. Only 5
+illustrations exist so far — everything else renders as `[ missing ]`, which is
+deliberate: layout is being settled before any more images are generated.
 
 ## Layout
 
-10 words per page in a 5 × 2 grid, landscape — measured against 8-up and 12-up
-on real pages. At 12-up on letter the images are width-constrained to 1.50 in
-while each row is 3.25 in tall, so a third of the page is wasted whitespace;
-10-up holds 1.84 in images with sentences still on one line. 12-up only works
-on tabloid (17 x 11), where it yields 2.50 in images.
+**One letter per page.** A letter never shares a page with another, because the
+book's job is lookup and a letter that reliably starts a new page is what makes
+that work. Letters longer than 10 words split across pages *evenly* — 11 words
+become 6 + 5, not 10 + 1, so no page is nearly empty.
+
+**One adaptive grid, not several templates.** The word count on a page picks the
+grid, and the image is capped at 3.30 in:
+
+| Words | Grid | Image |
+|---|---|---|
+| 1 | 1 × 1 | 3.30 in |
+| 2 | 2 × 1 | 3.30 in |
+| 3 | 3 × 1 | 3.22 in |
+| 4–8 | 2–4 × 2 | 2.30 in |
+| 9–10 | 5 × 2 | 1.84 in |
+
+Three or fewer words sit in a single row so sparse letters get *big* pictures.
+Forced into two rows they would end up with smaller artwork than a full page,
+which is backwards — U and Z have one word each.
+
+Two things the geometry has to get right. The image is square and often capped
+by row height rather than column width; when that happens the text column is
+narrowed to the image width and the block is centred, or the picture floats in
+the middle of its cell while the word sits at the far left. And type scales off
+the image, not the column — scaling off a 4.94 in two-column cell produced a
+33 pt headword that overflowed the footer.
 
 The grid is configurable:
 
 ```bash
-GRID=5x2 PAGE=11x8.5 python3 build_book.py
+MAX_PER_PAGE=10 PAGE=11x8.5 python3 build_book.py
 ```
 
 Covers are flat full-bleed images built by `make_covers.py`: the AI generates
@@ -69,7 +92,11 @@ Page images for the flipbook are rendered from the PDF into `docs/pages/`.
 
 ## Repo contents
 
-- `prompts/words.json` — all 71 words with a scene concept and example sentence
+- `Revised List.md` — the teacher-selected word list, the source of truth
+- `make_words.py` — parses that list and attaches sentences; reports any word
+  without a sentence and any sentence whose word was dropped, so the two cannot
+  drift apart
+- `prompts/words.json` — generated: 270 words with letter and example sentence
 - `prompts/STYLE.md` — the locked style block and negative prompt
 - `build_book.py` / `canvas_backends.py` — one layout pass, two output formats
 - `docs/` — the published flipbook; `docs/peel.js` holds the fold geometry
