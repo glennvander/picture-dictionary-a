@@ -1,0 +1,19 @@
+# Source word bank — a commercial teaching resource (P. Olivieri, Rockin'
+# Resources). Kept local; not redistributed via this repo.
+Spelling.pdf
+
+# Build output and generation scratch.
+build/
+
+# The 2K generation masters (~63MB now, ~150MB+ once all 71 words are done).
+# Deliberately excluded: git handles large binaries poorly, and the site only
+# needs docs/pages/. Back these up outside git — they are also still in the
+# Higgsfield generation history. Drop this line if you want them versioned.
+images/
+
+docs/_probe.html
+
+# Local scratch
+__pycache__/
+*.pyc
+.DS_Store
