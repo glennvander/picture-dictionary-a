@@ -69,6 +69,21 @@ def main():
     patched, count = re.subn(r"const PAGES = \d+;", f"const PAGES = {n};", html)
     if not count:
         sys.exit("could not find the PAGES constant in docs/index.html")
+
+    # Letter jump table, generated the same way and for the same reason as
+    # PAGES: the site must not re-derive pagination or it will drift.
+    lp_path = os.path.join(HERE, "build", "letter_pages.json")
+    if os.path.exists(lp_path):
+        import json
+        lp = json.load(open(lp_path))
+        compact = "{" + ",".join(f'{k}:[{",".join(str(v) for v in vs)}]'
+                                 for k, vs in sorted(lp.items())) + "}"
+        patched, c2 = re.subn(r"const LETTER_PAGES = \{.*?\};",
+                              f"const LETTER_PAGES = {compact};", patched,
+                              flags=re.S)
+        if not c2:
+            sys.exit("could not find the LETTER_PAGES constant in docs/index.html")
+        print(f"  letter jumps: {len(lp)} letters")
     open(INDEX, "w", encoding="utf-8").write(patched)
 
     size = sum(os.path.getsize(os.path.join(PAGES_DIR, f))

@@ -398,6 +398,15 @@ def main():
         cv.save(out)
         print(f"  {ext:5s} {os.path.getsize(out)/1e6:6.1f} MB  {out}")
 
+    # Letter -> zero-based page indices, written out so the flipbook can offer
+    # letter jumps without having to re-derive pagination in JavaScript.
+    FRONT = 3                       # cover, title, how-to
+    letter_pages = {}
+    for i, pg in enumerate(pages):
+        letter_pages.setdefault(pg["letter"], []).append(FRONT + i)
+    with open(os.path.join(BUILD, "letter_pages.json"), "w") as f:
+        json.dump(letter_pages, f, indent=1, sort_keys=True)
+
     n_idx = len(index_chunks(entries))
     pad = (3 + len(pages) + n_idx + 1) % 2
     total = 3 + len(pages) + n_idx + 1 + pad
