@@ -181,7 +181,13 @@ class PdfCanvas:
         # re-encoding to raw RGB, which is the difference between a ~3MB and a
         # ~100MB book.
         import hashlib
-        key = hashlib.md5(f"{path}|{w:.3f}|{h:.3f}".encode()).hexdigest()[:16]
+        # The key MUST include the source's mtime and size. Keyed on path and
+        # box alone, a regenerated image reuses the previous crop forever — the
+        # book silently keeps rendering the old artwork.
+        st = os.stat(path)
+        key = hashlib.md5(
+            f"{path}|{st.st_mtime_ns}|{st.st_size}|{w:.3f}|{h:.3f}".encode()
+        ).hexdigest()[:16]
         cache = os.path.join(os.path.dirname(path), ".pdfcrop")
         os.makedirs(cache, exist_ok=True)
         dst = os.path.join(cache, key + ".jpg")

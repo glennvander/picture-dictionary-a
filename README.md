@@ -1,7 +1,7 @@
-# Picture Dictionary — The Letter A
+# Picture Dictionary — A to Z
 
-A picture dictionary of the 71 "A" words from the classroom spelling word bank,
-built for middle-school students at **Lake Drive School**. Three deliverables
+A picture dictionary of the classroom spelling word bank, built for
+middle-school students at **Lake Drive School**. Three deliverables
 from one source of truth:
 
 | Output | Path | Notes |
@@ -12,19 +12,27 @@ from one source of truth:
 
 ## Status
 
-**13 of 71 illustrations are done.** The remaining 58 render as `[ missing ]`
-placeholders, so the current book is a working draft, not a finished product.
+**In progress.** The word list is being finalised at roughly 400 words A-Z.
+13 illustrations exist so far; the rest render as `[ missing ]` placeholders.
 
 ## Layout
 
-8 words per page in a 4 × 2 grid, landscape. Landscape rather than portrait
-because at 8-up on portrait letter each cell is only ~1.5 in and the example
-sentence gets crushed; landscape gives ~2.36 in images with room for word plus
-sentence, and doubles as a smartboard format for front-of-class teaching.
+10 words per page in a 5 × 2 grid, landscape — measured against 8-up and 12-up
+on real pages. At 12-up on letter the images are width-constrained to 1.50 in
+while each row is 3.25 in tall, so a third of the page is wasted whitespace;
+10-up holds 1.84 in images with sentences still on one line. 12-up only works
+on tabloid (17 x 11), where it yields 2.50 in images.
 
-14 pages total: cover, title, how-to, 9 word pages, word list, back cover. That
-page count is fixed regardless of how many words are illustrated, which is why
-the site stays ~1.6 MB even when complete.
+The grid is configurable:
+
+```bash
+GRID=5x2 PAGE=11x8.5 python3 build_book.py
+```
+
+Covers are flat full-bleed images built by `make_covers.py`: the AI generates
+artwork only and all typography is set programmatically, so the covers are
+pixel-identical in the .pptx and the PDF and are not limited to fonts present
+on every school machine.
 
 ## Design constraints
 
@@ -52,7 +60,9 @@ root or `/docs`, which is why the site lives in `docs/` rather than `site/`.
 ## Rebuilding
 
 ```bash
+python3 make_covers.py    # composes the flat cover images
 python3 build_book.py     # regenerates both the .pptx and the .pdf
+python3 make_site.py      # renders the flipbook pages and syncs the page count
 ```
 
 Page images for the flipbook are rendered from the PDF into `docs/pages/`.

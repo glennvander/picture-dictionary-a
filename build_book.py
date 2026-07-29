@@ -23,10 +23,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 IMG_DIR = os.path.join(HERE, "images")
 WEB_DIR = os.path.join(IMG_DIR, "web")
 BUILD = os.path.join(HERE, "build")
-STEM = "Lake Drive Picture Dictionary - A"
+STEM = os.environ.get("STEM", "Lake Drive Picture Dictionary - A")
 
-PER_PAGE, COLS, ROWS = 8, 4, 2
-PAGE_W, PAGE_H = 11.0, 8.5
+# Grid is configurable so densities can be compared on real pages rather than
+# argued about. Override with e.g. GRID=6x2 python3 build_book.py
+COLS, ROWS = (int(n) for n in os.environ.get('GRID', '5x2').split('x'))
+PER_PAGE = COLS * ROWS
+PAGE_W, PAGE_H = (float(v) for v in os.environ.get('PAGE','11.0x8.5').split('x'))
 
 # ---------------------------------------------------------------- brand
 # Colours sampled from ld.mlschools.org :root custom properties.
@@ -38,6 +41,7 @@ PAPER = "#FFFFFF"
 WASH = "#EAF0F6"     # matches the illustration background field
 LINE = "#D6DFE9"
 
+SUBTITLE = os.environ.get("SUBTITLE", "A to Z")
 SCHOOL = "Lake Drive School"
 TAGLINE = "Individual Child, Individual Potential"
 URL = "ld.mlschools.org"
@@ -45,10 +49,20 @@ URL = "ld.mlschools.org"
 # ---------------------------------------------------------------- geometry
 M = 0.45
 GUT_X, GUT_Y = 0.22, 0.22
-CELL_W = (PAGE_W - 2 * M - (COLS - 1) * GUT_X) / COLS   # 2.36"
-CELL_IMG = CELL_W                                        # square
-CELL_H = 3.28
 GRID_TOP = 1.30
+GRID_BOT = 0.48
+CELL_W = (PAGE_W - 2 * M - (COLS - 1) * GUT_X) / COLS
+CELL_H = (PAGE_H - GRID_TOP - GRID_BOT - (ROWS - 1) * GUT_Y) / ROWS
+# The image is square, so it is capped by whichever of width or leftover
+# vertical space is smaller once the headword and sentence have their room.
+TEXT_H = 0.95
+CELL_IMG = min(CELL_W, CELL_H - TEXT_H)
+# Type scales with the column, but with a floor: below ~7.5pt an example
+# sentence stops being readable for the audience this book is for, which is a
+# harder limit than image legibility.
+SCALE = CELL_W / 2.36
+WORD_PT = max(10.0, 16 * SCALE)
+SENT_PT = max(7.5, 8.5 * SCALE)
 
 
 def slugify(w):
@@ -93,19 +107,14 @@ def prepare_images(slugs, max_px=1200):
 # ---------------------------------------------------------------- pages
 
 def front_cover(cv):
+    """Pure full-bleed artwork. Typography is baked into the image by
+    make_covers.py so the cover is pixel-identical in the .pptx and the PDF and
+    is not limited to fonts that exist on every school machine."""
     cv.page(PAGE_W, PAGE_H)
     cv.rect(0, 0, PAGE_W, PAGE_H, WASH)
     p = img_path("_cover")
     if p:
         cv.image(p, 0, 0, PAGE_W, PAGE_H)
-    cv.rect(0, 0, 4.55, PAGE_H, NAVY)            # scrim for the title
-    cv.rect(0.7, 1.55, 1.5, 0.1, GOLD)
-    cv.text(0.7, 1.95, 3.4, "Picture\nDictionary", 42, PAPER, bold=True,
-            font=DISPLAY, leading=1.15)
-    cv.text(0.7, 4.15, 3.4, "The Letter A", 25, GOLD, bold=True, font=DISPLAY)
-    cv.rect(0.7, 5.15, 3.2, 0.02, GOLD)
-    cv.text(0.7, 5.45, 3.5, SCHOOL, 15, PAPER, bold=True)
-    cv.text(0.7, 5.88, 3.5, TAGLINE, 10.5, GOLD, italic=True)
 
 
 def title_page(cv, n_words, n_pages):
@@ -114,14 +123,14 @@ def title_page(cv, n_words, n_pages):
     cv.rect(0, 0, PAGE_W, 0.3, NAVY)
     cv.text(1.0, 1.95, 9.0, "Picture Dictionary", 40, NAVY, bold=True,
             font=DISPLAY, align="center")
-    cv.text(1.0, 2.95, 9.0, "The Letter A", 25, GOLD, bold=True,
+    cv.text(1.0, 2.95, 9.0, SUBTITLE, 25, GOLD, bold=True,
             font=DISPLAY, align="center")
     cv.rect(4.75, 3.85, 1.5, 0.06, GOLD)
     cv.text(1.0, 4.3, 9.0, SCHOOL, 18, INK, bold=True, align="center")
     cv.text(1.0, 4.78, 9.0, TAGLINE, 12, SLATE, italic=True, align="center")
     cv.text(1.0, 5.2, 9.0, URL, 10.5, SLATE, align="center")
     cv.text(2.5, 6.3, 6.0,
-            f"{n_words} words from the letter A, each with a picture and an "
+            f"{n_words} words, each with a picture and an "
             f"example sentence, across {n_pages} pages.", 10, SLATE,
             align="center", leading=1.45)
     cv.text(2.5, 6.95, 6.0,
@@ -139,7 +148,7 @@ def how_to_page(cv):
 
     items = [
         ("1.  Find your word",
-         "Words are in alphabetical order, eight to a page."),
+         f"Words are in alphabetical order, {PER_PAGE} to a page."),
         ("2.  Look at the picture",
          "The picture shows the meaning. Details matter — faces, hands and "
          "arrows all carry information."),
@@ -166,24 +175,28 @@ def how_to_page(cv):
 
 
 def word_cell(cv, entry, x, y):
-    cv.rounded(x, y, CELL_W, CELL_IMG, WASH, r=0.1)
+    ix = x + (CELL_W - CELL_IMG) / 2          # centre a square image in the column
+    cv.rounded(ix, y, CELL_IMG, CELL_IMG, WASH, r=0.1)
     p = img_path(slugify(entry["word"]))
     if p:
-        cv.image(p, x, y, CELL_W, CELL_IMG)
+        cv.image(p, ix, y, CELL_IMG, CELL_IMG)
     else:
-        cv.text(x, y + 1.1, CELL_W, "[ missing ]", 9, SLATE, align="center")
+        cv.text(ix, y + CELL_IMG / 2 - 0.06, CELL_IMG, "[ missing ]", 9, SLATE,
+                align="center")
     ty = y + CELL_IMG + 0.12
-    cv.text(x, ty, CELL_W, entry["word"], 16, NAVY, bold=True, font=DISPLAY)
-    cv.rect(x, ty + 0.32, 0.42, 0.045, GOLD)
-    cv.text(x, ty + 0.46, CELL_W, entry["sentence"], 8.5, INK, leading=1.3)
+    cv.text(x, ty, CELL_W, entry["word"], WORD_PT, NAVY, bold=True, font=DISPLAY)
+    cv.rect(x, ty + WORD_PT / 50, 0.42, 0.045, GOLD)
+    cv.text(x, ty + WORD_PT / 50 + 0.14, CELL_W, entry["sentence"], SENT_PT,
+            INK, leading=1.3)
 
 
 def word_page(cv, chunk, page_no, total_pages):
     cv.page(PAGE_W, PAGE_H)
     cv.rect(0, 0, PAGE_W, PAGE_H, PAPER)
     cv.rect(0, 0, PAGE_W, 0.16, NAVY)
+    letter = chunk[0]["word"][0].upper()
     cv.rect(M, 0.44, 0.62, 0.62, NAVY)
-    cv.text(M, 0.58, 0.62, "A", 22, PAPER, bold=True, font=DISPLAY,
+    cv.text(M, 0.58, 0.62, letter, 22, PAPER, bold=True, font=DISPLAY,
             align="center")
     cv.text(1.22, 0.52, 5.0, "Picture Dictionary", 15, NAVY, bold=True,
             font=DISPLAY)
@@ -197,7 +210,7 @@ def word_page(cv, chunk, page_no, total_pages):
         word_cell(cv, e, M + (CELL_W + GUT_X) * c, GRID_TOP + (CELL_H + GUT_Y) * r)
 
     cv.rect(M, 8.02, PAGE_W - 2 * M, 0.02, LINE)
-    cv.text(M, 8.16, 6.0, f"{SCHOOL}  ·  Picture Dictionary: The Letter A",
+    cv.text(M, 8.16, 6.0, f"{SCHOOL}  ·  Picture Dictionary: {SUBTITLE}",
             8, SLATE)
     cv.text(6.5, 8.16, 4.05, f"Page {page_no} of {total_pages}", 8, SLATE,
             align="right")
@@ -207,7 +220,7 @@ def index_page(cv, words):
     cv.page(PAGE_W, PAGE_H)
     cv.rect(0, 0, PAGE_W, PAGE_H, PAPER)
     cv.rect(0, 0, PAGE_W, 1.35, NAVY)
-    cv.text(0.6, 0.45, 8.0, "Word List — A", 26, PAPER, bold=True,
+    cv.text(0.6, 0.45, 8.0, f"Word List — {SUBTITLE}", 26, PAPER, bold=True,
             font=DISPLAY)
     cols, per_col, col_w = 6, 12, 1.68
     for i, w in enumerate(words):
@@ -217,27 +230,17 @@ def index_page(cv, words):
         cv.text(0.6 + col_w * c, 1.95 + 0.34 * r, col_w, f"{i+1}.  {w}",
                 10, INK)
     cv.rect(0.6, 8.02, 9.8, 0.02, LINE)
-    cv.text(0.6, 8.16, 9.8, f"{SCHOOL}  ·  Picture Dictionary: The Letter A",
+    cv.text(0.6, 8.16, 9.8, f"{SCHOOL}  ·  Picture Dictionary: {SUBTITLE}",
             8, SLATE)
 
 
 def back_cover(cv, n_words):
+    """Pure full-bleed artwork — see front_cover."""
     cv.page(PAGE_W, PAGE_H)
     cv.rect(0, 0, PAGE_W, PAGE_H, WASH)
     p = img_path("_back")
     if p:
         cv.image(p, 0, 0, PAGE_W, PAGE_H)
-    cv.rect(0, 5.15, PAGE_W, 3.35, NAVY)
-    cv.rect(0.7, 5.6, 1.5, 0.1, GOLD)
-    cv.text(0.7, 5.95, 6.6, "Every word has a picture.", 24, PAPER,
-            bold=True, font=DISPLAY)
-    cv.text(0.7, 6.6, 6.4,
-            f"The letter A of our classroom spelling word bank, turned into "
-            f"something you can see — {n_words} words, {n_words} pictures, "
-            f"and a sentence for every one.", 11.5, PAPER, leading=1.45)
-    cv.text(7.4, 6.05, 3.1, SCHOOL, 12.5, PAPER, bold=True, align="right")
-    cv.text(7.0, 6.45, 3.5, TAGLINE, 9.5, GOLD, italic=True, align="right")
-    cv.text(7.4, 6.82, 3.1, URL, 9, WASH, align="right")
 
 
 # ---------------------------------------------------------------- main
