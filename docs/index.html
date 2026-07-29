@@ -28,7 +28,7 @@ body{
 .masthead p{font-size:12px;color:var(--slate);margin-top:1px}
 
 .stage{flex:1;display:grid;place-items:center;width:100%}
-.book{position:relative}
+.book{position:relative;transition:transform var(--snap) var(--ease)}
 
 /* resting pages -------------------------------------------------------- */
 .pane{position:absolute;top:0;height:100%;overflow:hidden;background:var(--paper)}
@@ -188,12 +188,14 @@ function makePane(cls){
 function setPage(paneEl, page){
   const img = paneEl.querySelector('img');
   const s = src(page);
+  // A pane with no page behind it must vanish entirely. Hiding only the <img>
+  // leaves the pane painting --paper, which shows up as a blank white sheet
+  // beside the front and back covers.
+  paneEl.style.display = s ? '' : 'none';
   if (s){
     if (img.getAttribute('src') !== s){ img.src = s; }
     img.alt = `Page ${page+1}`;
     img.style.display = '';
-  } else {
-    img.style.display = 'none';
   }
 }
 
@@ -220,6 +222,10 @@ function buildSkeleton(){
   flap.append(mir, el('div','sheen'));
   turnerEl.append(cast, flat, flap);
   turnerEl.style.display = 'none';
+  // The reveal pane is only ever wanted mid-turn. Left visible at load it
+  // paints --paper in whichever slot has no page, which is exactly the blank
+  // sheet that appears beside the front cover.
+  underEl.style.display = 'none';
 
   book.append(shadowEl, underEl, paneL, paneR, turnerEl);
 
@@ -239,21 +245,25 @@ function buildSkeleton(){
 /* ------------------------------------------------------------------ render */
 function render(){
   const spread = mode === 'spread';
-  paneL.style.display = spread ? '' : 'none';
   paneL.style.width = '50%';
   paneR.style.width = spread ? '50%' : '100%';
   underEl.style.width = spread ? '50%' : '100%';
 
-  if (spread) setPage(paneL, leftPage());
+  setPage(paneL, spread ? leftPage() : -1);
   setPage(paneR, rightPage());
 
   if (spread){
     if (idx === 0)          { shadowEl.style.left='50%'; shadowEl.style.width='50%'; }
     else if (idx === LAST()){ shadowEl.style.left='0%';  shadowEl.style.width='50%'; }
     else                    { shadowEl.style.left='0%';  shadowEl.style.width='100%'; }
+    // Only one leaf is showing at the covers, so shift the block to keep it
+    // centred instead of hanging off one side of an empty half.
+    book.style.transform = idx === 0 ? 'translateX(-25%)'
+                         : idx === LAST() ? 'translateX(25%)' : 'none';
     book.classList.toggle('opened', idx > 0 && idx < LAST());
   } else {
     shadowEl.style.left='0%'; shadowEl.style.width='100%';
+    book.style.transform = 'none';
     book.classList.remove('opened');
   }
 
@@ -333,8 +343,9 @@ function applyFold(P){
 function disarm(){
   turnerEl.style.display = 'none';
   underEl.style.display = 'none';
-  paneR.style.display = '';
-  paneL.style.display = mode === 'spread' ? '' : 'none';
+  // Re-derive pane visibility from state; hardcoding it here would resurrect
+  // the blank pane beside a cover.
+  render();
 }
 
 function toLocal(ev){
@@ -441,7 +452,9 @@ addEventListener('resize', ()=>{ resize(); render(); });
 buildSkeleton();
 resize();
 idx = fromHash();
+book.style.transition = 'none';      // no slide-in on first paint
 render();
+requestAnimationFrame(() => { book.style.transition = ''; });
 
 // exposed for the screenshot harness (explicit accessors: Object.assign would
 // copy getter values rather than the accessors themselves)

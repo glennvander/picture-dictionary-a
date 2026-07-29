@@ -12,9 +12,9 @@ python3 - "$EXTRA" <<'PY'
 import sys, io
 extra = sys.argv[1] if len(sys.argv)>1 else ""
 html = io.open('docs/index.html', encoding='utf-8').read()
-anchor = "render();\n\n// exposed for the screenshot harness"
+anchor = "// exposed for the screenshot harness"
 assert anchor in html, "init anchor not found"
-html = html.replace(anchor, "render();\ntry{" + extra + "}catch(e){document.querySelector('.tip').textContent='ERR '+e.message;}\n\n// exposed for the screenshot harness")
+html = html.replace(anchor, "try{" + extra + "}catch(e){document.querySelector('.tip').textContent='ERR '+e.message;}\n\n" + anchor)
 io.open('docs/_probe.html','w',encoding='utf-8').write(html)
 PY
 "$CHROME" --headless --disable-gpu --force-device-scale-factor=1 \
