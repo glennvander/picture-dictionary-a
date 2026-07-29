@@ -234,6 +234,18 @@ def index_page(cv, words):
             8, SLATE)
 
 
+def blank_page(cv):
+    """Padding leaf so the page count stays even.
+
+    Every leaf has two sides, so an odd page count leaves the final leaf with a
+    front and no back. The back cover then binds as a recto — pairing into a
+    spread with the word list — and the fully-turned state has no pages on
+    either side and renders blank. Real books pad the same way; this is the
+    inside back cover."""
+    cv.page(PAGE_W, PAGE_H)
+    cv.rect(0, 0, PAGE_W, PAGE_H, PAPER)
+
+
 def back_cover(cv, n_words):
     """Pure full-bleed artwork — see front_cover."""
     cv.page(PAGE_W, PAGE_H)
@@ -252,6 +264,9 @@ def render(cv, entries, chunks):
     for i, ch in enumerate(chunks, 1):
         word_page(cv, ch, i, len(chunks))
     index_page(cv, [e["word"] for e in entries])
+    # cover + title + how-to + word pages + index, then the back cover last
+    if (4 + len(chunks) + 1) % 2:
+        blank_page(cv)
     back_cover(cv, len(entries))
 
 
@@ -271,7 +286,12 @@ def main():
         print(f"  {ext:5s} {os.path.getsize(out)/1e6:6.1f} MB  {out}")
 
     missing = [s for s in slugs if not img_path(s)]
-    print(f"Pages: {len(chunks)} word pages + 5 = {len(chunks) + 5}")
+    pad = (4 + len(chunks) + 1) % 2
+    total = 5 + len(chunks) + pad
+    print(f"Pages: {len(chunks)} word pages + 5"
+          + (" + 1 blank (even-page padding)" if pad else "")
+          + f" = {total}"
+          + ("  [even]" if total % 2 == 0 else "  [ODD - back cover will misbind]"))
     print(f"Missing images: {len(missing)}"
           + (f" -> {', '.join(missing[:14])}" if missing else " (none)"))
 
