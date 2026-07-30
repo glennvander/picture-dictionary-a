@@ -1,0 +1,24 @@
+# Cloudflare Pages reads this file and applies the rules to matching paths.
+# GitHub Pages ignores it, so it is harmless to keep in both places.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+# The shell carries the page count and the letter jump table, both regenerated
+# by make_site.py. If a browser caches it, a rebuilt book silently keeps the old
+# page count — which is exactly the stale-tab confusion we hit twice on GitHub
+# Pages. Always revalidate.
+/index.html
+  Cache-Control: no-cache
+
+/peel.js
+  Cache-Control: no-cache
+
+# Page images keep the same filenames across rebuilds (p03.jpg is always page 3),
+# so they cannot be cached immutably. must-revalidate lets the browser keep the
+# bytes but check freshness with an ETag, so an unchanged page costs a 304
+# rather than a re-download.
+/pages/*
+  Cache-Control: public, max-age=0, must-revalidate

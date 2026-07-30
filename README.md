@@ -80,6 +80,19 @@ derives from research on visual design for deaf and hard-of-hearing learners:
 Published with GitHub Pages from `main` / `docs`. Pages can only serve a branch
 root or `/docs`, which is why the site lives in `docs/` rather than `site/`.
 
+`docs/_headers` sets the cache policy for **Cloudflare Pages**, which reads it;
+GitHub Pages ignores it. It exists because GitHub Pages serves `index.html`
+with `max-age=600` and no revalidation, so a rebuilt book can keep showing the
+old page count for ten minutes — the stale-tab confusion this project hit twice.
+
+To deploy to Cloudflare Pages alongside GitHub (direct upload, no OAuth grant
+between Cloudflare and GitHub, every deploy explicit):
+
+```bash
+npx wrangler login        # one time
+./deploy_cloudflare.sh
+```
+
 ## Rebuilding
 
 ```bash
