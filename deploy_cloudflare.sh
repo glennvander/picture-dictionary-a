@@ -25,6 +25,13 @@ fi
 PAGES=$(ls "$DIR/docs/pages"/*.jpg 2>/dev/null | wc -l | tr -d ' ')
 echo "Deploying $PAGES page images to Cloudflare Pages project '$PROJECT'"
 
+# wrangler errors rather than creating the project on first deploy, so make the
+# script self-sufficient on a fresh machine or a new account.
+if ! npx --yes wrangler@latest pages project list 2>/dev/null | grep -q "\b$PROJECT\b"; then
+  echo "Project '$PROJECT' not found — creating it"
+  npx --yes wrangler@latest pages project create "$PROJECT" --production-branch main
+fi
+
 # --commit-dirty keeps wrangler from refusing on an unclean tree; the deployed
 # artifact is docs/, not the repo, so working-tree state is irrelevant here.
 npx --yes wrangler@latest pages deploy "$DIR/docs" \
