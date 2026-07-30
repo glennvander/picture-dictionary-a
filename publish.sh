@@ -85,10 +85,19 @@ for pair in "GitHub $GH_URL" "Cloudflare $CF_URL"; do
   fi
 done
 
-# spot-check an image on each, not just the shell
+# Spot-check an image on each, not just the shell. Retries on the same schedule
+# as the hash check above: a single-shot probe against a CDN seconds after a
+# deploy reports 000 (connection failed, not an HTTP status) often enough to
+# produce false failures, which is exactly what an unreliable check is worth.
 for pair in "GitHub $GH_URL" "Cloudflare $CF_URL"; do
   set -- $pair; NAME=$1; URL=$2
-  CODE=$(curl -s -o /dev/null -w '%{http_code}' --max-time 25 "$URL/pages/p00.jpg")
+  CODE=000
+  for attempt in 1 2 3 4 5 6; do
+    CODE=$(curl -s -o /dev/null -w '%{http_code}' --max-time 25 \
+           "$URL/pages/p00.jpg?cb=$RANDOM$attempt")
+    [ "$CODE" = "200" ] && break
+    sleep 8
+  done
   [ "$CODE" = "200" ] || { printf "  \033[31m✗\033[0m %s p00.jpg -> %s\n" "$NAME" "$CODE"; ok=0; }
 done
 
