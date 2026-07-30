@@ -46,20 +46,41 @@ git push -q origin main || fail "push"
 SHA=$(git rev-parse --short HEAD)
 
 # ---------------------------------------------------------------- 3. Pages
-step "Waiting for GitHub Pages to deploy $SHA"
+# Wait for GitHub to be SERVING this content — not for a build to have run.
+#
+# Those are different things, and the difference bites both ways. A build can
+# report "built" while the edge still serves the previous commit. And GitHub
+# skips the build entirely when a push does not change anything under docs/,
+# so demanding a build for the exact SHA fails on a commit that only touched a
+# script — even though the site is already correct.
+#
+# The content hash is the actual goal, so gate on that and treat the build
+# record as informational.
+step "Waiting for GitHub Pages to serve this build"
 TOKEN=$(printf 'protocol=https\nhost=github.com\n\n' | git credential fill 2>/dev/null \
         | grep '^password=' | cut -d= -f2-)
+GH_OK=0
 for i in $(seq 1 30); do
-  read -r STATUS BUILT <<<"$(curl -s -H "Authorization: token $TOKEN" \
+  LIVE=$(curl -s --max-time 25 "$GH_URL/?cb=$RANDOM$i" | shasum -a 256 | cut -c1-16)
+  if [ "$LIVE" = "$LOCAL_HASH" ]; then GH_OK=1; break; fi
+  STATUS=$(curl -s -H "Authorization: token $TOKEN" \
     "https://api.github.com/repos/$REPO/pages/builds/latest" \
-    | python3 -c "import sys,json;d=json.load(sys.stdin);print(d.get('status','?'),d.get('commit','')[:7])" 2>/dev/null)"
-  # match on the deployed COMMIT, not just 'built' — a stale success reads the
-  # same as a fresh one otherwise
-  [ "$STATUS" = "built" ] && [ "$BUILT" = "$SHA" ] && { echo "  built $BUILT"; break; }
+    | python3 -c "import sys,json;print(json.load(sys.stdin).get('status','?'))" 2>/dev/null)
   [ "$STATUS" = "errored" ] && fail "GitHub Pages build errored"
-  [ "$i" = 30 ] && fail "GitHub Pages did not publish $SHA in time"
   sleep 7
 done
+if [ "$GH_OK" = 1 ]; then
+  BUILT=$(curl -s -H "Authorization: token $TOKEN" \
+    "https://api.github.com/repos/$REPO/pages/builds/latest" \
+    | python3 -c "import sys,json;print(json.load(sys.stdin).get('commit','')[:7])" 2>/dev/null)
+  if [ "$BUILT" = "$SHA" ]; then
+    echo "  serving $SHA"
+  else
+    echo "  serving current content (last build $BUILT — docs/ unchanged by $SHA)"
+  fi
+else
+  fail "GitHub Pages is not serving the new build"
+fi
 
 # ---------------------------------------------------------------- 4. Cloudflare
 step "Deploying to Cloudflare"
