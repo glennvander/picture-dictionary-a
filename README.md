@@ -8,7 +8,7 @@ from one source of truth:
 |---|---|---|
 | Interactive flipbook | `docs/index.html` | Static, opens by double-click, drag-to-peel page turns |
 | Editable book | `build/…​.pptx` | Every element is a real shape/textbox, not a flattened image |
-| Print book | `build/…​.pdf` | 14 pages, 11 × 8.5 in landscape |
+| Print book | `build/…​.pdf` | 48 pages, 11 × 8.5 in landscape |
 
 ## Status
 
@@ -93,9 +93,28 @@ npx wrangler login        # one time
 ./deploy_cloudflare.sh
 ```
 
-## Rebuilding
+## Publishing
+
+One verified step to rebuild everything and push to both hosts:
 
 ```bash
+./publish.sh "what changed"
+```
+
+It rebuilds, commits, pushes, deploys to Cloudflare, and then **checks that each
+host is actually serving the local bytes** before reporting success. That last
+part is the point: GitHub Pages can report a build as "built" while the edge
+still serves the previous commit, and two hosts silently drifting apart is the
+failure this exists to prevent.
+
+It gates on the served content hash rather than on a build record, because the
+two differ in both directions — a build can lag the edge, and GitHub skips the
+build entirely when a push does not touch `docs/`.
+
+## Rebuilding only
+
+```bash
+python3 make_words.py     # rebuilds words.json from Revised List.md
 python3 make_covers.py    # composes the flat cover images
 python3 build_book.py     # regenerates both the .pptx and the .pdf
 python3 make_site.py      # renders the flipbook pages and syncs the page count
