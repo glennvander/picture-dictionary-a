@@ -45,6 +45,12 @@ fi
 git push -q origin main || fail "push"
 SHA=$(git rev-parse --short HEAD)
 
+# ---------------------------------------------------------------- 4. Cloudflare
+step "Deploying to Cloudflare"
+./deploy_cloudflare.sh > /tmp/cf_deploy.log 2>&1 || { cat /tmp/cf_deploy.log; fail "cloudflare deploy"; }
+grep -o 'https://[a-z0-9]*\.picture-dictionary[^ ]*' /tmp/cf_deploy.log | tail -1 \
+  | sed 's/^/  deployment: /'
+
 # ---------------------------------------------------------------- 3. Pages
 # Wait for GitHub to be SERVING this content — not for a build to have run.
 #
@@ -66,7 +72,7 @@ for i in $(seq 1 40); do
   STATUS=$(curl -s -H "Authorization: token $TOKEN" \
     "https://api.github.com/repos/$REPO/pages/builds/latest" \
     | python3 -c "import sys,json;print(json.load(sys.stdin).get('status','?'))" 2>/dev/null)
-  [ "$STATUS" = "errored" ] && fail "GitHub Pages build errored"
+  [ "$STATUS" = "errored" ] && { echo "  GitHub Pages build errored"; break; }
   sleep 10
 done
 if [ "$GH_OK" = 1 ]; then
@@ -79,14 +85,8 @@ if [ "$GH_OK" = 1 ]; then
     echo "  serving current content (last build $BUILT — docs/ unchanged by $SHA)"
   fi
 else
-  fail "GitHub Pages is not serving the new build"
+  echo "  GitHub Pages has NOT picked this up (see verification below)"
 fi
-
-# ---------------------------------------------------------------- 4. Cloudflare
-step "Deploying to Cloudflare"
-./deploy_cloudflare.sh > /tmp/cf_deploy.log 2>&1 || { cat /tmp/cf_deploy.log; fail "cloudflare deploy"; }
-grep -o 'https://[a-z0-9]*\.picture-dictionary[^ ]*' /tmp/cf_deploy.log | tail -1 \
-  | sed 's/^/  deployment: /'
 
 # ---------------------------------------------------------------- 5. verify
 step "Verifying both hosts serve the new build"
