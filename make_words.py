@@ -14,6 +14,10 @@ Run:  python3 make_words.py
 import json
 import os
 import re
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "prompts"))
+from scenes import SCENES, NEEDS_TEXT  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "Revised List.md")
@@ -359,10 +363,13 @@ def main():
             if not s:
                 missing.append(w)
                 s = ""
-            entries.append({"word": w.lower(), "letter": L, "sentence": s})
+            entries.append({"word": w.lower(), "letter": L, "sentence": s,
+                            "scene": SCENES.get(key, ""),
+                            "needs_text": key in NEEDS_TEXT})
 
     used = {e["word"] for e in entries}
     orphans = sorted(set(SENTENCES) - used)
+    no_scene = [e["word"] for e in entries if not e["scene"]]
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
@@ -381,6 +388,8 @@ def main():
           + (f" -> {', '.join(missing)}" if missing else " (none)"))
     print(f"orphaned sentences: {len(orphans)}"
           + (f" -> {', '.join(orphans)}" if orphans else " (none)"))
+    print(f"missing scenes: {len(no_scene)}"
+          + (f" -> {', '.join(no_scene)}" if no_scene else " (none)"))
 
 
 if __name__ == "__main__":

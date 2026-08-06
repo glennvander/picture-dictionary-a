@@ -36,1277 +36,1787 @@
   {
    "word": "accident",
    "letter": "A",
-   "sentence": "It was an accident. The paint spilled."
+   "sentence": "It was an accident. The paint spilled.",
+   "scene": "a tipped-over paint can spreading a blue puddle on the floor, a student beside it with both hands raised in surprise",
+   "needs_text": false
   },
   {
    "word": "add",
    "letter": "A",
-   "sentence": "Add two and three to get five."
+   "sentence": "Add two and three to get five.",
+   "scene": "a student at a whiteboard writing the equation 2 + 3 = 5, pointing at the plus sign",
+   "needs_text": false
   },
   {
    "word": "airplane",
    "letter": "A",
-   "sentence": "The airplane flies above the clouds."
+   "sentence": "The airplane flies above the clouds.",
+   "scene": "a passenger airplane in flight, side three-quarter view, a few rounded clouds below",
+   "needs_text": false
   },
   {
    "word": "airport",
    "letter": "A",
-   "sentence": "We waited for our plane at the airport."
+   "sentence": "We waited for our plane at the airport.",
+   "scene": "an airport terminal with tall windows, two airplanes at the gates outside, a traveller with a rolling suitcase",
+   "needs_text": false
   },
   {
    "word": "angry",
    "letter": "A",
-   "sentence": "He felt angry when he lost the game."
+   "sentence": "He felt angry when he lost the game.",
+   "scene": "a teenager with arms tightly crossed, eyebrows down, two small flat steam puffs at the sides of the head",
+   "needs_text": false
   },
   {
    "word": "animal",
    "letter": "A",
-   "sentence": "A dog is my favorite animal."
+   "sentence": "A dog is my favorite animal.",
+   "scene": "four friendly animals together on grass: a dog, a rabbit, a turtle and a small bird",
+   "needs_text": false
   },
   {
    "word": "apple",
    "letter": "A",
-   "sentence": "I packed an apple for lunch."
+   "sentence": "I packed an apple for lunch.",
+   "scene": "a single bright red apple with a green leaf on its stem, on a wooden desktop",
+   "needs_text": false
   },
   {
    "word": "arm",
    "letter": "A",
-   "sentence": "I raised my arm to answer."
+   "sentence": "I raised my arm to answer.",
+   "scene": "a teenager flexing one bent arm upward, a thin pointer line labelling the arm",
+   "needs_text": false
   },
   {
    "word": "art",
    "letter": "A",
-   "sentence": "Art class is on Tuesday."
+   "sentence": "Art class is on Tuesday.",
+   "scene": "a wooden easel holding a colourful painting, with a paint palette and brushes in a jar beside it",
+   "needs_text": false
   },
   {
    "word": "astronaut",
    "letter": "A",
-   "sentence": "The astronaut floated in space."
+   "sentence": "The astronaut floated in space.",
+   "scene": "an astronaut in a white spacesuit with a round helmet, floating, a few flat stars and a blue planet arc behind",
+   "needs_text": false
   },
   {
    "word": "backpack",
    "letter": "B",
-   "sentence": "I carry my backpack to school."
+   "sentence": "I carry my backpack to school.",
+   "scene": "a single school backpack standing upright and zipped, one side pocket holding a water bottle",
+   "needs_text": false
   },
   {
    "word": "bake",
    "letter": "B",
-   "sentence": "We bake bread on Sundays."
+   "sentence": "We bake bread on Sundays.",
+   "scene": "a teenager in oven mitts sliding a tray of bread rolls into an open oven",
+   "needs_text": false
   },
   {
    "word": "balloon",
    "letter": "B",
-   "sentence": "The red balloon floated away."
+   "sentence": "The red balloon floated away.",
+   "scene": "a single bright red balloon on a string, floating upward",
+   "needs_text": false
   },
   {
    "word": "baseball",
    "letter": "B",
-   "sentence": "He hit the baseball over the fence."
+   "sentence": "He hit the baseball over the fence.",
+   "scene": "a white baseball with red stitching resting beside a wooden bat",
+   "needs_text": false
   },
   {
    "word": "basketball",
    "letter": "B",
-   "sentence": "She plays basketball after school."
+   "sentence": "She plays basketball after school.",
+   "scene": "a teenager mid-jump shooting an orange basketball toward a hoop",
+   "needs_text": false
   },
   {
    "word": "beach",
    "letter": "B",
-   "sentence": "We swam at the beach all day."
+   "sentence": "We swam at the beach all day.",
+   "scene": "a sandy beach with gentle blue waves, a beach ball and a bucket on the sand",
+   "needs_text": false
   },
   {
    "word": "bear",
    "letter": "B",
-   "sentence": "A brown bear walked through the trees."
+   "sentence": "A brown bear walked through the trees.",
+   "scene": "a large brown bear standing on all fours among a few pine trees",
+   "needs_text": false
   },
   {
    "word": "bike",
    "letter": "B",
-   "sentence": "I ride my bike to school."
+   "sentence": "I ride my bike to school.",
+   "scene": "a single bicycle standing upright in side view, wheels frame and handlebars clearly shown",
+   "needs_text": false
   },
   {
    "word": "bird",
    "letter": "B",
-   "sentence": "A small bird landed on the fence."
+   "sentence": "A small bird landed on the fence.",
+   "scene": "a small blue bird perched on a thin branch",
+   "needs_text": false
   },
   {
    "word": "birthday",
    "letter": "B",
-   "sentence": "My birthday is in October."
+   "sentence": "My birthday is in October.",
+   "scene": "a birthday cake with lit candles, a party hat and streamers beside it",
+   "needs_text": false
   },
   {
    "word": "blanket",
    "letter": "B",
-   "sentence": "I pulled the blanket over my feet."
+   "sentence": "I pulled the blanket over my feet.",
+   "scene": "a folded checked blanket draped over the arm of a chair",
+   "needs_text": false
   },
   {
    "word": "boat",
    "letter": "B",
-   "sentence": "The boat crossed the lake."
+   "sentence": "The boat crossed the lake.",
+   "scene": "a small wooden rowboat with oars, on calm blue water",
+   "needs_text": false
   },
   {
    "word": "box",
    "letter": "B",
-   "sentence": "Put the shoes back in the box."
+   "sentence": "Put the shoes back in the box.",
+   "scene": "a cardboard box with its four flaps open, empty",
+   "needs_text": false
   },
   {
    "word": "breakfast",
    "letter": "B",
-   "sentence": "I eat breakfast before school."
+   "sentence": "I eat breakfast before school.",
+   "scene": "a breakfast plate with a fried egg and toast, a glass of juice beside it",
+   "needs_text": false
   },
   {
    "word": "brother",
    "letter": "B",
-   "sentence": "My brother is older than me."
+   "sentence": "My brother is older than me.",
+   "scene": "two teenage brothers standing side by side with arms around each other's shoulders, smiling",
+   "needs_text": false
   },
   {
    "word": "camera",
    "letter": "C",
-   "sentence": "I took a picture with my camera."
+   "sentence": "I took a picture with my camera.",
+   "scene": "a single camera with a large round lens, three-quarter view",
+   "needs_text": false
   },
   {
    "word": "candy",
    "letter": "C",
-   "sentence": "The candy was too sweet."
+   "sentence": "The candy was too sweet.",
+   "scene": "a small pile of colourful wrapped candies",
+   "needs_text": false
   },
   {
    "word": "chair",
    "letter": "C",
-   "sentence": "Pull your chair up to the desk."
+   "sentence": "Pull your chair up to the desk.",
+   "scene": "a single wooden chair, three-quarter view",
+   "needs_text": false
   },
   {
    "word": "cheese",
    "letter": "C",
-   "sentence": "I put cheese on my sandwich."
+   "sentence": "I put cheese on my sandwich.",
+   "scene": "a wedge of yellow cheese with holes, on a wooden board",
+   "needs_text": false
   },
   {
    "word": "chicken",
    "letter": "C",
-   "sentence": "We had chicken for dinner."
+   "sentence": "We had chicken for dinner.",
+   "scene": "a white and brown chicken standing on grass",
+   "needs_text": false
   },
   {
    "word": "chocolate",
    "letter": "C",
-   "sentence": "Chocolate is my favorite flavor."
+   "sentence": "Chocolate is my favorite flavor.",
+   "scene": "a bar of dark chocolate with two squares broken off beside it",
+   "needs_text": false
   },
   {
    "word": "city",
    "letter": "C",
-   "sentence": "The city has tall buildings."
+   "sentence": "The city has tall buildings.",
+   "scene": "a row of tall city buildings with lit windows, seen from street level",
+   "needs_text": false
   },
   {
    "word": "clean",
    "letter": "C",
-   "sentence": "I clean my room on Saturday."
+   "sentence": "I clean my room on Saturday.",
+   "scene": "a teenager wiping a table with a cloth, a spray bottle beside them",
+   "needs_text": false
   },
   {
    "word": "climb",
    "letter": "C",
-   "sentence": "We climb the rope in gym."
+   "sentence": "We climb the rope in gym.",
+   "scene": "a teenager climbing a knotted rope upward in a gym",
+   "needs_text": false
   },
   {
    "word": "clock",
    "letter": "C",
-   "sentence": "The clock says three o'clock."
+   "sentence": "The clock says three o'clock.",
+   "scene": "a round wall clock showing three o'clock",
+   "needs_text": false
   },
   {
    "word": "cloud",
    "letter": "C",
-   "sentence": "One white cloud crossed the sky."
+   "sentence": "One white cloud crossed the sky.",
+   "scene": "one white fluffy cloud in a plain pale sky",
+   "needs_text": false
   },
   {
    "word": "clown",
    "letter": "C",
-   "sentence": "The clown made everyone laugh."
+   "sentence": "The clown made everyone laugh.",
+   "scene": "a friendly clown with a red nose, colourful hat and wide smile",
+   "needs_text": false
   },
   {
    "word": "coat",
    "letter": "C",
-   "sentence": "Wear your coat. It is cold."
+   "sentence": "Wear your coat. It is cold.",
+   "scene": "a single warm winter coat on a hanger, zipped up",
+   "needs_text": false
   },
   {
    "word": "computer",
    "letter": "C",
-   "sentence": "I typed my report on the computer."
+   "sentence": "I typed my report on the computer.",
+   "scene": "an open laptop computer on a desk, screen facing the viewer",
+   "needs_text": false
   },
   {
    "word": "cook",
    "letter": "C",
-   "sentence": "My father can cook rice."
+   "sentence": "My father can cook rice.",
+   "scene": "a teenager stirring a pot on a stove with a wooden spoon",
+   "needs_text": false
   },
   {
    "word": "dance",
    "letter": "D",
-   "sentence": "We dance at the school party."
+   "sentence": "We dance at the school party.",
+   "scene": "two teenagers dancing together, arms raised, caught mid-movement",
+   "needs_text": false
   },
   {
    "word": "dark",
    "letter": "D",
-   "sentence": "The hallway was dark at night."
+   "sentence": "The hallway was dark at night.",
+   "scene": "a bedroom at night lit only by moonlight through the window",
+   "needs_text": false
   },
   {
    "word": "dentist",
    "letter": "D",
-   "sentence": "The dentist checked my teeth."
+   "sentence": "The dentist checked my teeth.",
+   "scene": "a dentist in a white coat holding a small round mirror beside a dental chair",
+   "needs_text": false
   },
   {
    "word": "desk",
    "letter": "D",
-   "sentence": "My books are on my desk."
+   "sentence": "My books are on my desk.",
+   "scene": "a school desk with a notebook and a pencil on top",
+   "needs_text": false
   },
   {
    "word": "dessert",
    "letter": "D",
-   "sentence": "We had ice cream for dessert."
+   "sentence": "We had ice cream for dessert.",
+   "scene": "a bowl of ice cream with a spoon and a cherry on top",
+   "needs_text": false
   },
   {
    "word": "dinosaur",
    "letter": "D",
-   "sentence": "This dinosaur lived long ago."
+   "sentence": "This dinosaur lived long ago.",
+   "scene": "a friendly green long-necked dinosaur standing among ferns",
+   "needs_text": false
   },
   {
    "word": "dirt",
    "letter": "D",
-   "sentence": "My shoes were covered in dirt."
+   "sentence": "My shoes were covered in dirt.",
+   "scene": "a mound of brown dirt with a small shovel standing in it",
+   "needs_text": false
   },
   {
    "word": "dish",
    "letter": "D",
-   "sentence": "I washed every dish."
+   "sentence": "I washed every dish.",
+   "scene": "a neat stack of clean white plates",
+   "needs_text": false
   },
   {
    "word": "doctor",
    "letter": "D",
-   "sentence": "The doctor checked my ears."
+   "sentence": "The doctor checked my ears.",
+   "scene": "a doctor in a white coat with a stethoscope around their neck",
+   "needs_text": false
   },
   {
    "word": "dollar",
    "letter": "D",
-   "sentence": "The pencil cost one dollar."
+   "sentence": "The pencil cost one dollar.",
+   "scene": "a single folded one dollar bill",
+   "needs_text": true
   },
   {
    "word": "door",
    "letter": "D",
-   "sentence": "Please close the door."
+   "sentence": "Please close the door.",
+   "scene": "a single closed wooden door with a round handle",
+   "needs_text": false
   },
   {
    "word": "dragon",
    "letter": "D",
-   "sentence": "The dragon in the story breathed fire."
+   "sentence": "The dragon in the story breathed fire.",
+   "scene": "a friendly green dragon with small wings, breathing one puff of flame",
+   "needs_text": false
   },
   {
    "word": "draw",
    "letter": "D",
-   "sentence": "I like to draw animals."
+   "sentence": "I like to draw animals.",
+   "scene": "a teenager drawing an animal on paper with a pencil",
+   "needs_text": false
   },
   {
    "word": "dress",
    "letter": "D",
-   "sentence": "She wore a blue dress."
+   "sentence": "She wore a blue dress.",
+   "scene": "a single blue dress on a hanger",
+   "needs_text": false
   },
   {
    "word": "drink",
    "letter": "D",
-   "sentence": "I drink water after I run."
+   "sentence": "I drink water after I run.",
+   "scene": "a teenager drinking water from a tall glass",
+   "needs_text": false
   },
   {
    "word": "drive",
    "letter": "D",
-   "sentence": "My mother will drive us home."
+   "sentence": "My mother will drive us home.",
+   "scene": "an adult driving a car, both hands on the steering wheel, seen from inside",
+   "needs_text": false
   },
   {
    "word": "drum",
    "letter": "D",
-   "sentence": "He plays the drum in band."
+   "sentence": "He plays the drum in band.",
+   "scene": "a single drum with two drumsticks crossed on top",
+   "needs_text": false
   },
   {
    "word": "duck",
    "letter": "D",
-   "sentence": "A duck swam across the pond."
+   "sentence": "A duck swam across the pond.",
+   "scene": "a duck with a yellow bill swimming on blue water",
+   "needs_text": false
   },
   {
    "word": "ear",
    "letter": "E",
-   "sentence": "My hearing aid sits behind my ear."
+   "sentence": "My hearing aid sits behind my ear.",
+   "scene": "a close side view of a teenager's ear with a hearing aid behind it",
+   "needs_text": false
   },
   {
    "word": "earth",
    "letter": "E",
-   "sentence": "Earth is the planet we live on."
+   "sentence": "Earth is the planet we live on.",
+   "scene": "the planet Earth seen from space, blue oceans and green continents",
+   "needs_text": false
   },
   {
    "word": "egg",
    "letter": "E",
-   "sentence": "I ate one egg for breakfast."
+   "sentence": "I ate one egg for breakfast.",
+   "scene": "a single white egg standing in an egg cup",
+   "needs_text": false
   },
   {
    "word": "elephant",
    "letter": "E",
-   "sentence": "The elephant has a long trunk."
+   "sentence": "The elephant has a long trunk.",
+   "scene": "a grey elephant standing side-on with its trunk curled",
+   "needs_text": false
   },
   {
    "word": "exercise",
    "letter": "E",
-   "sentence": "We exercise in gym class."
+   "sentence": "We exercise in gym class.",
+   "scene": "a teenager in gym clothes doing a jumping jack, arms and legs out",
+   "needs_text": false
   },
   {
    "word": "eye",
    "letter": "E",
-   "sentence": "Something got in my eye."
+   "sentence": "Something got in my eye.",
+   "scene": "a close view of one open eye",
+   "needs_text": false
   },
   {
    "word": "face",
    "letter": "F",
-   "sentence": "A big smile filled her face."
+   "sentence": "A big smile filled her face.",
+   "scene": "a teenager's smiling face seen straight on",
+   "needs_text": false
   },
   {
    "word": "family",
    "letter": "F",
-   "sentence": "My family eats dinner together."
+   "sentence": "My family eats dinner together.",
+   "scene": "a family of four standing together: two adults and two teenagers",
+   "needs_text": false
   },
   {
    "word": "farm",
    "letter": "F",
-   "sentence": "Cows live on the farm."
+   "sentence": "Cows live on the farm.",
+   "scene": "a red barn with a wooden fence and a green field behind it",
+   "needs_text": false
   },
   {
    "word": "farmer",
    "letter": "F",
-   "sentence": "The farmer drove the tractor."
+   "sentence": "The farmer drove the tractor.",
+   "scene": "a farmer in overalls and a straw hat holding a pitchfork",
+   "needs_text": false
   },
   {
    "word": "feet",
    "letter": "F",
-   "sentence": "My feet hurt after the hike."
+   "sentence": "My feet hurt after the hike.",
+   "scene": "a pair of bare feet standing on the floor, seen from above",
+   "needs_text": false
   },
   {
    "word": "fence",
    "letter": "F",
-   "sentence": "The ball went over the fence."
+   "sentence": "The ball went over the fence.",
+   "scene": "a wooden picket fence running across the frame",
+   "needs_text": false
   },
   {
    "word": "field",
    "letter": "F",
-   "sentence": "We played soccer on the field."
+   "sentence": "We played soccer on the field.",
+   "scene": "a wide green grass field with a goal at the far end",
+   "needs_text": false
   },
   {
    "word": "finger",
    "letter": "F",
-   "sentence": "I pointed with one finger."
+   "sentence": "I pointed with one finger.",
+   "scene": "a hand with one index finger pointing upward",
+   "needs_text": false
   },
   {
    "word": "fire",
    "letter": "F",
-   "sentence": "The fire kept us warm."
+   "sentence": "The fire kept us warm.",
+   "scene": "a campfire with orange flames over stacked logs",
+   "needs_text": false
   },
   {
    "word": "fish",
    "letter": "F",
-   "sentence": "A silver fish swam past."
+   "sentence": "A silver fish swam past.",
+   "scene": "a single silver and orange fish swimming",
+   "needs_text": false
   },
   {
    "word": "flag",
    "letter": "F",
-   "sentence": "The flag waved in the wind."
+   "sentence": "The flag waved in the wind.",
+   "scene": "a rectangular flag on a pole, waving in the wind",
+   "needs_text": false
   },
   {
    "word": "floor",
    "letter": "F",
-   "sentence": "Keep your backpack off the floor."
+   "sentence": "Keep your backpack off the floor.",
+   "scene": "a wooden floor seen at an angle with a broom resting on it",
+   "needs_text": false
   },
   {
    "word": "flower",
    "letter": "F",
-   "sentence": "One yellow flower opened today."
+   "sentence": "One yellow flower opened today.",
+   "scene": "a single yellow flower with a green stem and two leaves",
+   "needs_text": false
   },
   {
    "word": "forest",
    "letter": "F",
-   "sentence": "Tall trees filled the forest."
+   "sentence": "Tall trees filled the forest.",
+   "scene": "a group of tall green trees standing close together",
+   "needs_text": false
   },
   {
    "word": "game",
    "letter": "G",
-   "sentence": "We won the game by two points."
+   "sentence": "We won the game by two points.",
+   "scene": "a board game on a table with dice and coloured playing pieces",
+   "needs_text": false
   },
   {
    "word": "garden",
    "letter": "G",
-   "sentence": "Tomatoes grow in our garden."
+   "sentence": "Tomatoes grow in our garden.",
+   "scene": "a garden bed with tomato plants and a watering can",
+   "needs_text": false
   },
   {
    "word": "ghost",
    "letter": "G",
-   "sentence": "The ghost in the story was friendly."
+   "sentence": "The ghost in the story was friendly.",
+   "scene": "a friendly white cartoon ghost floating, with a wavy lower edge",
+   "needs_text": false
   },
   {
    "word": "giant",
    "letter": "G",
-   "sentence": "The giant was taller than the trees."
+   "sentence": "The giant was taller than the trees.",
+   "scene": "a very tall friendly giant standing beside a small tree for scale",
+   "needs_text": false
   },
   {
    "word": "gift",
    "letter": "G",
-   "sentence": "I wrapped the gift in blue paper."
+   "sentence": "I wrapped the gift in blue paper.",
+   "scene": "a wrapped gift box with a large ribbon bow",
+   "needs_text": false
   },
   {
    "word": "glass",
    "letter": "G",
-   "sentence": "Pour the milk into a glass."
+   "sentence": "Pour the milk into a glass.",
+   "scene": "a single clear drinking glass filled with water",
+   "needs_text": false
   },
   {
    "word": "gold",
    "letter": "G",
-   "sentence": "The ring is made of gold."
+   "sentence": "The ring is made of gold.",
+   "scene": "a small pile of shiny gold coins",
+   "needs_text": false
   },
   {
    "word": "grandfather",
    "letter": "G",
-   "sentence": "My grandfather taught me to fish."
+   "sentence": "My grandfather taught me to fish.",
+   "scene": "an older man with grey hair and glasses, smiling warmly",
+   "needs_text": false
   },
   {
    "word": "grandmother",
    "letter": "G",
-   "sentence": "My grandmother makes the best soup."
+   "sentence": "My grandmother makes the best soup.",
+   "scene": "an older woman with grey hair, smiling warmly",
+   "needs_text": false
   },
   {
    "word": "grass",
    "letter": "G",
-   "sentence": "The grass is wet this morning."
+   "sentence": "The grass is wet this morning.",
+   "scene": "a close view of green grass blades",
+   "needs_text": false
   },
   {
    "word": "gym",
    "letter": "G",
-   "sentence": "We run laps in the gym."
+   "sentence": "We run laps in the gym.",
+   "scene": "a school gymnasium with a basketball hoop and a polished wooden floor",
+   "needs_text": false
   },
   {
    "word": "hair",
    "letter": "H",
-   "sentence": "She tied her hair back."
+   "sentence": "She tied her hair back.",
+   "scene": "a teenager brushing their long hair with a hairbrush",
+   "needs_text": false
   },
   {
    "word": "halloween",
    "letter": "H",
-   "sentence": "We wear costumes on Halloween."
+   "sentence": "We wear costumes on Halloween.",
+   "scene": "a carved orange pumpkin glowing, with a small bat above it",
+   "needs_text": false
   },
   {
    "word": "hand",
    "letter": "H",
-   "sentence": "Raise your hand to answer."
+   "sentence": "Raise your hand to answer.",
+   "scene": "a single open hand, palm facing the viewer, fingers spread naturally",
+   "needs_text": false
   },
   {
    "word": "head",
    "letter": "H",
-   "sentence": "I wore a hat on my head."
+   "sentence": "I wore a hat on my head.",
+   "scene": "a teenager's head and shoulders seen straight on",
+   "needs_text": false
   },
   {
    "word": "heart",
    "letter": "H",
-   "sentence": "My heart beat fast after running."
+   "sentence": "My heart beat fast after running.",
+   "scene": "a simple red heart shape",
+   "needs_text": false
   },
   {
    "word": "hide",
    "letter": "H",
-   "sentence": "We hide behind the door."
+   "sentence": "We hide behind the door.",
+   "scene": "a teenager crouching behind a door, peeking around its edge",
+   "needs_text": false
   },
   {
    "word": "hill",
    "letter": "H",
-   "sentence": "We rode our bikes down the hill."
+   "sentence": "We rode our bikes down the hill.",
+   "scene": "a green rounded hill with a path winding up it",
+   "needs_text": false
   },
   {
    "word": "hole",
    "letter": "H",
-   "sentence": "There is a hole in my sock."
+   "sentence": "There is a hole in my sock.",
+   "scene": "a round hole in the ground with loose soil around the edge",
+   "needs_text": false
   },
   {
    "word": "horse",
    "letter": "H",
-   "sentence": "The horse ran across the field."
+   "sentence": "The horse ran across the field.",
+   "scene": "a brown horse standing side-on",
+   "needs_text": false
   },
   {
    "word": "hospital",
    "letter": "H",
-   "sentence": "The nurse works at the hospital."
+   "sentence": "The nurse works at the hospital.",
+   "scene": "a hospital building with a red cross sign and an ambulance outside",
+   "needs_text": false
   },
   {
    "word": "hungry",
    "letter": "H",
-   "sentence": "I was hungry before lunch."
+   "sentence": "I was hungry before lunch.",
+   "scene": "a teenager holding their stomach and looking at an empty plate",
+   "needs_text": false
   },
   {
    "word": "ice",
    "letter": "I",
-   "sentence": "The ice melted in my drink."
+   "sentence": "The ice melted in my drink.",
+   "scene": "three clear ice cubes stacked together",
+   "needs_text": false
   },
   {
    "word": "ice cream",
    "letter": "I",
-   "sentence": "We ate ice cream at the park."
+   "sentence": "We ate ice cream at the park.",
+   "scene": "an ice cream cone with two round scoops",
+   "needs_text": false
   },
   {
    "word": "island",
    "letter": "I",
-   "sentence": "The island is surrounded by water."
+   "sentence": "The island is surrounded by water.",
+   "scene": "a small green island with one palm tree, surrounded by blue water",
+   "needs_text": false
   },
   {
    "word": "jar",
    "letter": "J",
-   "sentence": "The cookies are in the jar."
+   "sentence": "The cookies are in the jar.",
+   "scene": "a glass jar with a lid, filled with round biscuits",
+   "needs_text": false
   },
   {
    "word": "juice",
    "letter": "J",
-   "sentence": "I drink orange juice with breakfast."
+   "sentence": "I drink orange juice with breakfast.",
+   "scene": "a tall glass of orange juice with a straw",
+   "needs_text": false
   },
   {
    "word": "jump",
    "letter": "J",
-   "sentence": "I can jump over the puddle."
+   "sentence": "I can jump over the puddle.",
+   "scene": "a teenager jumping over a puddle with both feet off the ground",
+   "needs_text": false
   },
   {
    "word": "kick",
    "letter": "K",
-   "sentence": "Kick the ball to me."
+   "sentence": "Kick the ball to me.",
+   "scene": "a teenager kicking a soccer ball, leg extended",
+   "needs_text": false
   },
   {
    "word": "king",
    "letter": "K",
-   "sentence": "The king wore a gold crown."
+   "sentence": "The king wore a gold crown.",
+   "scene": "a king wearing a gold crown and a red robe",
+   "needs_text": false
   },
   {
    "word": "kiss",
    "letter": "K",
-   "sentence": "She gave the baby a kiss."
+   "sentence": "She gave the baby a kiss.",
+   "scene": "a parent kissing a small child on the cheek",
+   "needs_text": false
   },
   {
    "word": "kitchen",
    "letter": "K",
-   "sentence": "We cook in the kitchen."
+   "sentence": "We cook in the kitchen.",
+   "scene": "a kitchen with a counter, a sink and cupboards",
+   "needs_text": false
   },
   {
    "word": "kite",
    "letter": "K",
-   "sentence": "My kite flew above the trees."
+   "sentence": "My kite flew above the trees.",
+   "scene": "a red diamond kite with a tail flying in the sky",
+   "needs_text": false
   },
   {
    "word": "knee",
    "letter": "K",
-   "sentence": "I scraped my knee on the sidewalk."
+   "sentence": "I scraped my knee on the sidewalk.",
+   "scene": "a teenager's bent knee with a small bandage on it",
+   "needs_text": false
   },
   {
    "word": "knife",
    "letter": "K",
-   "sentence": "Cut the bread with a knife."
+   "sentence": "Cut the bread with a knife.",
+   "scene": "a single kitchen knife lying on a cutting board",
+   "needs_text": false
   },
   {
    "word": "ladder",
    "letter": "L",
-   "sentence": "He climbed the ladder to the roof."
+   "sentence": "He climbed the ladder to the roof.",
+   "scene": "a wooden ladder leaning against a wall",
+   "needs_text": false
   },
   {
    "word": "lake",
    "letter": "L",
-   "sentence": "We swam across the lake."
+   "sentence": "We swam across the lake.",
+   "scene": "a calm blue lake with trees along the far shore",
+   "needs_text": false
   },
   {
    "word": "lamp",
    "letter": "L",
-   "sentence": "Turn on the lamp so you can read."
+   "sentence": "Turn on the lamp so you can read.",
+   "scene": "a table lamp switched on and glowing",
+   "needs_text": false
   },
   {
    "word": "laugh",
    "letter": "L",
-   "sentence": "That joke made me laugh."
+   "sentence": "That joke made me laugh.",
+   "scene": "a teenager laughing with their head tilted back",
+   "needs_text": false
   },
   {
    "word": "leg",
    "letter": "L",
-   "sentence": "I hurt my leg playing soccer."
+   "sentence": "I hurt my leg playing soccer.",
+   "scene": "a teenager's leg from hip to foot, standing",
+   "needs_text": false
   },
   {
    "word": "letter",
    "letter": "L",
-   "sentence": "I mailed a letter to my cousin."
+   "sentence": "I mailed a letter to my cousin.",
+   "scene": "a sealed white envelope with a stamp in the corner",
+   "needs_text": false
   },
   {
    "word": "library",
    "letter": "L",
-   "sentence": "I borrowed two books from the library."
+   "sentence": "I borrowed two books from the library.",
+   "scene": "tall bookshelves full of books with a reading table in front",
+   "needs_text": false
   },
   {
    "word": "light",
    "letter": "L",
-   "sentence": "The light is too bright."
+   "sentence": "The light is too bright.",
+   "scene": "a glowing light bulb",
+   "needs_text": false
   },
   {
    "word": "lion",
    "letter": "L",
-   "sentence": "The lion has a thick mane."
+   "sentence": "The lion has a thick mane.",
+   "scene": "a male lion with a thick mane, standing side-on",
+   "needs_text": false
   },
   {
    "word": "lock",
    "letter": "L",
-   "sentence": "Remember to lock your locker."
+   "sentence": "Remember to lock your locker.",
+   "scene": "a closed metal padlock with a keyhole",
+   "needs_text": false
   },
   {
    "word": "lunch",
    "letter": "L",
-   "sentence": "We eat lunch at noon."
+   "sentence": "We eat lunch at noon.",
+   "scene": "a school lunch tray holding a sandwich, an apple and a carton of milk",
+   "needs_text": false
   },
   {
    "word": "magic",
    "letter": "M",
-   "sentence": "The card trick looked like magic."
+   "sentence": "The card trick looked like magic.",
+   "scene": "a magician's top hat with a rabbit coming out of it and a wand beside it",
+   "needs_text": false
   },
   {
    "word": "mailman",
    "letter": "M",
-   "sentence": "The mailman brought a package."
+   "sentence": "The mailman brought a package.",
+   "scene": "a mail carrier in uniform holding letters beside a mailbox",
+   "needs_text": false
   },
   {
    "word": "mall",
    "letter": "M",
-   "sentence": "We met our friends at the mall."
+   "sentence": "We met our friends at the mall.",
+   "scene": "a shopping mall interior with shop fronts along a walkway",
+   "needs_text": false
   },
   {
    "word": "math",
    "letter": "M",
-   "sentence": "Math is my first class."
+   "sentence": "Math is my first class.",
+   "scene": "a chalkboard covered with plus, minus, multiply and divide symbols and simple numbers",
+   "needs_text": true
   },
   {
    "word": "meat",
    "letter": "M",
-   "sentence": "He does not eat meat."
+   "sentence": "He does not eat meat.",
+   "scene": "a cooked steak on a white plate",
+   "needs_text": false
   },
   {
    "word": "medicine",
    "letter": "M",
-   "sentence": "I took medicine for my cold."
+   "sentence": "I took medicine for my cold.",
+   "scene": "a medicine bottle with a measuring spoon beside it",
+   "needs_text": false
   },
   {
    "word": "milk",
    "letter": "M",
-   "sentence": "I poured milk on my cereal."
+   "sentence": "I poured milk on my cereal.",
+   "scene": "a tall glass of white milk",
+   "needs_text": false
   },
   {
    "word": "money",
    "letter": "M",
-   "sentence": "I saved money for a new game."
+   "sentence": "I saved money for a new game.",
+   "scene": "a small stack of bills with a few coins beside it",
+   "needs_text": false
   },
   {
    "word": "monkey",
    "letter": "M",
-   "sentence": "The monkey hung from a branch."
+   "sentence": "The monkey hung from a branch.",
+   "scene": "a brown monkey hanging from a branch by one arm",
+   "needs_text": false
   },
   {
    "word": "monster",
    "letter": "M",
-   "sentence": "The monster in the movie was not real."
+   "sentence": "The monster in the movie was not real.",
+   "scene": "a friendly purple cartoon monster with big round eyes, smiling",
+   "needs_text": false
   },
   {
    "word": "moon",
    "letter": "M",
-   "sentence": "The moon was full last night."
+   "sentence": "The moon was full last night.",
+   "scene": "a full moon in a dark sky with a few small stars",
+   "needs_text": false
   },
   {
    "word": "mother",
    "letter": "M",
-   "sentence": "My mother drives me to practice."
+   "sentence": "My mother drives me to practice.",
+   "scene": "a smiling adult woman standing with her arm around a teenager",
+   "needs_text": false
   },
   {
    "word": "mountain",
    "letter": "M",
-   "sentence": "Snow covered the top of the mountain."
+   "sentence": "Snow covered the top of the mountain.",
+   "scene": "a tall mountain with a snow-capped peak",
+   "needs_text": false
   },
   {
    "word": "mouse",
    "letter": "M",
-   "sentence": "A small mouse ran under the shelf."
+   "sentence": "A small mouse ran under the shelf.",
+   "scene": "a small grey mouse with a long tail",
+   "needs_text": false
   },
   {
    "word": "mouth",
    "letter": "M",
-   "sentence": "Cover your mouth when you cough."
+   "sentence": "Cover your mouth when you cough.",
+   "scene": "a close view of an open smiling mouth showing teeth",
+   "needs_text": false
   },
   {
    "word": "movie",
    "letter": "M",
-   "sentence": "We watched a movie on Friday."
+   "sentence": "We watched a movie on Friday.",
+   "scene": "a cinema screen showing a bright picture, two seats in front seen from behind",
+   "needs_text": false
   },
   {
    "word": "mud",
    "letter": "M",
-   "sentence": "My boots were thick with mud."
+   "sentence": "My boots were thick with mud.",
+   "scene": "a brown muddy puddle with a boot print pressed into it",
+   "needs_text": false
   },
   {
    "word": "music",
    "letter": "M",
-   "sentence": "The band played music at the assembly."
+   "sentence": "The band played music at the assembly.",
+   "scene": "musical notes floating above a guitar and a drum",
+   "needs_text": false
   },
   {
    "word": "name",
    "letter": "N",
-   "sentence": "Write your name at the top."
+   "sentence": "Write your name at the top.",
+   "scene": "a teenager smiling and pointing at a rectangular name tag on their shirt reading MAYA",
+   "needs_text": true
   },
   {
    "word": "neck",
    "letter": "N",
-   "sentence": "I wore a scarf around my neck."
+   "sentence": "I wore a scarf around my neck.",
+   "scene": "a teenager's neck and shoulders with a scarf around the neck",
+   "needs_text": false
   },
   {
    "word": "neighbor",
    "letter": "N",
-   "sentence": "Our neighbor helped us move."
+   "sentence": "Our neighbor helped us move.",
+   "scene": "two people waving to each other over a garden fence",
+   "needs_text": false
   },
   {
    "word": "nest",
    "letter": "N",
-   "sentence": "Three eggs sat in the nest."
+   "sentence": "Three eggs sat in the nest.",
+   "scene": "a round bird nest with three pale eggs in it, on a branch",
+   "needs_text": false
   },
   {
    "word": "night",
    "letter": "N",
-   "sentence": "The stars come out at night."
+   "sentence": "The stars come out at night.",
+   "scene": "a dark night sky full of stars above a quiet house",
+   "needs_text": false
   },
   {
    "word": "nose",
    "letter": "N",
-   "sentence": "My nose was cold outside."
+   "sentence": "My nose was cold outside.",
+   "scene": "a close view of a face showing the nose clearly",
+   "needs_text": false
   },
   {
    "word": "nurse",
    "letter": "N",
-   "sentence": "The nurse checked my ear."
+   "sentence": "The nurse checked my ear.",
+   "scene": "a nurse in scrubs holding a clipboard",
+   "needs_text": false
   },
   {
    "word": "nut",
    "letter": "N",
-   "sentence": "A squirrel buried the nut."
+   "sentence": "A squirrel buried the nut.",
+   "scene": "a walnut and an acorn side by side",
+   "needs_text": false
   },
   {
    "word": "ocean",
    "letter": "O",
-   "sentence": "We saw whales in the ocean."
+   "sentence": "We saw whales in the ocean.",
+   "scene": "blue ocean waves stretching to a distant horizon",
+   "needs_text": false
   },
   {
    "word": "office",
    "letter": "O",
-   "sentence": "The principal works in the office."
+   "sentence": "The principal works in the office.",
+   "scene": "an office with a desk, a chair and a computer",
+   "needs_text": false
   },
   {
    "word": "orange",
    "letter": "O",
-   "sentence": "I peeled an orange for lunch."
+   "sentence": "I peeled an orange for lunch.",
+   "scene": "a single orange fruit with one green leaf on top",
+   "needs_text": false
   },
   {
    "word": "oven",
    "letter": "O",
-   "sentence": "The bread is in the oven."
+   "sentence": "The bread is in the oven.",
+   "scene": "an oven with its door closed and the inside light glowing",
+   "needs_text": false
   },
   {
    "word": "outside",
    "letter": "O",
-   "sentence": "We ate lunch outside today."
+   "sentence": "We ate lunch outside today.",
+   "scene": "a teenager stepping out through a door into sunshine and grass",
+   "needs_text": false
   },
   {
    "word": "paint",
    "letter": "P",
-   "sentence": "We paint in art class."
+   "sentence": "We paint in art class.",
+   "scene": "a paintbrush resting across an open tin of blue paint",
+   "needs_text": false
   },
   {
    "word": "pants",
    "letter": "P",
-   "sentence": "My pants have deep pockets."
+   "sentence": "My pants have deep pockets.",
+   "scene": "a pair of blue jeans, neatly folded",
+   "needs_text": false
   },
   {
    "word": "paper",
    "letter": "P",
-   "sentence": "I need one sheet of paper."
+   "sentence": "I need one sheet of paper.",
+   "scene": "a single blank sheet of paper with one corner curling",
+   "needs_text": false
   },
   {
    "word": "park",
    "letter": "P",
-   "sentence": "We play basketball at the park."
+   "sentence": "We play basketball at the park.",
+   "scene": "a park with a bench, a tree and a winding path",
+   "needs_text": false
   },
   {
    "word": "party",
    "letter": "P",
-   "sentence": "The party starts at four."
+   "sentence": "The party starts at four.",
+   "scene": "a party scene with balloons, streamers and a cake on a table",
+   "needs_text": false
   },
   {
    "word": "pencil",
    "letter": "P",
-   "sentence": "My pencil needs sharpening."
+   "sentence": "My pencil needs sharpening.",
+   "scene": "a single sharpened yellow pencil",
+   "needs_text": false
   },
   {
    "word": "phone",
    "letter": "P",
-   "sentence": "I texted her from my phone."
+   "sentence": "I texted her from my phone.",
+   "scene": "a mobile phone held in one hand, screen facing the viewer",
+   "needs_text": false
   },
   {
    "word": "piano",
    "letter": "P",
-   "sentence": "She plays the piano every day."
+   "sentence": "She plays the piano every day.",
+   "scene": "an upright piano with the lid open showing the keys",
+   "needs_text": false
   },
   {
    "word": "picture",
    "letter": "P",
-   "sentence": "I drew a picture of my dog."
+   "sentence": "I drew a picture of my dog.",
+   "scene": "a framed picture of a dog hanging on a wall",
+   "needs_text": false
   },
   {
    "word": "plant",
    "letter": "P",
-   "sentence": "The plant needs water."
+   "sentence": "The plant needs water.",
+   "scene": "a green potted plant on a windowsill",
+   "needs_text": false
   },
   {
    "word": "police",
    "letter": "P",
-   "sentence": "The police officer helped us cross."
+   "sentence": "The police officer helped us cross.",
+   "scene": "a police officer in uniform standing beside a patrol car",
+   "needs_text": false
   },
   {
    "word": "potato",
    "letter": "P",
-   "sentence": "We baked a potato for dinner."
+   "sentence": "We baked a potato for dinner.",
+   "scene": "a single brown potato",
+   "needs_text": false
   },
   {
    "word": "present",
    "letter": "P",
-   "sentence": "I opened my present first."
+   "sentence": "I opened my present first.",
+   "scene": "two wrapped presents stacked, each with a ribbon",
+   "needs_text": false
   },
   {
    "word": "pumpkin",
    "letter": "P",
-   "sentence": "We carved a pumpkin in October."
+   "sentence": "We carved a pumpkin in October.",
+   "scene": "a large round orange pumpkin with a curling green stem",
+   "needs_text": false
   },
   {
    "word": "puppy",
    "letter": "P",
-   "sentence": "The puppy chewed my shoe."
+   "sentence": "The puppy chewed my shoe.",
+   "scene": "a small brown puppy sitting with its tail wagging",
+   "needs_text": false
   },
   {
    "word": "queen",
    "letter": "Q",
-   "sentence": "The queen waved to the crowd."
+   "sentence": "The queen waved to the crowd.",
+   "scene": "a queen wearing a crown and a blue gown, waving",
+   "needs_text": false
   },
   {
    "word": "quiet",
    "letter": "Q",
-   "sentence": "The library is a quiet place."
+   "sentence": "The library is a quiet place.",
+   "scene": "a library reading room with a student holding one finger to their lips",
+   "needs_text": false
   },
   {
    "word": "rabbit",
    "letter": "R",
-   "sentence": "A rabbit hopped across the yard."
+   "sentence": "A rabbit hopped across the yard.",
+   "scene": "a white rabbit sitting on grass with its ears up",
+   "needs_text": false
   },
   {
    "word": "rain",
    "letter": "R",
-   "sentence": "The rain stopped before recess."
+   "sentence": "The rain stopped before recess.",
+   "scene": "rain falling from one grey cloud onto the ground",
+   "needs_text": false
   },
   {
    "word": "rainbow",
    "letter": "R",
-   "sentence": "A rainbow appeared after the storm."
+   "sentence": "A rainbow appeared after the storm.",
+   "scene": "a colourful rainbow arcing across the sky",
+   "needs_text": false
   },
   {
    "word": "read",
    "letter": "R",
-   "sentence": "I read two chapters last night."
+   "sentence": "I read two chapters last night.",
+   "scene": "a teenager sitting and reading an open book",
+   "needs_text": false
   },
   {
    "word": "rice",
    "letter": "R",
-   "sentence": "We ate rice with dinner."
+   "sentence": "We ate rice with dinner.",
+   "scene": "a white bowl filled with cooked white rice",
+   "needs_text": false
   },
   {
    "word": "ride",
    "letter": "R",
-   "sentence": "I ride the bus to school."
+   "sentence": "I ride the bus to school.",
+   "scene": "a teenager riding a bicycle along a path",
+   "needs_text": false
   },
   {
    "word": "ring",
    "letter": "R",
-   "sentence": "She wore a silver ring."
+   "sentence": "She wore a silver ring.",
+   "scene": "a gold ring with a small blue stone",
+   "needs_text": false
   },
   {
    "word": "river",
    "letter": "R",
-   "sentence": "The river runs past our town."
+   "sentence": "The river runs past our town.",
+   "scene": "a blue river winding between green banks",
+   "needs_text": false
   },
   {
    "word": "road",
    "letter": "R",
-   "sentence": "The road turns left at the light."
+   "sentence": "The road turns left at the light.",
+   "scene": "a grey road with a dashed centre line stretching to the horizon",
+   "needs_text": false
   },
   {
    "word": "robot",
    "letter": "R",
-   "sentence": "Our team built a robot for science class."
+   "sentence": "Our team built a robot for science class.",
+   "scene": "a friendly silver robot standing upright with round eyes",
+   "needs_text": false
   },
   {
    "word": "rock",
    "letter": "R",
-   "sentence": "I found a smooth rock by the water."
+   "sentence": "I found a smooth rock by the water.",
+   "scene": "a large grey rock resting on the ground",
+   "needs_text": false
   },
   {
    "word": "rocket",
    "letter": "R",
-   "sentence": "The rocket lifted off."
+   "sentence": "The rocket lifted off.",
+   "scene": "a white and red rocket lifting off with flame beneath it",
+   "needs_text": false
   },
   {
    "word": "roof",
    "letter": "R",
-   "sentence": "Snow covered the roof."
+   "sentence": "Snow covered the roof.",
+   "scene": "a house roof with red tiles, seen from outside",
+   "needs_text": false
   },
   {
    "word": "room",
    "letter": "R",
-   "sentence": "My room is upstairs."
+   "sentence": "My room is upstairs.",
+   "scene": "a bedroom with a bed, a window and a rug",
+   "needs_text": false
   },
   {
    "word": "rope",
    "letter": "R",
-   "sentence": "We climbed the rope in gym."
+   "sentence": "We climbed the rope in gym.",
+   "scene": "a neatly coiled length of thick rope",
+   "needs_text": false
   },
   {
    "word": "sandwich",
    "letter": "S",
-   "sentence": "I made a cheese sandwich."
+   "sentence": "I made a cheese sandwich.",
+   "scene": "a sandwich cut in half showing cheese filling, on a plate",
+   "needs_text": false
   },
   {
    "word": "scared",
    "letter": "S",
-   "sentence": "The dark hallway made me scared."
+   "sentence": "The dark hallway made me scared.",
+   "scene": "a teenager with wide eyes and both hands raised near their face, looking frightened",
+   "needs_text": false
   },
   {
    "word": "school",
    "letter": "S",
-   "sentence": "Our school starts at eight."
+   "sentence": "Our school starts at eight.",
+   "scene": "a school building with a flag and steps up to the door",
+   "needs_text": false
   },
   {
    "word": "science",
    "letter": "S",
-   "sentence": "We did an experiment in science."
+   "sentence": "We did an experiment in science.",
+   "scene": "a science beaker of coloured liquid beside a microscope",
+   "needs_text": false
   },
   {
    "word": "scissors",
    "letter": "S",
-   "sentence": "Cut the paper with scissors."
+   "sentence": "Cut the paper with scissors.",
+   "scene": "a pair of open scissors",
+   "needs_text": false
   },
   {
    "word": "shirt",
    "letter": "S",
-   "sentence": "My shirt has blue stripes."
+   "sentence": "My shirt has blue stripes.",
+   "scene": "a single striped shirt on a hanger",
+   "needs_text": false
   },
   {
    "word": "shoe",
    "letter": "S",
-   "sentence": "There is a hole in my shoe."
+   "sentence": "There is a hole in my shoe.",
+   "scene": "a single sneaker, side view",
+   "needs_text": false
   },
   {
    "word": "shop",
    "letter": "S",
-   "sentence": "We shop for groceries on Saturday."
+   "sentence": "We shop for groceries on Saturday.",
+   "scene": "a small shop front with a striped awning and a window display",
+   "needs_text": false
   },
   {
    "word": "sidewalk",
    "letter": "S",
-   "sentence": "We walked along the sidewalk."
+   "sentence": "We walked along the sidewalk.",
+   "scene": "a concrete sidewalk running beside a street, paving lines visible",
+   "needs_text": false
   },
   {
    "word": "sing",
    "letter": "S",
-   "sentence": "We sing at the winter concert."
+   "sentence": "We sing at the winter concert.",
+   "scene": "a teenager standing and singing with their mouth open, musical notes floating nearby",
+   "needs_text": false
   },
   {
    "word": "sister",
    "letter": "S",
-   "sentence": "My sister is in third grade."
+   "sentence": "My sister is in third grade.",
+   "scene": "two teenage sisters standing together, smiling",
+   "needs_text": false
   },
   {
    "word": "skate",
    "letter": "S",
-   "sentence": "I skate on the frozen pond."
+   "sentence": "I skate on the frozen pond.",
+   "scene": "a teenager ice skating on a frozen pond",
+   "needs_text": false
   },
   {
    "word": "sleep",
    "letter": "S",
-   "sentence": "I sleep eight hours a night."
+   "sentence": "I sleep eight hours a night.",
+   "scene": "a teenager asleep in bed with three Z letters floating above",
+   "needs_text": false
   },
   {
    "word": "slide",
    "letter": "S",
-   "sentence": "The little kids went down the slide."
+   "sentence": "The little kids went down the slide.",
+   "scene": "a playground slide with a child sliding down it",
+   "needs_text": false
   },
   {
    "word": "smell",
    "letter": "S",
-   "sentence": "I smell bread baking."
+   "sentence": "I smell bread baking.",
+   "scene": "a teenager leaning toward a flower and smelling it, with wavy scent lines",
+   "needs_text": false
   },
   {
    "word": "smile",
    "letter": "S",
-   "sentence": "A big smile crossed her face."
+   "sentence": "A big smile crossed her face.",
+   "scene": "a teenager's face with a wide open smile",
+   "needs_text": false
   },
   {
    "word": "soap",
    "letter": "S",
-   "sentence": "Wash your hands with soap."
+   "sentence": "Wash your hands with soap.",
+   "scene": "a bar of soap with bubbles around it",
+   "needs_text": false
   },
   {
    "word": "soccer",
    "letter": "S",
-   "sentence": "We won our soccer game."
+   "sentence": "We won our soccer game.",
+   "scene": "a black and white soccer ball resting on grass",
+   "needs_text": false
   },
   {
    "word": "spider",
    "letter": "S",
-   "sentence": "A spider built a web in the corner."
+   "sentence": "A spider built a web in the corner.",
+   "scene": "a spider sitting on its web",
+   "needs_text": false
   },
   {
    "word": "sport",
    "letter": "S",
-   "sentence": "Basketball is my favorite sport."
+   "sentence": "Basketball is my favorite sport.",
+   "scene": "a soccer ball, a basketball and a baseball grouped together",
+   "needs_text": false
   },
   {
    "word": "stairs",
    "letter": "S",
-   "sentence": "We ran up the stairs."
+   "sentence": "We ran up the stairs.",
+   "scene": "a flight of stairs going upward",
+   "needs_text": false
   },
   {
    "word": "stand",
    "letter": "S",
-   "sentence": "Please stand for the flag."
+   "sentence": "Please stand for the flag.",
+   "scene": "a teenager standing upright with arms relaxed at their sides",
+   "needs_text": false
   },
   {
    "word": "star",
    "letter": "S",
-   "sentence": "One bright star appeared first."
+   "sentence": "One bright star appeared first.",
+   "scene": "a single bright yellow five-pointed star",
+   "needs_text": false
   },
   {
    "word": "stomach",
    "letter": "S",
-   "sentence": "My stomach hurt after lunch."
+   "sentence": "My stomach hurt after lunch.",
+   "scene": "a teenager pointing at their stomach",
+   "needs_text": false
   },
   {
    "word": "store",
    "letter": "S",
-   "sentence": "The store closes at nine."
+   "sentence": "The store closes at nine.",
+   "scene": "a grocery store aisle with shelves of food on both sides",
+   "needs_text": false
   },
   {
    "word": "storm",
    "letter": "S",
-   "sentence": "The storm knocked down a tree."
+   "sentence": "The storm knocked down a tree.",
+   "scene": "dark storm clouds with a lightning bolt and falling rain",
+   "needs_text": false
   },
   {
    "word": "stove",
    "letter": "S",
-   "sentence": "The pot is on the stove."
+   "sentence": "The pot is on the stove.",
+   "scene": "a stove top with a pot sitting on one burner",
+   "needs_text": false
   },
   {
    "word": "street",
    "letter": "S",
-   "sentence": "Look both ways before crossing the street."
+   "sentence": "Look both ways before crossing the street.",
+   "scene": "a street with buildings on both sides and a crosswalk",
+   "needs_text": false
   },
   {
    "word": "swim",
    "letter": "S",
-   "sentence": "I swim laps at the pool."
+   "sentence": "I swim laps at the pool.",
+   "scene": "a teenager swimming in a pool, arms mid-stroke",
+   "needs_text": false
   },
   {
    "word": "swing",
    "letter": "S",
-   "sentence": "She pushed me on the swing."
+   "sentence": "She pushed me on the swing.",
+   "scene": "a playground swing with a child swinging on it",
+   "needs_text": false
   },
   {
    "word": "table",
    "letter": "T",
-   "sentence": "We set the table for dinner."
+   "sentence": "We set the table for dinner.",
+   "scene": "a wooden table with four legs",
+   "needs_text": false
   },
   {
    "word": "tail",
    "letter": "T",
-   "sentence": "The dog wagged its tail."
+   "sentence": "The dog wagged its tail.",
+   "scene": "a dog seen from behind with its tail raised",
+   "needs_text": false
   },
   {
    "word": "teacher",
    "letter": "T",
-   "sentence": "My teacher signs very clearly."
+   "sentence": "My teacher signs very clearly.",
+   "scene": "a teacher standing beside a whiteboard, facing the class",
+   "needs_text": false
   },
   {
    "word": "teeth",
    "letter": "T",
-   "sentence": "I brush my teeth twice a day."
+   "sentence": "I brush my teeth twice a day.",
+   "scene": "a close view of a smile showing white teeth, with a toothbrush beside it",
+   "needs_text": false
   },
   {
    "word": "tiger",
    "letter": "T",
-   "sentence": "The tiger has orange stripes."
+   "sentence": "The tiger has orange stripes.",
+   "scene": "an orange tiger with black stripes, standing side-on",
+   "needs_text": false
   },
   {
    "word": "time",
    "letter": "T",
-   "sentence": "What time does the bus come?"
+   "sentence": "What time does the bus come?",
+   "scene": "a wristwatch face showing a clear time",
+   "needs_text": true
   },
   {
    "word": "tired",
    "letter": "T",
-   "sentence": "I was tired after practice."
+   "sentence": "I was tired after practice.",
+   "scene": "a teenager yawning with drooping eyes, resting their head on one hand",
+   "needs_text": false
   },
   {
    "word": "tissue",
    "letter": "T",
-   "sentence": "I need a tissue for my nose."
+   "sentence": "I need a tissue for my nose.",
+   "scene": "a tissue box with one tissue pulled up out of it",
+   "needs_text": false
   },
   {
    "word": "tongue",
    "letter": "T",
-   "sentence": "I burned my tongue on the soup."
+   "sentence": "I burned my tongue on the soup.",
+   "scene": "a face with the tongue sticking out slightly",
+   "needs_text": false
   },
   {
    "word": "touch",
    "letter": "T",
-   "sentence": "Do not touch the wet paint."
+   "sentence": "Do not touch the wet paint.",
+   "scene": "a hand reaching out with one fingertip touching a surface",
+   "needs_text": false
   },
   {
    "word": "town",
    "letter": "T",
-   "sentence": "Our town has one movie theater."
+   "sentence": "Our town has one movie theater.",
+   "scene": "a small town with a few buildings, a road and trees",
+   "needs_text": false
   },
   {
    "word": "train",
    "letter": "T",
-   "sentence": "The train arrives at six."
+   "sentence": "The train arrives at six.",
+   "scene": "a train on tracks, side view",
+   "needs_text": false
   },
   {
    "word": "tree",
    "letter": "T",
-   "sentence": "We planted a tree at school."
+   "sentence": "We planted a tree at school.",
+   "scene": "a single green leafy tree with a brown trunk",
+   "needs_text": false
   },
   {
    "word": "truck",
    "letter": "T",
-   "sentence": "The truck carried our furniture."
+   "sentence": "The truck carried our furniture.",
+   "scene": "a delivery truck, three-quarter front view",
+   "needs_text": false
   },
   {
    "word": "turkey",
    "letter": "T",
-   "sentence": "We eat turkey in November."
+   "sentence": "We eat turkey in November.",
+   "scene": "a brown turkey with its tail feathers fanned out",
+   "needs_text": false
   },
   {
    "word": "turtle",
    "letter": "T",
-   "sentence": "The turtle moved slowly."
+   "sentence": "The turtle moved slowly.",
+   "scene": "a green turtle with a patterned shell",
+   "needs_text": false
   },
   {
    "word": "uncle",
    "letter": "U",
-   "sentence": "My uncle taught me to ride."
+   "sentence": "My uncle taught me to ride.",
+   "scene": "a smiling adult man standing beside a teenager",
+   "needs_text": false
   },
   {
    "word": "vacation",
    "letter": "V",
-   "sentence": "We go to the beach on vacation."
+   "sentence": "We go to the beach on vacation.",
+   "scene": "a suitcase, a sun hat and a beach ball grouped together",
+   "needs_text": false
   },
   {
    "word": "vegetable",
    "letter": "V",
-   "sentence": "A carrot is my favorite vegetable."
+   "sentence": "A carrot is my favorite vegetable.",
+   "scene": "a carrot, a head of broccoli and a tomato grouped together",
+   "needs_text": false
   },
   {
    "word": "wash",
    "letter": "W",
-   "sentence": "Wash your hands before lunch."
+   "sentence": "Wash your hands before lunch.",
+   "scene": "a pair of hands under running water with soap suds",
+   "needs_text": false
   },
   {
    "word": "watch",
    "letter": "W",
-   "sentence": "My watch stopped last night."
+   "sentence": "My watch stopped last night.",
+   "scene": "a wristwatch fastened on a wrist",
+   "needs_text": false
   },
   {
    "word": "wave",
    "letter": "W",
-   "sentence": "A big wave splashed my legs."
+   "sentence": "A big wave splashed my legs.",
+   "scene": "a large blue ocean wave curling over",
+   "needs_text": false
   },
   {
    "word": "weather",
    "letter": "W",
-   "sentence": "The weather is warm today."
+   "sentence": "The weather is warm today.",
+   "scene": "a bright sun beside a cloud with rain falling from it",
+   "needs_text": false
   },
   {
    "word": "wet",
    "letter": "W",
-   "sentence": "My jacket is wet from the rain."
+   "sentence": "My jacket is wet from the rain.",
+   "scene": "a teenager in a raincoat with water dripping off them",
+   "needs_text": false
   },
   {
    "word": "window",
    "letter": "W",
-   "sentence": "Open the window for fresh air."
+   "sentence": "Open the window for fresh air.",
+   "scene": "a single window with curtains, seen from inside",
+   "needs_text": false
   },
   {
    "word": "winter",
    "letter": "W",
-   "sentence": "It snows here in winter."
+   "sentence": "It snows here in winter.",
+   "scene": "a snowy scene with a bare tree and snow falling",
+   "needs_text": false
   },
   {
    "word": "witch",
    "letter": "W",
-   "sentence": "The witch in the story flew away."
+   "sentence": "The witch in the story flew away.",
+   "scene": "a friendly witch in a pointed hat riding a broom",
+   "needs_text": false
   },
   {
    "word": "woman",
    "letter": "W",
-   "sentence": "The woman next door is a nurse."
+   "sentence": "The woman next door is a nurse.",
+   "scene": "an adult woman standing and smiling",
+   "needs_text": false
   },
   {
    "word": "wood",
    "letter": "W",
-   "sentence": "The table is made of wood."
+   "sentence": "The table is made of wood.",
+   "scene": "a stack of cut logs",
+   "needs_text": false
   },
   {
    "word": "work",
    "letter": "W",
-   "sentence": "My parents work downtown."
+   "sentence": "My parents work downtown.",
+   "scene": "an adult sitting at a desk working on a computer",
+   "needs_text": false
   },
   {
    "word": "write",
    "letter": "W",
-   "sentence": "Write your answer on the line."
+   "sentence": "Write your answer on the line.",
+   "scene": "a hand writing on a sheet of paper with a pencil",
+   "needs_text": false
   },
   {
    "word": "x-ray",
    "letter": "X",
-   "sentence": "The x-ray showed a broken bone."
+   "sentence": "The x-ray showed a broken bone.",
+   "scene": "an x-ray image of a hand showing the bones",
+   "needs_text": false
   },
   {
    "word": "xylophone",
    "letter": "X",
-   "sentence": "She played the xylophone in music class."
+   "sentence": "She played the xylophone in music class.",
+   "scene": "a colourful xylophone with two mallets resting on it",
+   "needs_text": false
   },
   {
    "word": "yard",
    "letter": "Y",
-   "sentence": "We raked leaves in the yard."
+   "sentence": "We raked leaves in the yard.",
+   "scene": "a house yard with grass, a tree and a rake leaning against the fence",
+   "needs_text": false
   },
   {
    "word": "yawn",
    "letter": "Y",
-   "sentence": "A long yawn made my eyes water."
+   "sentence": "A long yawn made my eyes water.",
+   "scene": "a teenager yawning widely with one hand near their mouth",
+   "needs_text": false
   },
   {
    "word": "yellow",
    "letter": "Y",
-   "sentence": "The school bus is yellow."
+   "sentence": "The school bus is yellow.",
+   "scene": "a lemon, a banana and a yellow flower grouped together, all clearly yellow",
+   "needs_text": false
   },
   {
    "word": "young",
    "letter": "Y",
-   "sentence": "My cousin is too young for school."
+   "sentence": "My cousin is too young for school.",
+   "scene": "a small child standing next to a teenager, showing the difference in age",
+   "needs_text": false
   },
   {
    "word": "zoo",
    "letter": "Z",
-   "sentence": "We saw elephants at the zoo."
+   "sentence": "We saw elephants at the zoo.",
+   "scene": "a zoo entrance gate with an elephant and a giraffe visible behind it",
+   "needs_text": false
   }
  ]
 }
