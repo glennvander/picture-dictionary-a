@@ -251,14 +251,12 @@ def _header(cv, letter, sub, page_no, total_pages):
     cv.text(1.22, 0.52, 5.0, "Picture Dictionary", 15, NAVY, bold=True,
             font=DISPLAY)
     cv.text(1.22, 0.8, 5.0, sub, 9.5, SLATE)
-    cv.text(6.0, 0.64, 4.55, SCHOOL, 10.5, SLATE, align="right")
     cv.rect(M, 1.16, AREA_W, 0.02, LINE)
 
 
 def _footer(cv, page_no, total_pages):
     cv.rect(M, 8.02, AREA_W, 0.02, LINE)
-    cv.text(M, 8.16, 6.0, f"{SCHOOL}  ·  Picture Dictionary: {SUBTITLE}", 8,
-            SLATE)
+    cv.text(M, 8.16, 6.0, f"Picture Dictionary: {SUBTITLE}", 8, SLATE)
     cv.text(6.5, 8.16, 4.05, f"Page {page_no} of {total_pages}", 8, SLATE,
             align="right")
 
@@ -312,7 +310,7 @@ def index_page(cv, entries, part, parts):
     cv.text(0.6, 0.45, 8.0, head, 26, PAPER, bold=True, font=DISPLAY)
 
     cols, col_w = 6, 1.68
-    rows = 17
+    rows = 16
     for i, e in enumerate(entries):
         c, r = divmod(i, rows)
         if c >= cols:
@@ -325,9 +323,12 @@ def index_page(cv, entries, part, parts):
             cv.rect(x, y + 0.22, 0.30, 0.035, GOLD)
         else:
             cv.text(x, y, col_w, e.strip(), 10, INK)
+    cv.rect(0.6, 7.72, AREA_W, 0.02, LINE)
+    cv.text(0.6, 7.86, AREA_W,
+            "Every picture in this book shows what a word MEANS. None of them "
+            "show ASL signs or fingerspelling.", 8.5, SLATE, italic=True)
     cv.rect(0.6, 8.02, AREA_W, 0.02, LINE)
-    cv.text(0.6, 8.16, AREA_W, f"{SCHOOL}  ·  Picture Dictionary: {SUBTITLE}",
-            8, SLATE)
+    cv.text(0.6, 8.16, AREA_W, f"Picture Dictionary: {SUBTITLE}", 8, SLATE)
 
 
 def blank_page(cv):
@@ -362,7 +363,7 @@ def index_chunks(entries):
             lines.append(f"{L}")
             last = L
         lines.append(f"   {e['word']}")
-    per_page = 6 * 17
+    per_page = 6 * 16
     return [lines[i:i + per_page] for i in range(0, len(lines), per_page)]
 
 
@@ -371,14 +372,12 @@ def render(cv, entries, pages):
     total = len(pages)
 
     front_cover(cv)
-    title_page(cv, len(entries), total)
-    how_to_page(cv)
     for i, pg in enumerate(pages, 1):
         word_page(cv, pg, i, total)
     for k, chunk in enumerate(idx_pages, 1):
         index_page(cv, chunk, k, len(idx_pages))
     # cover + title + how-to + word pages + index pages, then the back cover
-    if (3 + total + len(idx_pages) + 1) % 2:
+    if (1 + total + len(idx_pages) + 1) % 2:
         blank_page(cv)
     back_cover(cv, len(entries))
 
@@ -400,7 +399,7 @@ def main():
 
     # Letter -> zero-based page indices, written out so the flipbook can offer
     # letter jumps without having to re-derive pagination in JavaScript.
-    FRONT = 3                       # cover, title, how-to
+    FRONT = 1                       # cover only
     letter_pages = {}
     for i, pg in enumerate(pages):
         letter_pages.setdefault(pg["letter"], []).append(FRONT + i)
@@ -408,12 +407,12 @@ def main():
         json.dump(letter_pages, f, indent=1, sort_keys=True)
 
     n_idx = len(index_chunks(entries))
-    pad = (3 + len(pages) + n_idx + 1) % 2
-    total = 3 + len(pages) + n_idx + 1 + pad
+    pad = (1 + len(pages) + n_idx + 1) % 2
+    total = 1 + len(pages) + n_idx + 1 + pad
     have = sum(1 for e in entries if img_path(slugify(e["word"])))
     print(f"Words: {len(entries)}   illustrated: {have}   "
           f"placeholders: {len(entries) - have}")
-    print(f"Pages: 3 front + {len(pages)} word + {n_idx} index + 1 back"
+    print(f"Pages: 1 cover + {len(pages)} word + {n_idx} index + 1 back"
           + (" + 1 blank" if pad else "")
           + f" = {total}" + ("  [even]" if total % 2 == 0 else "  [ODD]"))
     tmpl = {}

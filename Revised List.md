@@ -4,15 +4,15 @@
 
 ### **Letter B**
 
-### **Bag, bake, balloon, baseball, basketball, beach, bear, bike, bird, birthday, blanket, boat, book, box, breakfast, brother.**
+### **Backpack, bake, balloon, baseball, basketball, beach, bear, bike, bird, birthday, blanket, boat, box, breakfast, brother.**
 
 ### **Letter C**
 
-### **Cake, camera, candy, chair, cheese, chicken, chocolate, city, clean, climb, clock, cloud, clown, coat, computer, cook, cookie.**
+### **camera, candy, chair, cheese, chicken, chocolate, city, clean, climb, clock, cloud, clown, coat, computer, cook.**
 
 ### **Letter D**
 
-### **Dance, dark, dentist, desk, dessert, dinosaur, dirt, dish, doctor, doll, dollar, door, dragon, draw, dress, drink, drive, drum, duck.**
+### **Dance, dark, dentist, desk, dessert, dinosaur, dirt, dish, doctor, dollar, door, dragon, draw, dress, drink, drive, drum, duck.**
 
 ### **Letter E**
 
@@ -20,7 +20,7 @@
 
 ### **Letter F**
 
-### **Face, family, farm, farmer, feet, fence, field, finger, fire, fish, flag, floor, flower, food, forest.**
+### **Face, family, farm, farmer, feet, fence, field, finger, fire, fish, flag, floor, flower, forest.**
 
 ### **Letter G**
 
@@ -28,7 +28,7 @@
 
 ### **Letter H**
 
-### **Hair, Halloween, hand, head, heart, help, hide, hill, hole, home, horse, hospital, house, hungry.**
+### **Hair, Halloween, hand, head, heart, hide, hill, hole, horse, hospital, hungry.**
 
 ### **Letter I**
 
@@ -40,7 +40,7 @@
 
 ### **Letter K**
 
-### **Kick, king, kiss, kitchen, kite, kitten, knee, knife.**
+### **Kick, king, kiss, kitchen, kite, knee, knife.**
 
 ### **Letter L**
 
@@ -56,11 +56,11 @@
 
 ### **Letter O**
 
-### **Ocean, office, open, orange, oven, outside.**
+### **Ocean, office, orange, oven, outside.**
 
 ### **Letter P**
 
-### **Paint, pants, paper, park, party, pen, pencil, phone, piano, picture, plant, play, police, potato, present, pumpkin, puppy.**
+### **Paint, pants, paper, park, party, pencil, phone, piano, picture, plant, police, potato, present, pumpkin, puppy.**
 
 ### **Letter Q**
 
@@ -68,7 +68,7 @@
 
 ### **Letter R**
 
-### **Rabbit, rain, rainbow, read, rice, ride, ring, river, road, robot, rock, rocket, roof, room, rope, run.**
+### **Rabbit, rain, rainbow, read, rice, ride, ring, river, road, robot, rock, rocket, roof, room, rope.**
 
 ### **Letter S**
 
@@ -80,7 +80,7 @@
 
 ### **Letter U**
 
-### **Uncle,** 
+### **Uncle.**
 
 ### **Letter V**
 
@@ -88,7 +88,7 @@
 
 ### **Letter W**
 
-### **Walk, wash, watch, water, wave, weather, wet, window, winter, witch, woman, wood, work, write.**
+### **wash, watch, wave, weather, wet, window, winter, witch, woman, wood, work, write.**
 
 ### **Letter X**
 

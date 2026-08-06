@@ -1,31 +1,31 @@
 {
  "_meta": {
   "source": "Revised List.md (teacher-selected list)",
-  "count": 270,
+  "count": 255,
   "letters": {
    "A": 10,
-   "B": 16,
-   "C": 17,
-   "D": 19,
+   "B": 15,
+   "C": 15,
+   "D": 18,
    "E": 6,
-   "F": 15,
+   "F": 14,
    "G": 11,
-   "H": 14,
+   "H": 11,
    "I": 3,
    "J": 3,
-   "K": 8,
+   "K": 7,
    "L": 11,
    "M": 18,
    "N": 8,
-   "O": 6,
-   "P": 17,
+   "O": 5,
+   "P": 15,
    "Q": 2,
-   "R": 16,
+   "R": 15,
    "S": 30,
    "T": 16,
    "U": 1,
    "V": 2,
-   "W": 14,
+   "W": 12,
    "X": 2,
    "Y": 4,
    "Z": 1
@@ -84,9 +84,9 @@
    "sentence": "The astronaut floated in space."
   },
   {
-   "word": "bag",
+   "word": "backpack",
    "letter": "B",
-   "sentence": "My bag is full of books."
+   "sentence": "I carry my backpack to school."
   },
   {
    "word": "bake",
@@ -144,11 +144,6 @@
    "sentence": "The boat crossed the lake."
   },
   {
-   "word": "book",
-   "letter": "B",
-   "sentence": "This book has three hundred pages."
-  },
-  {
    "word": "box",
    "letter": "B",
    "sentence": "Put the shoes back in the box."
@@ -162,11 +157,6 @@
    "word": "brother",
    "letter": "B",
    "sentence": "My brother is older than me."
-  },
-  {
-   "word": "cake",
-   "letter": "C",
-   "sentence": "She put candles on the cake."
   },
   {
    "word": "camera",
@@ -244,11 +234,6 @@
    "sentence": "My father can cook rice."
   },
   {
-   "word": "cookie",
-   "letter": "C",
-   "sentence": "May I have one cookie?"
-  },
-  {
    "word": "dance",
    "letter": "D",
    "sentence": "We dance at the school party."
@@ -292,11 +277,6 @@
    "word": "doctor",
    "letter": "D",
    "sentence": "The doctor checked my ears."
-  },
-  {
-   "word": "doll",
-   "letter": "D",
-   "sentence": "She kept the doll on her shelf."
   },
   {
    "word": "dollar",
@@ -439,11 +419,6 @@
    "sentence": "One yellow flower opened today."
   },
   {
-   "word": "food",
-   "letter": "F",
-   "sentence": "We packed food for the trip."
-  },
-  {
    "word": "forest",
    "letter": "F",
    "sentence": "Tall trees filled the forest."
@@ -529,11 +504,6 @@
    "sentence": "My heart beat fast after running."
   },
   {
-   "word": "help",
-   "letter": "H",
-   "sentence": "Can you help me carry this?"
-  },
-  {
    "word": "hide",
    "letter": "H",
    "sentence": "We hide behind the door."
@@ -549,11 +519,6 @@
    "sentence": "There is a hole in my sock."
   },
   {
-   "word": "home",
-   "letter": "H",
-   "sentence": "I walk home after school."
-  },
-  {
    "word": "horse",
    "letter": "H",
    "sentence": "The horse ran across the field."
@@ -562,11 +527,6 @@
    "word": "hospital",
    "letter": "H",
    "sentence": "The nurse works at the hospital."
-  },
-  {
-   "word": "house",
-   "letter": "H",
-   "sentence": "Our house has a red door."
   },
   {
    "word": "hungry",
@@ -627,11 +587,6 @@
    "word": "kite",
    "letter": "K",
    "sentence": "My kite flew above the trees."
-  },
-  {
-   "word": "kitten",
-   "letter": "K",
-   "sentence": "The kitten fell asleep in my lap."
   },
   {
    "word": "knee",
@@ -839,11 +794,6 @@
    "sentence": "The principal works in the office."
   },
   {
-   "word": "open",
-   "letter": "O",
-   "sentence": "Please open the window."
-  },
-  {
    "word": "orange",
    "letter": "O",
    "sentence": "I peeled an orange for lunch."
@@ -884,11 +834,6 @@
    "sentence": "The party starts at four."
   },
   {
-   "word": "pen",
-   "letter": "P",
-   "sentence": "Sign your name with a pen."
-  },
-  {
    "word": "pencil",
    "letter": "P",
    "sentence": "My pencil needs sharpening."
@@ -912,11 +857,6 @@
    "word": "plant",
    "letter": "P",
    "sentence": "The plant needs water."
-  },
-  {
-   "word": "play",
-   "letter": "P",
-   "sentence": "We play soccer after school."
   },
   {
    "word": "police",
@@ -1027,11 +967,6 @@
    "word": "rope",
    "letter": "R",
    "sentence": "We climbed the rope in gym."
-  },
-  {
-   "word": "run",
-   "letter": "R",
-   "sentence": "I run a mile every morning."
   },
   {
    "word": "sandwich",
@@ -1279,11 +1214,6 @@
    "sentence": "A carrot is my favorite vegetable."
   },
   {
-   "word": "walk",
-   "letter": "W",
-   "sentence": "I walk to school with my sister."
-  },
-  {
    "word": "wash",
    "letter": "W",
    "sentence": "Wash your hands before lunch."
@@ -1292,11 +1222,6 @@
    "word": "watch",
    "letter": "W",
    "sentence": "My watch stopped last night."
-  },
-  {
-   "word": "water",
-   "letter": "W",
-   "sentence": "I drink water after gym."
   },
   {
    "word": "wave",

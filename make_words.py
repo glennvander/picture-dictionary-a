@@ -35,7 +35,7 @@ SENTENCES = {
     "art": "Art class is on Tuesday.",
     "astronaut": "The astronaut floated in space.",
     # B
-    "bag": "My bag is full of books.",
+    "backpack": "I carry my backpack to school.",
     "bake": "We bake bread on Sundays.",
     "balloon": "The red balloon floated away.",
     "baseball": "He hit the baseball over the fence.",

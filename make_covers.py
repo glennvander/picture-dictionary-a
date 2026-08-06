@@ -102,14 +102,8 @@ def front():
     fz, _ = fit(d, ["A to Z"], "heavy", 40, avail)
     d.text((x, y), "A to Z", font=fz, fill=ORANGE)
 
-    y += int(0.85 * DPI)
-    d.rectangle([x, y, x + int(3.1 * DPI), y + 5], fill=(255, 255, 255, 90))
-
-    y += int(0.32 * DPI)
-    d.text((x, y), "Lake Drive School", font=font("demi", 22), fill=WHITE)
-    y += int(0.32 * DPI)
-    d.text((x, y), "Individual Child, Individual Potential",
-           font=font("italic", 15), fill=ORANGE)
+    # Deliberately generic: no school name, tagline or URL. The book is meant to
+    # be usable by any classroom, so nothing on the cover ties it to one.
     return im
 
 
@@ -126,7 +120,7 @@ def back():
 
     y += int(0.36 * DPI)
     fh, _ = fit(d, ["Every word has a picture."], "heavy", 34,
-                PAGE_W - x - int(4.5 * DPI))
+                PAGE_W - 2 * x)
     d.text((x, y), "Every word has a picture.", font=fh, fill=WHITE)
 
     y += int(0.62 * DPI)
@@ -135,16 +129,7 @@ def back():
     d.multiline_text((x, y), body, font=font("regular", 16), fill=WHITE,
                      spacing=int(0.12 * DPI))
 
-    rx = PAGE_W - int(0.9 * DPI)
-    ry = band_top + int(0.78 * DPI)
-    for txt, face, pt, col, dy in [
-        ("Lake Drive School", "demi", 20, WHITE, 0),
-        ("Individual Child, Individual Potential", "italic", 14, ORANGE, 0.32),
-        ("ld.mlschools.org", "regular", 13, SLATE, 0.60),
-    ]:
-        f = font(face, pt)
-        w = d.textlength(txt, font=f)
-        d.text((rx - w, ry + int(dy * DPI)), txt, font=f, fill=col)
+    # No school name, tagline or URL here either — see front().
     return im
 
 
