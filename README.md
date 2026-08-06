@@ -77,21 +77,32 @@ derives from research on visual design for deaf and hard-of-hearing learners:
 
 ## Hosting
 
-Published with GitHub Pages from `main` / `docs`. Pages can only serve a branch
-root or `/docs`, which is why the site lives in `docs/` rather than `site/`.
+Published on **Cloudflare Pages**: https://picture-dictionary-4um.pages.dev
 
-`docs/_headers` sets the cache policy for **Cloudflare Pages**, which reads it;
-GitHub Pages ignores it. It exists because GitHub Pages serves `index.html`
-with `max-age=600` and no revalidation, so a rebuilt book can keep showing the
-old page count for ten minutes — the stale-tab confusion this project hit twice.
+GitHub is source control and backup only — its Pages hosting is disabled. The
+legacy builder failed five consecutive times on a clean 4 MB repo, including a
+manually triggered rebuild, reporting only "Page build failed." GitHub Status
+showed Pages fully operational and `.nojekyll` made no difference. Meanwhile
+that URL kept serving an older book still carrying branding the teacher had
+asked to be removed, which is worse than serving nothing.
 
-To deploy to Cloudflare Pages alongside GitHub (direct upload, no OAuth grant
-between Cloudflare and GitHub, every deploy explicit):
+Cloudflare uses **direct upload**, so it never reads the repo. Source control
+and hosting are fully independent, and no OAuth grant links the two.
+
+`docs/_headers` sets the cache policy. It matters: GitHub Pages had served
+`index.html` with `max-age=600` and no revalidation, so a rebuilt book could
+keep showing the old page count for ten minutes — the stale-tab confusion this
+project hit twice. On Cloudflare `index.html` is `no-cache` and page images
+revalidate with an ETag.
+
+One-time setup on a new machine:
 
 ```bash
-npx wrangler login        # one time
-./deploy_cloudflare.sh
+npx wrangler login
 ```
+
+The site lives in `docs/` for historical reasons — GitHub Pages could only
+serve a branch root or `/docs`. Cloudflare does not care about the name.
 
 ## Publishing
 
@@ -101,15 +112,11 @@ One verified step to rebuild everything and push to both hosts:
 ./publish.sh "what changed"
 ```
 
-It rebuilds, commits, pushes, deploys to Cloudflare, and then **checks that each
-host is actually serving the local bytes** before reporting success. That last
-part is the point: GitHub Pages can report a build as "built" while the edge
-still serves the previous commit, and two hosts silently drifting apart is the
-failure this exists to prevent.
-
-It gates on the served content hash rather than on a build record, because the
-two differ in both directions — a build can lag the edge, and GitHub skips the
-build entirely when a push does not touch `docs/`.
+It rebuilds, commits and pushes to GitHub for backup, deploys to Cloudflare,
+and then **checks the live site is actually serving the local bytes** before
+reporting success. That last part is the point: a site silently serving an older
+book than the one on disk is the failure this exists to prevent, and it has
+happened in this project more than once.
 
 ## Rebuilding only
 

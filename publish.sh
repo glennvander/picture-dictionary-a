@@ -1,21 +1,26 @@
 #!/bin/bash
-# Rebuild the book and publish it to BOTH hosts, then prove it actually landed.
+# Rebuild the book, back it up to GitHub, publish it to Cloudflare, and prove
+# the live site is actually serving the new bytes.
 #
 #   ./publish.sh "optional commit message"
 #
-# Steps: rebuild covers -> book -> site, commit, push to GitHub, deploy to
-# Cloudflare, then verify each host is serving the bytes that are on disk.
+# GitHub is source control and backup only. Its Pages hosting was disabled after
+# its legacy builder failed five times in a row on a clean 4MB repo with only
+# "Page build failed." for a reason, while serving a stale copy of the book that
+# still carried branding the teacher had asked to remove. A stale public URL is
+# worse than none.
 #
-# The verification is the point. GitHub Pages reports a build as "built" while
-# still serving the previous commit, and this project has already been caught
-# by that once. Publishing without checking is how the two URLs silently drift.
+# Cloudflare is the published site, by direct upload — it never reads the repo,
+# so source control and hosting are fully independent.
+#
+# The verification is the point: publishing without checking is how a site
+# silently keeps serving an older book than the one on disk.
 set -uo pipefail
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$DIR"
 
 REPO="glennvander/picture-dictionary-a"
-GH_URL="https://glennvander.github.io/picture-dictionary-a"
 CF_URL="https://picture-dictionary-4um.pages.dev"
 MSG="${1:-Update the picture dictionary}"
 
@@ -34,7 +39,7 @@ PAGE_COUNT=$(ls docs/pages/*.jpg 2>/dev/null | wc -l | tr -d ' ')
 echo "  local index.html $LOCAL_HASH · $PAGE_COUNT pages"
 
 # ---------------------------------------------------------------- 2. GitHub
-step "Pushing to GitHub"
+step "Backing up to GitHub (source control)"
 if [ -n "$(git status --porcelain)" ]; then
   git add -A
   git commit -q -m "$MSG" || fail "commit"
@@ -45,53 +50,16 @@ fi
 git push -q origin main || fail "push"
 SHA=$(git rev-parse --short HEAD)
 
-# ---------------------------------------------------------------- 4. Cloudflare
-step "Deploying to Cloudflare"
+# ---------------------------------------------------------------- 3. Cloudflare
+step "Publishing to Cloudflare"
 ./deploy_cloudflare.sh > /tmp/cf_deploy.log 2>&1 || { cat /tmp/cf_deploy.log; fail "cloudflare deploy"; }
 grep -o 'https://[a-z0-9]*\.picture-dictionary[^ ]*' /tmp/cf_deploy.log | tail -1 \
   | sed 's/^/  deployment: /'
 
-# ---------------------------------------------------------------- 3. Pages
-# Wait for GitHub to be SERVING this content — not for a build to have run.
-#
-# Those are different things, and the difference bites both ways. A build can
-# report "built" while the edge still serves the previous commit. And GitHub
-# skips the build entirely when a push does not change anything under docs/,
-# so demanding a build for the exact SHA fails on a commit that only touched a
-# script — even though the site is already correct.
-#
-# The content hash is the actual goal, so gate on that and treat the build
-# record as informational.
-step "Waiting for GitHub Pages to serve this build"
-TOKEN=$(printf 'protocol=https\nhost=github.com\n\n' | git credential fill 2>/dev/null \
-        | grep '^password=' | cut -d= -f2-)
-GH_OK=0
-for i in $(seq 1 40); do
-  LIVE=$(curl -s --max-time 25 "$GH_URL/?cb=$RANDOM$i" | shasum -a 256 | cut -c1-16)
-  if [ "$LIVE" = "$LOCAL_HASH" ]; then GH_OK=1; break; fi
-  STATUS=$(curl -s -H "Authorization: token $TOKEN" \
-    "https://api.github.com/repos/$REPO/pages/builds/latest" \
-    | python3 -c "import sys,json;print(json.load(sys.stdin).get('status','?'))" 2>/dev/null)
-  [ "$STATUS" = "errored" ] && { echo "  GitHub Pages build errored"; break; }
-  sleep 10
-done
-if [ "$GH_OK" = 1 ]; then
-  BUILT=$(curl -s -H "Authorization: token $TOKEN" \
-    "https://api.github.com/repos/$REPO/pages/builds/latest" \
-    | python3 -c "import sys,json;print(json.load(sys.stdin).get('commit','')[:7])" 2>/dev/null)
-  if [ "$BUILT" = "$SHA" ]; then
-    echo "  serving $SHA"
-  else
-    echo "  serving current content (last build $BUILT — docs/ unchanged by $SHA)"
-  fi
-else
-  echo "  GitHub Pages has NOT picked this up (see verification below)"
-fi
-
-# ---------------------------------------------------------------- 5. verify
-step "Verifying both hosts serve the new build"
+# ---------------------------------------------------------------- 4. verify
+step "Verifying the live site serves the new build"
 ok=1
-for pair in "GitHub $GH_URL" "Cloudflare $CF_URL"; do
+for pair in "Cloudflare $CF_URL"; do
   set -- $pair; NAME=$1; URL=$2
   for attempt in 1 2 3 4 5 6; do
     LIVE=$(curl -s --max-time 25 "$URL/?cb=$RANDOM$attempt" | shasum -a 256 | cut -c1-16)
@@ -110,7 +78,7 @@ done
 # as the hash check above: a single-shot probe against a CDN seconds after a
 # deploy reports 000 (connection failed, not an HTTP status) often enough to
 # produce false failures, which is exactly what an unreliable check is worth.
-for pair in "GitHub $GH_URL" "Cloudflare $CF_URL"; do
+for pair in "Cloudflare $CF_URL"; do
   set -- $pair; NAME=$1; URL=$2
   CODE=000
   for attempt in 1 2 3 4 5 6; do
@@ -122,7 +90,7 @@ for pair in "GitHub $GH_URL" "Cloudflare $CF_URL"; do
   [ "$CODE" = "200" ] || { printf "  \033[31m✗\033[0m %s p00.jpg -> %s\n" "$NAME" "$CODE"; ok=0; }
 done
 
-[ "$ok" = 1 ] || fail "one or more hosts are stale"
-printf "\n\033[32mPublished.\033[0m %s pages live on both hosts.\n" "$PAGE_COUNT"
-echo "  $GH_URL"
+[ "$ok" = 1 ] || fail "the live site is stale"
+printf "\n\033[32mPublished.\033[0m %s pages live.\n" "$PAGE_COUNT"
 echo "  $CF_URL"
+echo "  source backed up to github.com/$REPO"
