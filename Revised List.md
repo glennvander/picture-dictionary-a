@@ -96,7 +96,7 @@
 
 ### **Letter Y**
 
-### **Yard, yawn, yellow, young.**
+### **Yard, yawn, young.**
 
 ### **Letter Z**
 

@@ -25,7 +25,8 @@ SCENES = {
     "angry": "a teenager with arms tightly crossed, eyebrows down, two small flat steam puffs at the sides of the head",
     "animal": "four friendly animals together on grass: a dog, a rabbit, a turtle and a small bird",
     "apple": "a single bright red apple with a green leaf on its stem, on a wooden desktop",
-    "arm": "a teenager sitting at a school desk with one whole arm raised straight up to answer, the raised arm the clear focus, not a flexed muscle",
+    # The raised arm sprouted from the middle of the chest. Name the shoulder joint.
+    "arm": "a teenager sitting at a school desk with one arm raised straight up to answer, the raised arm clearly joined at the shoulder with the shoulder and upper sleeve visible, the other arm resting on the desk",
     "art": "a wooden easel holding a colourful painting, with a paint palette and brushes in a jar beside it",
     "astronaut": "an astronaut in a white spacesuit with a round helmet, floating, a few flat stars and a blue planet arc behind",
     # B
@@ -39,7 +40,8 @@ SCENES = {
     "bike": "a single bicycle standing upright in side view, wheels frame and handlebars clearly shown",
     "bird": "a small blue bird perched on a thin branch",
     "birthday": "a birthday cake with lit candles, a party hat and streamers beside it",
-    "blanket": "a folded checked blanket draped over the arm of a chair",
+    # Draped over a chair, the chair took over and the blanket read as a small cloth.
+    "blanket": "a thick folded blanket resting by itself, its soft folds and stitched edge clearly visible, no furniture and no person in the picture",
     "boat": "a small wooden rowboat with oars, on calm blue water",
     "box": "a cardboard box with its four flaps open, empty",
     "breakfast": "a breakfast plate with a fried egg and toast, a glass of juice beside it",
@@ -80,7 +82,8 @@ SCENES = {
     "drum": "a single drum with two drumsticks crossed on top",
     "duck": "a duck with a yellow bill swimming on blue water",
     # E
-    "ear": "a close side view of a teenager's ear with a hearing aid behind it",
+    # The ear came back far larger than a real ear relative to the head.
+    "ear": "a side view of a teenager's head, the ear drawn at natural size in correct proportion to the head, with a hearing aid tucked behind it",
     "earth": "the planet Earth seen from space, blue oceans and green continents",
     "egg": "a single white egg standing in an egg cup",
     "elephant": "a grey elephant standing side-on with its trunk curled",
@@ -100,9 +103,10 @@ SCENES = {
     "finger": "a hand resting on an open book, one index finger pointing down at a picture on the page, the pointing finger the clear focus",
     "fire": "a campfire with orange flames over stacked logs",
     "fish": "a single silver and orange fish swimming",
-    # An unspecified flag comes back as a rainbow one, which teaches a specific
-    # symbol under a generic word. Describe an invented, meaningless design.
-    "flag": "a plain blue rectangular flag with one large white star in the middle, on a tall pole, waving in the wind",
+    # Left unspecified this came back as a rainbow flag, so it was first pinned to
+    # an invented neutral design. Brooke then asked for the US flag by name, which
+    # settles it — but the design must still be stated outright, never left open.
+    "flag": "the flag of the United States of America on a tall pole waving in the wind, thirteen red and white stripes with a blue rectangle of white stars in the upper corner",
     "floor": "a wooden floor seen at an angle with a broom resting on it",
     "flower": "a single yellow flower with a green stem and two leaves",
     "forest": "a group of tall green trees standing close together",
@@ -123,14 +127,16 @@ SCENES = {
     "grass": "a close view of a patch of green grass blades and nothing else, no people and no animals",
     "gym": "a school gymnasium with a basketball hoop and a polished wooden floor",
     # H
-    "hair": "a teenager brushing their long hair with a hairbrush",
+    # Came back with three arms: one holding hair, one brushing, one hanging spare.
+    "hair": "a teenager with long hair seen from the side, holding a hairbrush in one hand and brushing their hair, with exactly two arms and two hands in the picture",
     "halloween": "a carved orange pumpkin glowing, with a small bat above it",
     # A spread open palm facing the viewer is the ASL 5 handshape. Anchor the
     # hand to an arm and a surface so it reads as anatomy, not language.
     "hand": "a teenager's hand and forearm resting palm-up and relaxed on a table top, the open hand the clear focus",
     # "head and shoulders straight on" is the same picture as `face`. The hat
     # gives the head a top and a shape of its own.
-    "head": "a teenager wearing a woolly hat, seen in side profile so the whole shape of the head is clear",
+    # Showed the whole body, so the head was not the subject.
+    "head": "a close view of a teenager's head and neck only, in side profile wearing a woolly hat, cropped at the shoulders with no body below",
     "heart": "a simple red heart shape",
     "hide": "a teenager crouching behind a door, peeking around its edge",
     "hill": "a green rounded hill with a path winding up it",
@@ -143,9 +149,13 @@ SCENES = {
     "ice cream": "an ice cream cone with two round scoops",
     "island": "a small green island with one palm tree, surrounded by blue water",
     # J
-    "jar": "a glass jar with a lid, filled with round biscuits",
+    # jar / milk / scissors all came back giant because the style block asks the
+    # subject to fill ~70% of the frame — with a person in shot the *object*
+    # took the 70%. Dropping the person removes the conflict entirely.
+    "jar": "a single glass jar with a lid, filled with round biscuits, standing by itself with no person in the picture",
     "juice": "a tall glass of orange juice with a straw",
-    "jump": "a teenager jumping over a puddle with both feet off the ground",
+    # The old pose read as squatting, and he was above the grass, not the puddle.
+    "jump": "a teenager caught in mid-air leaping across a puddle, body leaning forward with one leg stretched out in front and the other trailing behind, clearly airborne directly above the water",
     # K
     "kick": "a teenager kicking a soccer ball, leg extended",
     "king": "a king wearing a gold crown and a red robe",
@@ -153,13 +163,15 @@ SCENES = {
     "kitchen": "a kitchen with a counter, a sink and cupboards",
     "kite": "a red diamond kite with a tail flying in the sky",
     "knee": "a teenager's bent knee with a small bandage on it",
-    "knife": "a single kitchen knife lying on a cutting board",
+    # The board dominated the square and the blade looked embedded in it.
+    "knife": "a single kitchen knife lying by itself on a plain surface, its blade and handle clearly visible, with no cutting board",
     # L
     "ladder": "a wooden ladder leaning against a wall",
     "lake": "a calm blue lake with trees along the far shore",
     "lamp": "a table lamp switched on and glowing",
     "laugh": "a teenager laughing with their head tilted back",
-    "leg": "a teenager standing seen from the waist down, wearing matching sports shorts and trainers, both legs straight and fully visible",
+    # Cropping at the waist left a headless torso.
+    "leg": "a teenager standing still and facing the viewer, shown from head to feet, wearing short sports shorts and trainers so both bare legs are uncovered and clearly visible from hip to ankle",
     "letter": "a sealed white envelope with a stamp in the corner",
     "library": "tall bookshelves full of books with a reading table in front",
     "light": "a glowing light bulb",
@@ -173,7 +185,7 @@ SCENES = {
     "math": "a chalkboard covered with plus, minus, multiply and divide symbols and simple numbers",
     "meat": "a cooked steak on a white plate",
     "medicine": "a medicine bottle with a measuring spoon beside it",
-    "milk": "a tall glass of white milk",
+    "milk": "a single tall glass of white milk standing by itself, no person in the picture",
     "money": "a small stack of bills with a few coins beside it",
     "monkey": "a brown monkey hanging from a branch by one arm",
     "monster": "a friendly purple cartoon monster with big round eyes, smiling",
@@ -205,7 +217,8 @@ SCENES = {
     "office": "an office with a desk, a chair and a computer",
     "orange": "a single orange fruit with one green leaf on top",
     "oven": "an oven with its door closed and the inside light glowing",
-    "outside": "a teenager stepping out through a door into sunshine and grass",
+    # The doorway slab dominated and the stride read as off balance.
+    "outside": "a teenager standing on green grass in bright sunshine with a house and its open front door behind them, arms relaxed, clearly out of doors",
     # P
     "paint": "a paintbrush resting across an open tin of blue paint",
     "pants": "a pair of blue jeans, neatly folded",
@@ -234,7 +247,8 @@ SCENES = {
     "read": "a teenager sitting and reading an open book",
     "rice": "a white bowl filled with cooked white rice",
     "ride": "a teenager riding a bicycle along a path",
-    "ring": "a gold ring with a small blue stone",
+    # The hand was malformed — wrong digit count and the ring finger cut off at the band.
+    "ring": "a single gold ring with a small blue stone, standing upright by itself, with no hand and no person in the picture",
     "river": "a blue river winding between green banks",
     "road": "a grey road with a dashed centre line stretching to the horizon",
     "robot": "a friendly silver robot standing upright with round eyes",
@@ -250,7 +264,7 @@ SCENES = {
     "scared": "a teenager shrinking backwards with shoulders hunched and both hands clasped tightly together at their chest, eyes wide and eyebrows raised in fright",
     "school": "a school building with a flag and steps up to the door",
     "science": "a science beaker of coloured liquid beside a microscope",
-    "scissors": "a pair of open scissors",
+    "scissors": "a single pair of open scissors lying by itself, no person in the picture",
     "shirt": "a single striped shirt on a hanger",
     "shoe": "a single sneaker, side view",
     "shop": "a small shop front with a striped awning and a window display",
@@ -268,7 +282,8 @@ SCENES = {
     "soap": "a bar of soap with bubbles around it",
     "soccer": "a black and white soccer ball resting on grass",
     "spider": "a spider sitting on its web",
-    "sport": "a soccer ball, a basketball and a baseball grouped together",
+    # All three came back nearly the same size, so the scale taught the wrong thing.
+    "sport": "a soccer ball, a basketball and a baseball resting side by side on the ground at their true relative sizes: the basketball clearly the biggest, the soccer ball a little smaller, and the baseball much smaller than both",
     "stairs": "a flight of stairs going upward",
     "stand": "a teenager standing upright with arms relaxed at their sides",
     "star": "a single bright yellow five-pointed star",
@@ -281,7 +296,8 @@ SCENES = {
     "swing": "a playground swing with a child swinging on it",
     # T
     "table": "a wooden table with four legs",
-    "tail": "a dog seen from behind with its tail raised",
+    # A rear view of a dog's backside is not a readable picture of a tail.
+    "tail": "a dog standing in side view with its long tail raised and curling upward, the tail the clear focus of the picture",
     "teacher": "a teacher standing beside a whiteboard, facing the class",
     # Would otherwise be the same crop as `mouth`. The action distinguishes it.
     "teeth": "a teenager brushing their front teeth with a toothbrush, mouth open so the white teeth are the clear focus",
@@ -291,7 +307,7 @@ SCENES = {
     "time": "a close view of a wristwatch worn on a wrist, its round dial carrying the numerals 1 to 12 and the hands pointing to three o'clock, and no other writing anywhere",
     "tired": "a teenager yawning with drooping eyes, resting their head on one hand",
     "tissue": "a tissue box with one tissue pulled up out of it",
-    "tongue": "a face with the tongue sticking out slightly",
+    "tongue": "a close view of a teenager's face straight on, mouth open and tongue stuck well out, the tongue the clear focus",
     "touch": "a hand reaching out with one fingertip touching a surface",
     "town": "a small town with a few buildings, a road and trees",
     "train": "a train on tracks, side view",

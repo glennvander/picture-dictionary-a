@@ -1,7 +1,7 @@
 {
  "_meta": {
   "source": "Revised List.md (teacher-selected list)",
-  "count": 255,
+  "count": 254,
   "letters": {
    "A": 10,
    "B": 15,
@@ -27,7 +27,7 @@
    "V": 2,
    "W": 12,
    "X": 2,
-   "Y": 4,
+   "Y": 3,
    "Z": 1
   },
   "audience": "Middle school, Lake Drive School"
@@ -86,7 +86,7 @@
    "word": "arm",
    "letter": "A",
    "sentence": "I raised my arm to answer.",
-   "scene": "a teenager sitting at a school desk with one whole arm raised straight up to answer, the raised arm the clear focus, not a flexed muscle",
+   "scene": "a teenager sitting at a school desk with one arm raised straight up to answer, the raised arm clearly joined at the shoulder with the shoulder and upper sleeve visible, the other arm resting on the desk",
    "needs_text": false
   },
   {
@@ -177,7 +177,7 @@
    "word": "blanket",
    "letter": "B",
    "sentence": "I pulled the blanket over my feet.",
-   "scene": "a folded checked blanket draped over the arm of a chair",
+   "scene": "a thick folded blanket resting by itself, its soft folds and stitched edge clearly visible, no furniture and no person in the picture",
    "needs_text": false
   },
   {
@@ -443,7 +443,7 @@
    "word": "ear",
    "letter": "E",
    "sentence": "My hearing aid sits behind my ear.",
-   "scene": "a close side view of a teenager's ear with a hearing aid behind it",
+   "scene": "a side view of a teenager's head, the ear drawn at natural size in correct proportion to the head, with a hearing aid tucked behind it",
    "needs_text": false
   },
   {
@@ -555,7 +555,7 @@
    "word": "flag",
    "letter": "F",
    "sentence": "The flag waved in the wind.",
-   "scene": "a plain blue rectangular flag with one large white star in the middle, on a tall pole, waving in the wind",
+   "scene": "the flag of the United States of America on a tall pole waving in the wind, thirteen red and white stripes with a blue rectangle of white stars in the upper corner",
    "needs_text": false
   },
   {
@@ -660,7 +660,7 @@
    "word": "hair",
    "letter": "H",
    "sentence": "She tied her hair back.",
-   "scene": "a teenager brushing their long hair with a hairbrush",
+   "scene": "a teenager with long hair seen from the side, holding a hairbrush in one hand and brushing their hair, with exactly two arms and two hands in the picture",
    "needs_text": false
   },
   {
@@ -681,7 +681,7 @@
    "word": "head",
    "letter": "H",
    "sentence": "I wore a hat on my head.",
-   "scene": "a teenager wearing a woolly hat, seen in side profile so the whole shape of the head is clear",
+   "scene": "a close view of a teenager's head and neck only, in side profile wearing a woolly hat, cropped at the shoulders with no body below",
    "needs_text": false
   },
   {
@@ -758,7 +758,7 @@
    "word": "jar",
    "letter": "J",
    "sentence": "The cookies are in the jar.",
-   "scene": "a glass jar with a lid, filled with round biscuits",
+   "scene": "a single glass jar with a lid, filled with round biscuits, standing by itself with no person in the picture",
    "needs_text": false
   },
   {
@@ -772,7 +772,7 @@
    "word": "jump",
    "letter": "J",
    "sentence": "I can jump over the puddle.",
-   "scene": "a teenager jumping over a puddle with both feet off the ground",
+   "scene": "a teenager caught in mid-air leaping across a puddle, body leaning forward with one leg stretched out in front and the other trailing behind, clearly airborne directly above the water",
    "needs_text": false
   },
   {
@@ -821,7 +821,7 @@
    "word": "knife",
    "letter": "K",
    "sentence": "Cut the bread with a knife.",
-   "scene": "a single kitchen knife lying on a cutting board",
+   "scene": "a single kitchen knife lying by itself on a plain surface, its blade and handle clearly visible, with no cutting board",
    "needs_text": false
   },
   {
@@ -856,7 +856,7 @@
    "word": "leg",
    "letter": "L",
    "sentence": "I hurt my leg playing soccer.",
-   "scene": "a teenager standing seen from the waist down, wearing matching sports shorts and trainers, both legs straight and fully visible",
+   "scene": "a teenager standing still and facing the viewer, shown from head to feet, wearing short sports shorts and trainers so both bare legs are uncovered and clearly visible from hip to ankle",
    "needs_text": false
   },
   {
@@ -947,7 +947,7 @@
    "word": "milk",
    "letter": "M",
    "sentence": "I poured milk on my cereal.",
-   "scene": "a tall glass of white milk",
+   "scene": "a single tall glass of white milk standing by itself, no person in the picture",
    "needs_text": false
   },
   {
@@ -1115,7 +1115,7 @@
    "word": "outside",
    "letter": "O",
    "sentence": "We ate lunch outside today.",
-   "scene": "a teenager stepping out through a door into sunshine and grass",
+   "scene": "a teenager standing on green grass in bright sunshine with a house and its open front door behind them, arms relaxed, clearly out of doors",
    "needs_text": false
   },
   {
@@ -1283,7 +1283,7 @@
    "word": "ring",
    "letter": "R",
    "sentence": "She wore a silver ring.",
-   "scene": "a gold ring with a small blue stone",
+   "scene": "a single gold ring with a small blue stone, standing upright by itself, with no hand and no person in the picture",
    "needs_text": false
   },
   {
@@ -1374,7 +1374,7 @@
    "word": "scissors",
    "letter": "S",
    "sentence": "Cut the paper with scissors.",
-   "scene": "a pair of open scissors",
+   "scene": "a single pair of open scissors lying by itself, no person in the picture",
    "needs_text": false
   },
   {
@@ -1479,7 +1479,7 @@
    "word": "sport",
    "letter": "S",
    "sentence": "Basketball is my favorite sport.",
-   "scene": "a soccer ball, a basketball and a baseball grouped together",
+   "scene": "a soccer ball, a basketball and a baseball resting side by side on the ground at their true relative sizes: the basketball clearly the biggest, the soccer ball a little smaller, and the baseball much smaller than both",
    "needs_text": false
   },
   {
@@ -1563,7 +1563,7 @@
    "word": "tail",
    "letter": "T",
    "sentence": "The dog wagged its tail.",
-   "scene": "a dog seen from behind with its tail raised",
+   "scene": "a dog standing in side view with its long tail raised and curling upward, the tail the clear focus of the picture",
    "needs_text": false
   },
   {
@@ -1612,7 +1612,7 @@
    "word": "tongue",
    "letter": "T",
    "sentence": "I burned my tongue on the soup.",
-   "scene": "a face with the tongue sticking out slightly",
+   "scene": "a close view of a teenager's face straight on, mouth open and tongue stuck well out, the tongue the clear focus",
    "needs_text": false
   },
   {
@@ -1795,13 +1795,6 @@
    "letter": "Y",
    "sentence": "A long yawn made my eyes water.",
    "scene": "a teenager yawning wide with both arms stretched straight up above their head in a big morning stretch",
-   "needs_text": false
-  },
-  {
-   "word": "yellow",
-   "letter": "Y",
-   "sentence": "The school bus is yellow.",
-   "scene": "a lemon, a banana and a yellow flower grouped together, all clearly yellow",
    "needs_text": false
   },
   {
