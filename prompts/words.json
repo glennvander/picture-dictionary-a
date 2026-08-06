@@ -1003,7 +1003,7 @@
    "word": "mouth",
    "letter": "M",
    "sentence": "Cover your mouth when you cough.",
-   "scene": "a close view of an open smiling mouth showing teeth",
+   "scene": "an extreme close-up of only the lower part of a face, filling the whole frame: lips open in a smile showing the teeth, chin below, no eyes and no hair in view",
    "needs_text": false
   },
   {
@@ -1017,7 +1017,7 @@
    "word": "mud",
    "letter": "M",
    "sentence": "My boots were thick with mud.",
-   "scene": "a brown muddy puddle with a boot print pressed into it",
+   "scene": "a puddle of thick dark chocolate-brown mud on the ground with a deep boot print pressed into it",
    "needs_text": false
   },
   {
@@ -1066,7 +1066,7 @@
    "word": "nose",
    "letter": "N",
    "sentence": "My nose was cold outside.",
-   "scene": "a close view of a face showing the nose clearly",
+   "scene": "an extreme close-up of only the middle of a face in three-quarter view, filling the whole frame: the nose large and central with both nostrils clear, no whole head in view",
    "needs_text": false
   },
   {
@@ -1087,7 +1087,7 @@
    "word": "ocean",
    "letter": "O",
    "sentence": "We saw whales in the ocean.",
-   "scene": "blue ocean waves stretching to a distant horizon",
+   "scene": "open blue ocean water filling the frame with rolling waves and a flat empty horizon, no beach, no land and no people",
    "needs_text": false
   },
   {
@@ -1136,7 +1136,7 @@
    "word": "paper",
    "letter": "P",
    "sentence": "I need one sheet of paper.",
-   "scene": "a single blank sheet of paper with one corner curling",
+   "scene": "a single blank sheet of plain white paper, pure white with one corner curling",
    "needs_text": false
   },
   {
@@ -1353,7 +1353,7 @@
    "word": "scared",
    "letter": "S",
    "sentence": "The dark hallway made me scared.",
-   "scene": "a teenager with wide eyes and both hands raised near their face, looking frightened",
+   "scene": "a teenager shrinking backwards with shoulders hunched and both hands clasped tightly together at their chest, eyes wide and eyebrows raised in fright",
    "needs_text": false
   },
   {
@@ -1430,7 +1430,7 @@
    "word": "sleep",
    "letter": "S",
    "sentence": "I sleep eight hours a night.",
-   "scene": "a teenager asleep in bed with three Z letters floating above",
+   "scene": "a teenager asleep in bed under a blanket with eyes closed and head on the pillow, a crescent moon visible through the window",
    "needs_text": false
   },
   {
@@ -1451,7 +1451,7 @@
    "word": "smile",
    "letter": "S",
    "sentence": "A big smile crossed her face.",
-   "scene": "a teenager's face with a wide open smile",
+   "scene": "two teenage friends facing each other and grinning broadly, both smiles clearly visible",
    "needs_text": false
   },
   {
@@ -1577,7 +1577,7 @@
    "word": "teeth",
    "letter": "T",
    "sentence": "I brush my teeth twice a day.",
-   "scene": "a close view of a smile showing white teeth, with a toothbrush beside it",
+   "scene": "a teenager brushing their front teeth with a toothbrush, mouth open so the white teeth are the clear focus",
    "needs_text": false
   },
   {
@@ -1591,7 +1591,7 @@
    "word": "time",
    "letter": "T",
    "sentence": "What time does the bus come?",
-   "scene": "a wristwatch face showing a clear time",
+   "scene": "a close view of a wristwatch worn on a wrist, its round dial carrying the numerals 1 to 12 and the hands pointing to three o'clock, and no other writing anywhere",
    "needs_text": true
   },
   {
@@ -1696,7 +1696,7 @@
    "word": "watch",
    "letter": "W",
    "sentence": "My watch stopped last night.",
-   "scene": "a wristwatch fastened on a wrist",
+   "scene": "a single wristwatch lying flat on a table seen from above, its strap unbuckled and stretched out straight, buckle clearly visible",
    "needs_text": false
   },
   {
@@ -1759,7 +1759,7 @@
    "word": "work",
    "letter": "W",
    "sentence": "My parents work downtown.",
-   "scene": "an adult sitting at a desk working on a computer",
+   "scene": "an adult in a tool belt working at a workbench with both hands, concentrating on the job",
    "needs_text": false
   },
   {
@@ -1794,7 +1794,7 @@
    "word": "yawn",
    "letter": "Y",
    "sentence": "A long yawn made my eyes water.",
-   "scene": "a teenager yawning widely with one hand near their mouth",
+   "scene": "a teenager yawning wide with both arms stretched straight up above their head in a big morning stretch",
    "needs_text": false
   },
   {

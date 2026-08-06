@@ -181,9 +181,14 @@ SCENES = {
     "mother": "a smiling adult woman standing with her arm around a teenager",
     "mountain": "a tall mountain with a snow-capped peak",
     "mouse": "a small grey mouse with a long tail",
-    "mouth": "a close view of an open smiling mouth showing teeth",
+    # `face`, `mouth` and `nose` all came back as the same head-and-shoulders
+    # portrait. Body-part words need the crop stated outright, or the model
+    # defaults to drawing the whole person.
+    "mouth": "an extreme close-up of only the lower part of a face, filling the whole frame: lips open in a smile showing the teeth, chin below, no eyes and no hair in view",
     "movie": "a cinema screen showing a bright picture, two seats in front seen from behind",
-    "mud": "a brown muddy puddle with a boot print pressed into it",
+    # Left as "brown", the restricted palette pushes this to bright orange and
+    # it stops reading as mud. Name the dark brown explicitly.
+    "mud": "a puddle of thick dark chocolate-brown mud on the ground with a deep boot print pressed into it",
     "music": "musical notes floating above a guitar and a drum",
     # N
     "name": "a teenager smiling and pointing at a rectangular name tag on their shirt reading MAYA",
@@ -191,11 +196,12 @@ SCENES = {
     "neighbor": "two people waving to each other over a garden fence",
     "nest": "a round bird nest with three pale eggs in it, on a branch",
     "night": "a dark night sky full of stars above a quiet house",
-    "nose": "a close view of a face showing the nose clearly",
+    "nose": "an extreme close-up of only the middle of a face in three-quarter view, filling the whole frame: the nose large and central with both nostrils clear, no whole head in view",
     "nurse": "a nurse in scrubs holding a clipboard",
     "nut": "a walnut and an acorn side by side",
     # O
-    "ocean": "blue ocean waves stretching to a distant horizon",
+    # Without this it draws a beach with people and duplicates `beach`.
+    "ocean": "open blue ocean water filling the frame with rolling waves and a flat empty horizon, no beach, no land and no people",
     "office": "an office with a desk, a chair and a computer",
     "orange": "a single orange fruit with one green leaf on top",
     "oven": "an oven with its door closed and the inside light glowing",
@@ -203,7 +209,9 @@ SCENES = {
     # P
     "paint": "a paintbrush resting across an open tin of blue paint",
     "pants": "a pair of blue jeans, neatly folded",
-    "paper": "a single blank sheet of paper with one corner curling",
+    # Unstated, the restricted palette colours plain objects orange. White has
+    # to be asked for by name.
+    "paper": "a single blank sheet of plain white paper, pure white with one corner curling",
     "park": "a park with a bench, a tree and a winding path",
     "party": "a party scene with balloons, streamers and a cake on a table",
     "pencil": "a single sharpened yellow pencil",
@@ -237,7 +245,9 @@ SCENES = {
     "rope": "a neatly coiled length of thick rope",
     # S
     "sandwich": "a sandwich cut in half showing cheese filling, on a plate",
-    "scared": "a teenager with wide eyes and both hands raised near their face, looking frightened",
+    # Raised open palms read as the ASL 5 handshape. Show the fear in the body
+    # and face instead of in the hands.
+    "scared": "a teenager shrinking backwards with shoulders hunched and both hands clasped tightly together at their chest, eyes wide and eyebrows raised in fright",
     "school": "a school building with a flag and steps up to the door",
     "science": "a science beaker of coloured liquid beside a microscope",
     "scissors": "a pair of open scissors",
@@ -248,10 +258,13 @@ SCENES = {
     "sing": "a teenager standing and singing with their mouth open, musical notes floating nearby",
     "sister": "two teenage sisters standing together, smiling",
     "skate": "a teenager ice skating on a frozen pond",
-    "sleep": "a teenager asleep in bed with three Z letters floating above",
+    # The floating Zs contradicted the no-letters rule in the same prompt.
+    "sleep": "a teenager asleep in bed under a blanket with eyes closed and head on the pillow, a crescent moon visible through the window",
     "slide": "a playground slide with a child sliding down it",
     "smell": "a teenager leaning toward a flower and smelling it, with wavy scent lines",
-    "smile": "a teenager's face with a wide open smile",
+    # A single smiling portrait is already `face`. Make this one about the act
+    # of smiling at someone.
+    "smile": "two teenage friends facing each other and grinning broadly, both smiles clearly visible",
     "soap": "a bar of soap with bubbles around it",
     "soccer": "a black and white soccer ball resting on grass",
     "spider": "a spider sitting on its web",
@@ -270,9 +283,12 @@ SCENES = {
     "table": "a wooden table with four legs",
     "tail": "a dog seen from behind with its tail raised",
     "teacher": "a teacher standing beside a whiteboard, facing the class",
-    "teeth": "a close view of a smile showing white teeth, with a toothbrush beside it",
+    # Would otherwise be the same crop as `mouth`. The action distinguishes it.
+    "teeth": "a teenager brushing their front teeth with a toothbrush, mouth open so the white teeth are the clear focus",
     "tiger": "an orange tiger with black stripes, standing side-on",
-    "time": "a wristwatch face showing a clear time",
+    # "showing a clear time" was vague enough that the text exception let a
+    # caption through. Name exactly which characters are allowed.
+    "time": "a close view of a wristwatch worn on a wrist, its round dial carrying the numerals 1 to 12 and the hands pointing to three o'clock, and no other writing anywhere",
     "tired": "a teenager yawning with drooping eyes, resting their head on one hand",
     "tissue": "a tissue box with one tissue pulled up out of it",
     "tongue": "a face with the tongue sticking out slightly",
@@ -290,7 +306,8 @@ SCENES = {
     "vegetable": "a carrot, a head of broccoli and a tomato grouped together",
     # W
     "wash": "a pair of hands under running water with soap suds",
-    "watch": "a wristwatch fastened on a wrist",
+    # `time` is already a watch on a wrist. Show this one as the object itself.
+    "watch": "a single wristwatch lying flat on a table seen from above, its strap unbuckled and stretched out straight, buckle clearly visible",
     "wave": "a large blue ocean wave curling over",
     "weather": "a bright sun beside a cloud with rain falling from it",
     "wet": "a teenager in a raincoat with water dripping off them",
@@ -299,14 +316,16 @@ SCENES = {
     "witch": "a friendly witch in a pointed hat riding a broom",
     "woman": "an adult woman standing and smiling",
     "wood": "a stack of cut logs",
-    "work": "an adult sitting at a desk working on a computer",
+    # A desk and a computer is already `office`.
+    "work": "an adult in a tool belt working at a workbench with both hands, concentrating on the job",
     "write": "a hand writing on a sheet of paper with a pencil",
     # X
     "x-ray": "an x-ray image of a hand showing the bones",
     "xylophone": "a colourful xylophone with two mallets resting on it",
     # Y
     "yard": "a house yard with grass, a tree and a rake leaning against the fence",
-    "yawn": "a teenager yawning widely with one hand near their mouth",
+    # `tired` is already a yawn with a hand at the mouth. The stretch separates them.
+    "yawn": "a teenager yawning wide with both arms stretched straight up above their head in a big morning stretch",
     "yellow": "a lemon, a banana and a yellow flower grouped together, all clearly yellow",
     "young": "a small child standing next to a teenager, showing the difference in age",
     # Z
