@@ -25,7 +25,7 @@ SCENES = {
     "angry": "a teenager with arms tightly crossed, eyebrows down, two small flat steam puffs at the sides of the head",
     "animal": "four friendly animals together on grass: a dog, a rabbit, a turtle and a small bird",
     "apple": "a single bright red apple with a green leaf on its stem, on a wooden desktop",
-    "arm": "a teenager flexing one bent arm upward, a thin pointer line labelling the arm",
+    "arm": "a teenager sitting at a school desk with one whole arm raised straight up to answer, the raised arm the clear focus, not a flexed muscle",
     "art": "a wooden easel holding a colourful painting, with a paint palette and brushes in a jar beside it",
     "astronaut": "an astronaut in a white spacesuit with a round helmet, floating, a few flat stars and a blue planet arc behind",
     # B
