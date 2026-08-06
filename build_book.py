@@ -23,7 +23,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 IMG_DIR = os.path.join(HERE, "images")
 WEB_DIR = os.path.join(IMG_DIR, "web")
 BUILD = os.path.join(HERE, "build")
-STEM = os.environ.get("STEM", "Lake Drive Picture Dictionary - A")
+STEM = os.environ.get("STEM", "Picture Dictionary A-Z")
+# The PDF is an intermediate, not a deliverable. The flipbook is rasterised from
+# it by make_site.py, so it still has to exist — it just lives out of the way in
+# build/intermediate/ rather than sitting next to the real outputs.
+INTERMEDIATE = os.path.join(HERE, "build", "intermediate")
 
 # Grid is configurable so densities can be compared on real pages rather than
 # argued about. Override with e.g. GRID=6x2 python3 build_book.py
@@ -390,12 +394,15 @@ def main():
     slugs = [slugify(e["word"]) for e in entries] + ["_cover", "_back"]
     prepare_images(slugs)
 
-    for cls, ext in ((PptxCanvas, "pptx"), (PdfCanvas, "pdf")):
+    os.makedirs(INTERMEDIATE, exist_ok=True)
+    for cls, ext, where, label in (
+            (PptxCanvas, "pptx", BUILD, "deliverable"),
+            (PdfCanvas, "pdf", INTERMEDIATE, "intermediate")):
         cv = cls()
         render(cv, entries, pages)
-        out = os.path.join(BUILD, f"{STEM}.{ext}")
+        out = os.path.join(where, f"{STEM}.{ext}")
         cv.save(out)
-        print(f"  {ext:5s} {os.path.getsize(out)/1e6:6.1f} MB  {out}")
+        print(f"  {ext:5s} {os.path.getsize(out)/1e6:6.1f} MB  {label:12s} {out}")
 
     # Letter -> zero-based page indices, written out so the flipbook can offer
     # letter jumps without having to re-derive pagination in JavaScript.

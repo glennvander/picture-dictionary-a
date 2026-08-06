@@ -23,7 +23,7 @@ check `git status` and `git diff --stat` and describe it yourself.
 
 1. `make_words.py` — rebuilds `words.json` from `Revised List.md`
 2. `make_covers.py` — recomposes the flat cover images
-3. `build_book.py` — regenerates the `.pptx` and `.pdf`
+3. `build_book.py` — the `.pptx` deliverable, plus a PDF intermediate
 4. `make_site.py` — renders flipbook pages, syncs `PAGES` and `LETTER_PAGES`
 5. commits and pushes to GitHub (backup only — Pages hosting is disabled)
 6. deploys to Cloudflare Pages
@@ -37,7 +37,7 @@ Report what actually changed, not just that it ran. Useful things to surface:
   removed, and the book pads to an even count)
 - how many words are still `[ missing ]` an illustration
 - any word in `Revised List.md` with no sentence, which `make_words.py` prints
-- the live URL
+- the live URL and the PowerPoint path
 
 ## When it fails
 

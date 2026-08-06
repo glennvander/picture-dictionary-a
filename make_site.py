@@ -19,7 +19,7 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PDF = os.path.join(HERE, "build", "Lake Drive Picture Dictionary - A.pdf")
+PDF = os.path.join(HERE, "build", "intermediate", "Picture Dictionary A-Z.pdf")
 SPLIT = os.path.join(HERE, "build", "split")
 PAGES_DIR = os.path.join(HERE, "docs", "pages")
 INDEX = os.path.join(HERE, "docs", "index.html")

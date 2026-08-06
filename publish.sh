@@ -92,5 +92,6 @@ done
 
 [ "$ok" = 1 ] || fail "the live site is stale"
 printf "\n\033[32mPublished.\033[0m %s pages live.\n" "$PAGE_COUNT"
-echo "  $CF_URL"
-echo "  source backed up to github.com/$REPO"
+echo "  website     $CF_URL"
+echo "  powerpoint  build/Picture Dictionary A-Z.pptx"
+echo "  source      github.com/$REPO"

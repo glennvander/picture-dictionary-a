@@ -4,11 +4,16 @@ A picture dictionary of the classroom spelling word bank, built for
 middle-school students at **Lake Drive School**. Three deliverables
 from one source of truth:
 
+Two deliverables:
+
 | Output | Path | Notes |
 |---|---|---|
-| Interactive flipbook | `docs/index.html` | Static, opens by double-click, drag-to-peel page turns |
-| Editable book | `build/…​.pptx` | Every element is a real shape/textbox, not a flattened image |
-| Print book | `build/…​.pdf` | 48 pages, 11 × 8.5 in landscape |
+| **Website** | published to Cloudflare from `docs/` | Static, opens by double-click, drag-to-peel page turns, letter-key jumps |
+| **PowerPoint** | `build/Picture Dictionary A-Z.pptx` | Every element is a real shape or textbox, not a flattened image |
+
+A PDF is still produced, but only as an **intermediate** in
+`build/intermediate/` — the flipbook pages are rasterised from it. It is not a
+deliverable and is not meant to be handed to anyone.
 
 ## Status
 
@@ -123,11 +128,12 @@ happened in this project more than once.
 ```bash
 python3 make_words.py     # rebuilds words.json from Revised List.md
 python3 make_covers.py    # composes the flat cover images
-python3 build_book.py     # regenerates both the .pptx and the .pdf
-python3 make_site.py      # renders the flipbook pages and syncs the page count
+python3 build_book.py     # the .pptx deliverable + the PDF intermediate
+python3 make_site.py      # rasterises the PDF into docs/pages/, syncs page count
 ```
 
-Page images for the flipbook are rendered from the PDF into `docs/pages/`.
+`make_site.py` uses macOS `qlmanage` to rasterise, so the website build is
+macOS-only today. The PowerPoint build is portable.
 
 ## Repo contents
 
