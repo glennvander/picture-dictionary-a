@@ -60,14 +60,14 @@ step "Waiting for GitHub Pages to serve this build"
 TOKEN=$(printf 'protocol=https\nhost=github.com\n\n' | git credential fill 2>/dev/null \
         | grep '^password=' | cut -d= -f2-)
 GH_OK=0
-for i in $(seq 1 30); do
+for i in $(seq 1 40); do
   LIVE=$(curl -s --max-time 25 "$GH_URL/?cb=$RANDOM$i" | shasum -a 256 | cut -c1-16)
   if [ "$LIVE" = "$LOCAL_HASH" ]; then GH_OK=1; break; fi
   STATUS=$(curl -s -H "Authorization: token $TOKEN" \
     "https://api.github.com/repos/$REPO/pages/builds/latest" \
     | python3 -c "import sys,json;print(json.load(sys.stdin).get('status','?'))" 2>/dev/null)
   [ "$STATUS" = "errored" ] && fail "GitHub Pages build errored"
-  sleep 7
+  sleep 10
 done
 if [ "$GH_OK" = 1 ]; then
   BUILT=$(curl -s -H "Authorization: token $TOKEN" \
