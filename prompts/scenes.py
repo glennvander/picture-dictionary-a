@@ -94,10 +94,15 @@ SCENES = {
     "feet": "a pair of bare feet standing on the floor, seen from above",
     "fence": "a wooden picket fence running across the frame",
     "field": "a wide green grass field with a goal at the far end",
-    "finger": "a hand with one index finger pointing upward",
+    # An index finger raised on a closed fist is the ASL number 1 — an isolated
+    # handshape reads as a sign to this audience. Keep the finger in context,
+    # doing something, so it reads as anatomy rather than as language.
+    "finger": "a hand resting on an open book, one index finger pointing down at a picture on the page, the pointing finger the clear focus",
     "fire": "a campfire with orange flames over stacked logs",
     "fish": "a single silver and orange fish swimming",
-    "flag": "a rectangular flag on a pole, waving in the wind",
+    # An unspecified flag comes back as a rainbow one, which teaches a specific
+    # symbol under a generic word. Describe an invented, meaningless design.
+    "flag": "a plain blue rectangular flag with one large white star in the middle, on a tall pole, waving in the wind",
     "floor": "a wooden floor seen at an angle with a broom resting on it",
     "flower": "a single yellow flower with a green stem and two leaves",
     "forest": "a group of tall green trees standing close together",
@@ -105,19 +110,27 @@ SCENES = {
     "game": "a board game on a table with dice and coloured playing pieces",
     "garden": "a garden bed with tomato plants and a watering can",
     "ghost": "a friendly white cartoon ghost floating, with a wavy lower edge",
-    "giant": "a very tall friendly giant standing beside a small tree for scale",
+    # Scale needs a human reference, not a tree — a person beside a shrub just
+    # reads as someone gardening.
+    "giant": "an enormous friendly giant filling the frame, with two tiny ordinary people standing at his feet reaching only to his ankle",
     "gift": "a wrapped gift box with a large ribbon bow",
     "glass": "a single clear drinking glass filled with water",
     "gold": "a small pile of shiny gold coins",
     "grandfather": "an older man with grey hair and glasses, smiling warmly",
     "grandmother": "an older woman with grey hair, smiling warmly",
-    "grass": "a close view of green grass blades",
+    # Left open, the model adds a child among the blades and the scale goes
+    # surreal — grass taller than a person. Say plainly that nothing else is in it.
+    "grass": "a close view of a patch of green grass blades and nothing else, no people and no animals",
     "gym": "a school gymnasium with a basketball hoop and a polished wooden floor",
     # H
     "hair": "a teenager brushing their long hair with a hairbrush",
     "halloween": "a carved orange pumpkin glowing, with a small bat above it",
-    "hand": "a single open hand, palm facing the viewer, fingers spread naturally",
-    "head": "a teenager's head and shoulders seen straight on",
+    # A spread open palm facing the viewer is the ASL 5 handshape. Anchor the
+    # hand to an arm and a surface so it reads as anatomy, not language.
+    "hand": "a teenager's hand and forearm resting palm-up and relaxed on a table top, the open hand the clear focus",
+    # "head and shoulders straight on" is the same picture as `face`. The hat
+    # gives the head a top and a shape of its own.
+    "head": "a teenager wearing a woolly hat, seen in side profile so the whole shape of the head is clear",
     "heart": "a simple red heart shape",
     "hide": "a teenager crouching behind a door, peeking around its edge",
     "hill": "a green rounded hill with a path winding up it",
@@ -146,7 +159,7 @@ SCENES = {
     "lake": "a calm blue lake with trees along the far shore",
     "lamp": "a table lamp switched on and glowing",
     "laugh": "a teenager laughing with their head tilted back",
-    "leg": "a teenager's leg from hip to foot, standing",
+    "leg": "a teenager standing seen from the waist down, wearing matching sports shorts and trainers, both legs straight and fully visible",
     "letter": "a sealed white envelope with a stamp in the corner",
     "library": "tall bookshelves full of books with a reading table in front",
     "light": "a glowing light bulb",

@@ -534,7 +534,7 @@
    "word": "finger",
    "letter": "F",
    "sentence": "I pointed with one finger.",
-   "scene": "a hand with one index finger pointing upward",
+   "scene": "a hand resting on an open book, one index finger pointing down at a picture on the page, the pointing finger the clear focus",
    "needs_text": false
   },
   {
@@ -555,7 +555,7 @@
    "word": "flag",
    "letter": "F",
    "sentence": "The flag waved in the wind.",
-   "scene": "a rectangular flag on a pole, waving in the wind",
+   "scene": "a plain blue rectangular flag with one large white star in the middle, on a tall pole, waving in the wind",
    "needs_text": false
   },
   {
@@ -604,7 +604,7 @@
    "word": "giant",
    "letter": "G",
    "sentence": "The giant was taller than the trees.",
-   "scene": "a very tall friendly giant standing beside a small tree for scale",
+   "scene": "an enormous friendly giant filling the frame, with two tiny ordinary people standing at his feet reaching only to his ankle",
    "needs_text": false
   },
   {
@@ -646,7 +646,7 @@
    "word": "grass",
    "letter": "G",
    "sentence": "The grass is wet this morning.",
-   "scene": "a close view of green grass blades",
+   "scene": "a close view of a patch of green grass blades and nothing else, no people and no animals",
    "needs_text": false
   },
   {
@@ -674,14 +674,14 @@
    "word": "hand",
    "letter": "H",
    "sentence": "Raise your hand to answer.",
-   "scene": "a single open hand, palm facing the viewer, fingers spread naturally",
+   "scene": "a teenager's hand and forearm resting palm-up and relaxed on a table top, the open hand the clear focus",
    "needs_text": false
   },
   {
    "word": "head",
    "letter": "H",
    "sentence": "I wore a hat on my head.",
-   "scene": "a teenager's head and shoulders seen straight on",
+   "scene": "a teenager wearing a woolly hat, seen in side profile so the whole shape of the head is clear",
    "needs_text": false
   },
   {
@@ -856,7 +856,7 @@
    "word": "leg",
    "letter": "L",
    "sentence": "I hurt my leg playing soccer.",
-   "scene": "a teenager's leg from hip to foot, standing",
+   "scene": "a teenager standing seen from the waist down, wearing matching sports shorts and trainers, both legs straight and fully visible",
    "needs_text": false
   },
   {

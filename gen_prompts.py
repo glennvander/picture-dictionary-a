@@ -40,7 +40,10 @@ NEG_COMMON = (
     "background. No chibi or big-head proportions. No sign language or "
     "fingerspelling handshapes. No deformed hands or extra fingers. No "
     "exaggerated shocked or goofy expressions. No clip-art borders. Do not "
-    "place the subject on a wooden board or tray unless described."
+    "place the subject on a wooden board or tray unless described. Never draw "
+    "colour swatches, colour chips, palette strips or style-guide samples — the "
+    "palette above describes how to colour the picture, it is not part of the "
+    "picture. Never add a caption, title or label bar above or below the art."
 )
 NEG_NO_TEXT = ("No text, letters, numbers, labels, watermarks or signatures "
                "anywhere in the image. " + NEG_COMMON)
