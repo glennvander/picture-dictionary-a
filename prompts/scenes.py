@@ -86,9 +86,9 @@ SCENES = {
     # The ear came back far larger than a real ear relative to the head.
     # The hearing aid was removed at Brooke's request — the sentence in
     # make_words.py was changed to match, since it used to mention one.
-    # Cropped too tight it renders as a rectangular patch of skin pasted on the
-    # background. Keep the head's outline so it reads as a drawing, not a crop.
-    "ear": "a close side view of a teenager's head with the ear large and central, the curved outline of the cheek, jaw and hair drawn around it against the plain background, no hearing aid and no earring",
+    # Shown on a head, the head kept stealing the picture. Fully detached, like
+    # `arm` — the isolated-limb treatment is what actually reads here.
+    "ear": "one single human ear entirely on its own, drawn as one simple flat shape centred against the plain background, with no head, no face, no hair, no neck and no skin around it, and no hearing aid or earring",
     "earth": "the planet Earth seen from space, blue oceans and green continents",
     "egg": "a single white egg lying on its side by itself, with no egg cup, no bowl and nothing else in the picture",
     "elephant": "a grey elephant standing side-on with its trunk curled",
@@ -308,8 +308,9 @@ SCENES = {
     # whole dog makes the tail too small. Crop to the back half, side on.
     # Told to fill the frame the tail swallowed the dog and read as a flame.
     # The dog has to stay recognisable for the tail to mean anything.
-    # Left unstated, the restricted palette coloured the dog pink and green.
-    "tail": "a golden-brown dog standing side-on seen from close up, natural tan and brown fur all over, its whole body and hind legs clearly recognisable as a dog, with its long fluffy tail raised and curling upward as the largest feature",
+    # Cropping and scaling both failed to single out the tail, so the picture
+    # now points at it outright. This is the only arrow in the book.
+    "tail": "a golden-brown dog standing side-on with natural tan and brown fur, its long fluffy tail raised and curling upward, and one bold charcoal arrow in clear space beside the dog with its tip touching the tail",
     "teacher": "a teacher standing beside a whiteboard, facing the class",
     # Would otherwise be the same crop as `mouth`. The action distinguishes it.
     "teeth": "a teenager brushing their front teeth with a toothbrush, mouth open so the white teeth are the clear focus",

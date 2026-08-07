@@ -443,7 +443,7 @@
    "word": "ear",
    "letter": "E",
    "sentence": "My ear is on the side of my head.",
-   "scene": "a close side view of a teenager's head with the ear large and central, the curved outline of the cheek, jaw and hair drawn around it against the plain background, no hearing aid and no earring",
+   "scene": "one single human ear entirely on its own, drawn as one simple flat shape centred against the plain background, with no head, no face, no hair, no neck and no skin around it, and no hearing aid or earring",
    "needs_text": false
   },
   {
@@ -1563,7 +1563,7 @@
    "word": "tail",
    "letter": "T",
    "sentence": "The dog wagged its tail.",
-   "scene": "a golden-brown dog standing side-on seen from close up, natural tan and brown fur all over, its whole body and hind legs clearly recognisable as a dog, with its long fluffy tail raised and curling upward as the largest feature",
+   "scene": "a golden-brown dog standing side-on with natural tan and brown fur, its long fluffy tail raised and curling upward, and one bold charcoal arrow in clear space beside the dog with its tip touching the tail",
    "needs_text": false
   },
   {
