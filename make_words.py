@@ -94,7 +94,7 @@ SENTENCES = {
     "drum": "He plays the drum in band.",
     "duck": "A duck swam across the pond.",
     # E
-    "ear": "My hearing aid sits behind my ear.",
+    "ear": "My ear is on the side of my head.",
     "earth": "Earth is the planet we live on.",
     "egg": "I ate one egg for breakfast.",
     "elephant": "The elephant has a long trunk.",

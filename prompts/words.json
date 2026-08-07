@@ -86,7 +86,7 @@
    "word": "arm",
    "letter": "A",
    "sentence": "I raised my arm to answer.",
-   "scene": "a teenager sitting at a school desk with one arm raised straight up to answer, the raised arm clearly joined at the shoulder with the shoulder and upper sleeve visible, the other arm resting on the desk",
+   "scene": "one single arm by itself from shoulder to fingertips, held out straight across the picture, the hand relaxed with fingers loosely apart and making no deliberate shape, no body and no head",
    "needs_text": false
   },
   {
@@ -442,8 +442,8 @@
   {
    "word": "ear",
    "letter": "E",
-   "sentence": "My hearing aid sits behind my ear.",
-   "scene": "a side view of a teenager's head, the ear drawn at natural size in correct proportion to the head, with a hearing aid tucked behind it",
+   "sentence": "My ear is on the side of my head.",
+   "scene": "a close side view of a teenager's head with the ear large and central, the curved outline of the cheek, jaw and hair drawn around it against the plain background, no hearing aid and no earring",
    "needs_text": false
   },
   {
@@ -457,7 +457,7 @@
    "word": "egg",
    "letter": "E",
    "sentence": "I ate one egg for breakfast.",
-   "scene": "a single white egg standing in an egg cup",
+   "scene": "a single white egg lying on its side by itself, with no egg cup, no bowl and nothing else in the picture",
    "needs_text": false
   },
   {
@@ -681,7 +681,7 @@
    "word": "head",
    "letter": "H",
    "sentence": "I wore a hat on my head.",
-   "scene": "a close view of a teenager's head and neck only, in side profile wearing a woolly hat, cropped at the shoulders with no body below",
+   "scene": "a close view of a teenager's whole head and neck in side profile, hair visible and nothing covering the head, no hat, cropped at the shoulders with no body below",
    "needs_text": false
   },
   {
@@ -772,7 +772,7 @@
    "word": "jump",
    "letter": "J",
    "sentence": "I can jump over the puddle.",
-   "scene": "a teenager caught in mid-air leaping across a puddle, body leaning forward with one leg stretched out in front and the other trailing behind, clearly airborne directly above the water",
+   "scene": "a teenager bouncing high in the air above a round trampoline, knees bent and arms out for balance, clearly airborne well above the trampoline mat",
    "needs_text": false
   },
   {
@@ -856,7 +856,7 @@
    "word": "leg",
    "letter": "L",
    "sentence": "I hurt my leg playing soccer.",
-   "scene": "a teenager standing still and facing the viewer, shown from head to feet, wearing short sports shorts and trainers so both bare legs are uncovered and clearly visible from hip to ankle",
+   "scene": "a close view of one single bare leg by itself from hip down to the foot, wearing a trainer, the leg filling the picture, no body above the hip",
    "needs_text": false
   },
   {
@@ -1563,7 +1563,7 @@
    "word": "tail",
    "letter": "T",
    "sentence": "The dog wagged its tail.",
-   "scene": "a dog standing in side view with its long tail raised and curling upward, the tail the clear focus of the picture",
+   "scene": "a golden-brown dog standing side-on seen from close up, natural tan and brown fur all over, its whole body and hind legs clearly recognisable as a dog, with its long fluffy tail raised and curling upward as the largest feature",
    "needs_text": false
   },
   {

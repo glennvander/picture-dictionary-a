@@ -25,8 +25,9 @@ SCENES = {
     "angry": "a teenager with arms tightly crossed, eyebrows down, two small flat steam puffs at the sides of the head",
     "animal": "four friendly animals together on grass: a dog, a rabbit, a turtle and a small bird",
     "apple": "a single bright red apple with a green leaf on its stem, on a wooden desktop",
-    # The raised arm sprouted from the middle of the chest. Name the shoulder joint.
-    "arm": "a teenager sitting at a school desk with one arm raised straight up to answer, the raised arm clearly joined at the shoulder with the shoulder and upper sleeve visible, the other arm resting on the desk",
+    # Now an isolated limb, like `ear`, `head` and `leg`. The hand must stay
+    # loose and shapeless: a deliberate handshape here would read as a sign.
+    "arm": "one single arm by itself from shoulder to fingertips, held out straight across the picture, the hand relaxed with fingers loosely apart and making no deliberate shape, no body and no head",
     "art": "a wooden easel holding a colourful painting, with a paint palette and brushes in a jar beside it",
     "astronaut": "an astronaut in a white spacesuit with a round helmet, floating, a few flat stars and a blue planet arc behind",
     # B
@@ -83,9 +84,13 @@ SCENES = {
     "duck": "a duck with a yellow bill swimming on blue water",
     # E
     # The ear came back far larger than a real ear relative to the head.
-    "ear": "a side view of a teenager's head, the ear drawn at natural size in correct proportion to the head, with a hearing aid tucked behind it",
+    # The hearing aid was removed at Brooke's request — the sentence in
+    # make_words.py was changed to match, since it used to mention one.
+    # Cropped too tight it renders as a rectangular patch of skin pasted on the
+    # background. Keep the head's outline so it reads as a drawing, not a crop.
+    "ear": "a close side view of a teenager's head with the ear large and central, the curved outline of the cheek, jaw and hair drawn around it against the plain background, no hearing aid and no earring",
     "earth": "the planet Earth seen from space, blue oceans and green continents",
-    "egg": "a single white egg standing in an egg cup",
+    "egg": "a single white egg lying on its side by itself, with no egg cup, no bowl and nothing else in the picture",
     "elephant": "a grey elephant standing side-on with its trunk curled",
     "exercise": "a teenager in gym clothes doing a jumping jack, arms and legs out",
     "eye": "a close view of one open eye",
@@ -136,7 +141,10 @@ SCENES = {
     # "head and shoulders straight on" is the same picture as `face`. The hat
     # gives the head a top and a shape of its own.
     # Showed the whole body, so the head was not the subject.
-    "head": "a close view of a teenager's head and neck only, in side profile wearing a woolly hat, cropped at the shoulders with no body below",
+    # The hat was here to stop this colliding with `face`; Brooke asked for it
+    # gone, so side profile against `face`'s front view is now the only thing
+    # keeping the two pictures apart.
+    "head": "a close view of a teenager's whole head and neck in side profile, hair visible and nothing covering the head, no hat, cropped at the shoulders with no body below",
     "heart": "a simple red heart shape",
     "hide": "a teenager crouching behind a door, peeking around its edge",
     "hill": "a green rounded hill with a path winding up it",
@@ -154,8 +162,7 @@ SCENES = {
     # took the 70%. Dropping the person removes the conflict entirely.
     "jar": "a single glass jar with a lid, filled with round biscuits, standing by itself with no person in the picture",
     "juice": "a tall glass of orange juice with a straw",
-    # The old pose read as squatting, and he was above the grass, not the puddle.
-    "jump": "a teenager caught in mid-air leaping across a puddle, body leaning forward with one leg stretched out in front and the other trailing behind, clearly airborne directly above the water",
+    "jump": "a teenager bouncing high in the air above a round trampoline, knees bent and arms out for balance, clearly airborne well above the trampoline mat",
     # K
     "kick": "a teenager kicking a soccer ball, leg extended",
     "king": "a king wearing a gold crown and a red robe",
@@ -171,7 +178,8 @@ SCENES = {
     "lamp": "a table lamp switched on and glowing",
     "laugh": "a teenager laughing with their head tilted back",
     # Cropping at the waist left a headless torso.
-    "leg": "a teenager standing still and facing the viewer, shown from head to feet, wearing short sports shorts and trainers so both bare legs are uncovered and clearly visible from hip to ankle",
+    # A whole standing figure is the picture for `stand`. Crop to the limb.
+    "leg": "a close view of one single bare leg by itself from hip down to the foot, wearing a trainer, the leg filling the picture, no body above the hip",
     "letter": "a sealed white envelope with a stamp in the corner",
     "library": "tall bookshelves full of books with a reading table in front",
     "light": "a glowing light bulb",
@@ -296,8 +304,12 @@ SCENES = {
     "swing": "a playground swing with a child swinging on it",
     # T
     "table": "a wooden table with four legs",
-    # A rear view of a dog's backside is not a readable picture of a tail.
-    "tail": "a dog standing in side view with its long tail raised and curling upward, the tail the clear focus of the picture",
+    # A rear view of a dog's backside is not a readable picture of a tail; a
+    # whole dog makes the tail too small. Crop to the back half, side on.
+    # Told to fill the frame the tail swallowed the dog and read as a flame.
+    # The dog has to stay recognisable for the tail to mean anything.
+    # Left unstated, the restricted palette coloured the dog pink and green.
+    "tail": "a golden-brown dog standing side-on seen from close up, natural tan and brown fur all over, its whole body and hind legs clearly recognisable as a dog, with its long fluffy tail raised and curling upward as the largest feature",
     "teacher": "a teacher standing beside a whiteboard, facing the class",
     # Would otherwise be the same crop as `mouth`. The action distinguishes it.
     "teeth": "a teenager brushing their front teeth with a toothbrush, mouth open so the white teeth are the clear focus",
